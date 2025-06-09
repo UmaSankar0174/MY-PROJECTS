@@ -1,0 +1,453 @@
+<html>
+    <head>
+    <title> CSS </title>
+    <style>
+        h2{
+            background-color: pink;
+        }
+        body{
+            background-color: skyblue;
+        }
+        p.dashed { border-style: dashed; }
+        p.double { border-style:double;}
+        p.solid { border-style:solid;}
+        h3.dotted { border-style:dotted;} 
+        h4{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            margin-right: 10px;
+            border:4px solid olive;
+        }
+        h5{
+            padding-left: 70px;   /* lly padding right,top ,bottom ... padding=used to create space between the content of an element*/
+        }
+     
+        p1{ 
+            display:flex;
+            justify-content: flex-end; /* Text right side lo ravali */ /* Horizontally center */
+            align-items: center;  /* Vertically center */
+            
+            padding-right: 100px; /* Right side ki koncham gap */
+
+        }
+        p2{
+            border:1px solid greenyellow;
+        }
+        p3{
+            border:1px solid pink;
+                padding-left: 80px;
+                padding-right: 100px;
+                padding-top: 60px;
+                padding-bottom: 70px;
+                display: flex; 
+            }
+        p4{
+            display: flex; /* idhi untene border padding and center work avtay */
+            justify-content: center;  /* Horizontally center */
+        }
+        p5{
+            border:1px solid pink;
+            background-color: darkgray;
+            padding-left: 80px;
+            padding-right: 100px;
+            padding-top: 60px;
+           /* padding-bottom: 70px; */
+            display: flex; 
+            margin: auto; /* Box ni page madhyalo petadam */
+            justify-content: center;  /* Horizontally center */
+        }
+        p6{
+            border:20px solid pink;
+            display: flex;  
+            justify-content: flex-start;  /* Left side ki move */   
+            align-items: flex-start;  /* Top lo move */
+            padding-left: 10px; /* Left side ki gap */
+            padding-top: 10px; /* Top side ki gap */
+            padding-bottom: 70px;
+            padding-right: 50px;
+            
+        }
+        p7{
+            border:2px solid navy;
+                padding: 1px; /* box space motham change chestundi */
+                margin:25px; /* left nunchi right ki move */
+                background-color: grey;
+        }
+        p8{
+            border: 2px solid pink;
+            background-color: grey;
+        }
+        p9{
+            width: 80vw;  /* Screen width lo 80% */
+            height: 50vh; /* Screen height lo 50% */
+            border: 2px solid green;
+        }
+        p10{
+            color: orange;
+            font-size: 50px;
+            text-transform: uppercase;  /* Converts text to uppercase */
+            font-weight: bold;
+            font-style: italic;
+        }
+        p11{
+            font-family: Arial, sans-serif;  /* Specifies font */
+            line-height: 1.5;  /* Adjusts line spacing */
+            letter-spacing: 2px;  /* Adds space between letters */
+            word-spacing: 5px;  /* Adds space between words */
+            text-decoration: underline;
+        }
+        p12{
+            text-shadow: 2px 2px 5px red;  /* Adds shadow to text */
+        }   
+        p13{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcoral;
+            width: 100px;
+            height: 100px;
+
+        }
+        p14{
+            font-family: cursive;
+        }
+        a{
+            text-decoration: underline;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: blue;
+        }
+        a:active {
+            color: red;
+        } 
+
+
+        ol1{
+            color:blue;
+            list-style-type:none; /*[ none = remove default numbering like 1,2,3 ... square =add square box before numbers] */
+        }
+        ul{
+            color:pink;
+        }
+        li{
+            font-family: "arial" sans-serif;
+        }
+
+        ol.ABC 
+        {
+          margin-bottom: 5px;
+          font-weight:bold;
+          margin-right:5px;
+        }
+
+        .gallery{  /* body styling ki  use chestaru .gallery place lo adayna use cheyochu..  used to hold all imgs.. cant apply width directly*/
+            display:grid;   /* line by line ga img ostay * .. use cheykapothe random ga imgs ostay */
+            gap:20px;     /* Spacing between images */
+            padding:20px;  
+        }
+        .gallery img{         /* body or gallery  lo unna anni  imgs styling ki use chestaru */
+            width:100px;
+            height:auto;  /* sets height to adjust automatically to keep img porportions*/
+            border-radius: 5px;     /* Rounded corners */
+            object-fit: cover;       /* Crop the img to  fit its size without stretching */
+        }
+        .gallery img:hover{
+            transform scale (1.1); /* Slight zoom on hover */
+            box-shadow: 1px 1px 1px blue; /* Stronger shadow on hover */
+            filter: brightness(1.1); /* Slight brightness boost */
+            cursor:pointer; /* Hand cursor */
+        }  
+
+         
+           
+            asus  {
+            /* background: white;  Sets form background color to white */
+            padding: 10px; /* Adds spacing inside the form */
+           /*  border-radius: 10px; Makes the edges rounded */
+           /*  box-shadow: 5px 5px 10px red; Adds a pink shadow effect */
+            width: 100px; /* Sets the width of the form */
+        }
+
+        /* 🌟 Label Styling */
+        AA {   /* name email lantivi box madyalo side headings ki  */
+            font-weight: bold; /* Makes label text bold */
+            display: block; /* Ensures labels appear on a new line */
+            margin-bottom: 5px; /* Adds space between label and input */
+        }
+
+        input {  /* name kindha oche box email kindha oche box */
+            width: 50%; /* Makes input fields take full width */
+            padding: 10px; /* Adds spacing inside the input box */
+            margin-bottom: 10px; /* Adds space between input fields */
+            border: 2px solid pink; /* Sets a pink border */
+            border-radius: 5px; /* Rounds the edges of input fields */
+            font-size: 16px; /* Increases font size for readability */
+            background-color: aqua;
+        }
+
+       
+        input:focus {   /* last lo separate ga button ki color */
+            border-color: green; /* Changes border color to green when focused */
+            outline: none; /* Removes default outline */
+        }
+
+        
+        button {
+            width: 50%; /* Makes button take full width */
+            padding: 10px; /* Adds padding inside the button */
+            background: purple; /* Sets the background color */
+            color: white; /* Sets the text color to white */
+            border: none; /* Removes default border */
+            border-radius: 5px; /* Rounds the edges */
+            cursor: pointer; /* Changes mouse cursor to pointer */
+            font-size: 16px; /* Increases font size */
+        }
+
+       
+        button:hover {
+            background: red; /* Changes button color to red when hovered */
+        }
+      
+       
+        /* Dark mode ki styles */
+        .AAA {  /* user choice */
+            background-color: black; /* Background dark chestham */
+            color: white; /* Text white chestham */
+        }
+
+        /* Button styles */
+        .ABC {   /* user choice */
+            padding: 10px 20px; /* Button ki padding istam */
+            font-size: 16px; /* Text size increase chestham */
+            border: none; /* Border remove chestham */
+            cursor: pointer; /* Cursor pointer chestham */
+            margin-top: 20px; /* Space add chestham */
+        }
+        .dark-mode-section {
+            background-color: white; /* Default white background for dark mode toggle area */
+            padding: 20px;
+            border-radius: 10px;
+            color:pink;
+        }
+
+
+        /* Portfolio Styles */
+        .portfolio-body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: white;
+        }
+        .portfolio-nav {
+            background-color: pink;
+            padding: 10px;
+        }
+        .portfolio-nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: red;
+        }
+        nav a:hover {
+            color: orange;
+        }
+        h1 {
+            color: violet;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .underline {
+            border-bottom: 2px solid red;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .skills-box {
+            border: 2px solid violet;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .portfolio-section {
+            padding: 10px;
+        }
+        .portfolio-ul, .portfolio-table, .portfolio-form {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .portfolio-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .portfolio-th, .portfolio-td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .portfolio-form input, .portfolio-form textarea {
+            width: 100%;
+            margin: 2px 0;
+        }
+        .portfolio-footer {
+            background-color: grey;
+            padding: 2px;
+            width: 100%;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            height: 30px;
+            object-fit: cover;
+            
+        }
+
+     
+       /* User choice is the function name (toggleDarkMode()) and the class name (dark-mode).*/
+      /* Predefined keywords are onclick, document.body, classList.toggle(), and function DarkMode.*/
+    
+
+      </style>
+      </head>
+    <body>
+    <h1 style= "color:red" > Hello </h1>
+    <h2 style="text-align: center;" > HELLOOOO </h2>
+    <p class="dashed" > HELLO </p>
+    <p class="double" > AAA </p>
+    <p class="solid" > BBB </p>
+    <h3 class="dotted" > CCC </h3>
+    <h1 style="border: 10px solid pink;"> DDD </h1>
+    <h2 style="border-top: 10px solid pink;"> EEE </h2> <hr>  <!-- lly border right,left ,bottom  -->
+    <h4>  FFF </h4>  <hr> <hr>
+    <h5> GGG </h5>  <hr>
+    <p1> HHH </p1> <hr>
+    <p2>  III </p2> <hr>
+    <P3> JJJ </P3>
+    <p4> KKK </p4> <hr> 
+    <p5> LLL </p5> <hr>
+    <p6> MMM </p6> <hr> <hr>
+    <p7> NNN </p7> <hr> <hr>
+    <p8> OOO </p8> <hr> 
+    <p9> PPP </p9> <hr>
+    <p10> qqq </p10>  <hr> 
+    <p11> RRR RRR RRR </p11> <hr>
+    <h1 style="outline: 2px dotted red;"> ABC </h1> <hr>
+    <p12> SSS </p12> <hr>
+    <p13> TTT </p13> <hr>
+    <p14 class="cursive">  ASUS VIVOBOOK </p14> <hr>
+    <p> <a href="https://www.google.com/"> Google </a> </p> <hr>
+    <ol1>
+        <li> UUU </li>
+        <li> UUU </li>
+    </ol1>
+    <ol>
+        <li> AAA </li>
+    </ol>
+    <ul>
+        <li> WWW </li>
+        <li> WWW </li>
+    </ul> <hr>
+    <ol class="ABC">
+        <li> ONE </li>
+        <li> TWO </li>
+    </ol> <hr>
+    <div class="gallery">
+        <a href="https://www.google.com" target="blank">
+            <img src="D:/img.jpeg" alt="Image 1">
+        </a>
+        <a href="https://www.google.com" target="blank">
+            <img src="D:/img.jpeg" alt="Image 2">
+        </a>
+        <a href="https://www.wikipedia.org" target="blank">
+            <img src="D:/img4.jpg" alt="My image from D drive">
+        </a>
+    </div> <hr> <hr>
+    <asus>
+       <AA for="name">Name:</AA>
+        <input type="text" id="name" placeholder="Enter your Name">
+        
+        <AA for="email">Email:</AA>
+        <input type="email" id="email" placeholder="Enter your Email">
+
+        <AA for="Message">Message:</AA>
+        <input type="email" id="email" placeholder="Enter your Message">
+     
+        <button type="submit">Submit</button>
+    </asus> <hr><hr>
+    <div class="dark-mode-section">
+    <h1>Dark Mode Toggle</h1> <!-- Heading for the page -->
+    <button class="ABC" onclick="DarkMode()"> Dark Mode </button> <!-- Button ni create chestham .. -->
+    </div>
+    <script> // The <script> tag in HTML is used to add JavaScript code inside an HTML file. JavaScript is responsible for making a webpage interactive. Handle user interactions (e.g., button clicks)
+        // Function dark mode ni toggle cheyyadaniki
+        function DarkMode() {
+            document.body.classList.toggle('AAA'); // Body lo class add/remove chestham
+        }
+    </script> <hr> <hr> <hr> 
+
+     <!-- Portfolio Content Starts Here -->
+     <div class="portfolio-body">
+        <nav class="portfolio-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section class="portfolio-section" id="home">
+            <div class="welcome-box">
+            <h1>Welcome to My Portfolio</h1>
+            </div>
+        </section>
+        <section class="portfolio-section" id="about">
+            <h1 class="underline">Uma Sankar</h1>
+            <ul class="portfolio-ul" style="color: green;">
+                <li>Passionate web developer focusing on front-end.</li>
+                <li>B.Tech student at Tirumala Engineering College.</li>
+                <li>Learned web development from YouTube.</li>
+            </ul>
+        </section>
+        <section class="portfolio-section" id="skills" style="color: skyblue;">
+            <h1 class="underline">My Skills</h1>
+            <div class="skills-box">
+            <ul class="portfolio-ul" style="color: black;" >
+                <li>Python Basics</li>
+                <li>HTML Basics</li>
+                <li>CSS Basics</li>
+                <li>JavaScript Basics</li>
+            </ul>
+            </div>
+        </section>
+        <section class="portfolio-section" id="projects">
+            <h1 class="underline">My Projects</h1>
+            <table class="portfolio-table">
+                <tr><th class="portfolio-th">Project</th><th class="portfolio-th">Description</th></tr>
+                <tr><td class="portfolio-td">Portfolio Website</td><td class="portfolio-td">Built with HTML, CSS, JavaScript</td></tr>
+                <tr><td class="portfolio-td">Python Calculator</td><td class="portfolio-td">Simple calculator from YouTube course</td></tr>
+            </table>
+        </section>
+        <section class="portfolio-section" id="contact">
+            <h1 class="underline">Contact Me</h1>
+            <form class="portfolio-form">
+                <label>Name: <input type="text" name="name"></label>
+                <label>Email: <input type="email" name="email"></label>
+                <label>Message: <textarea name="message" maxlength="200"></textarea></label>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <footer>
+            <p>© 2025 My Portfolio</p>
+    <div class="social-icons">
+        <a href="https://www.primevideo.com/storefront/ref=atv_dl_rdr"  target="blank"><img src="D:/img6.jpeg" alt="PrimeVideo"></a>
+        <a href="https://www.aha.video/"  target="blank"><img src="D:/img7.jpg" alt="Aha"></a>
+        <a href="https://netfree.cc/mobile/home"  target="blank"><img src="D:/img8.jpeg" alt="Netflix"></a>
+    </div>
+</footer>
+</body>
+</html>

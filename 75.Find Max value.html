@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Max using reduce()</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f8ff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .box {
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find Maximum Value using reduce()</h1>
+
+  <div class="box">
+    <p><strong>Numbers:</strong> <span id="nums"></span></p>
+    <p><strong>Maximum Value:</strong> <span id="maxValue"></span></p>
+  </div>
+
+  <script>
+    // Step 1: Define an array of numbers
+    let nums = [10, 45, 23, 89, 32];
+
+    // Step 2: Use reduce() to find the maximum value
+    let max = nums.reduce((acc, curr) => {
+      // Compare current number with the current max (acc)
+      return curr > acc ? curr : acc;
+    });
+
+    // Step 3: Output to console
+    console.log("Numbers:", nums); // [10, 45, 23, 89, 32]
+    console.log("Max Value:", max); // 89
+
+    // Step 4: Show on the webpage
+    document.getElementById("nums").textContent = JSON.stringify(nums);
+    document.getElementById("maxValue").textContent = max;
+  </script>
+
+</body>
+</html>
+<!--reduce() compares each number (curr) with the current highest (acc)
+
+curr > acc ? curr : acc → If curr is bigger, return curr, else return acc
+
+This continues until all values are checked 
+
+
+| Use Case     | Code Idea                             |
+| ------------ | ------------------------------------- |
+| Sum of array | `arr.reduce((a, c) => a + c, 0)`      |
+| Product      | `arr.reduce((a, c) => a * c, 1)`      |
+| Find max     | `arr.reduce((a, c) => c > a ? c : a)` |

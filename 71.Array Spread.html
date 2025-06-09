@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread Operator Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6ff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .output {
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Spread Operator with Arrays</h1>
+
+  <div class="output">
+    <p><strong>Original Array:</strong> <span id="original"></span></p>
+    <p><strong>New Array with Spread:</strong> <span id="spread"></span></p>
+  </div>
+
+  <script>
+    // Step 1: Create the original array
+    let arr1 = [1, 2, 3]; 
+    // This array has three elements: 1, 2, and 3
+
+    // Step 2: Create a new array by copying arr1 and adding 4 and 5 using the spread operator
+    let arr2 = [...arr1, 4, 5]; 
+    // [...arr1] spreads (copies) all elements of arr1 into arr2
+    // Then 4 and 5 are added at the end
+
+    // Step 3: Display result in the browser console
+    console.log("Original Array:", arr1);         // Output: [1, 2, 3]
+    console.log("New Array with Spread:", arr2);  // Output: [1, 2, 3, 4, 5]
+
+    // Step 4: Display result on the webpage
+    document.getElementById("original").textContent = JSON.stringify(arr1);
+    document.getElementById("spread").textContent = JSON.stringify(arr2);
+  </script>
+
+</body>
+</html>

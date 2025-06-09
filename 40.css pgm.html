@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page meta information -->
+    <meta charset="UTF-8"> <!-- Website lo special characters correct ga display cheyyadam ki -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile-friendly responsive design kosam -->
+    <title>Responsive Portfolio</title> <!-- Browser tab lo title chupinchadam kosam -->
+    <style>
+        /* Page layout ki CSS apply chestunnam */
+        * {
+            margin: 0; /* Page edges ki space remove cheyadam */
+            padding: 0; /* Elements ki extra space ravvakunda cheyadam */
+            box-sizing: border-box; /* Box model correct ga set cheyadam */
+            font-family: Arial, sans-serif; /* Default font set cheyadam */
+        }
+        
+        /* Body background color set cheyadam */
+        body {
+            background-color: #f4f4f4; /* Light gray background set cheyadam */
+            text-align: center; /* Text center lo chupinchadam */
+        }
+        
+        /* Header section style */
+        header {
+            background-color: #333; /* Dark background color */
+            color: white; /* White text */
+            padding: 20px; /* Space add cheyadam header ki */
+            font-size: 24px; /* Text size penchadam */
+        }
+        
+        /* Profile image ki style */
+        .profile-img {
+            width: 150px; /* Image width set cheyadam */
+            height: 150px; /* Image height set cheyadam */
+            border-radius: 50%; /* Circle shape ki image */
+            margin-top: 20px; /* Top space add cheyadam */
+        }
+        
+        /* Container lo content center lo arrange cheyyadam */
+        .container {
+            width: 80%; /* Page width ki limit set cheyadam */
+            margin: auto; /* Center lo position cheyadam */
+            padding: 20px; /* Space add cheyadam */
+            background: white; /* White background petadam */
+            box-shadow: 0 0 10px gray; /* Light shadow effect add cheyadam */
+            border-radius: 10px; /* Soft corners ki round edges */
+        }
+        
+        /* Button style */
+        .btn {
+            display: inline-block; /* Button inline block lo untadi */
+            background: #007BFF; /* Blue background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Button size set cheyadam */
+            text-decoration: none; /* Underline remove cheyadam */
+            border-radius: 5px; /* Button edges smooth cheyadam */
+            margin-top: 10px; /* Button ki space add cheyadam */
+            transition: background 0.3s; /* Smooth color change effect */
+        }
+        
+        /* Hover effect ki style */
+        .btn:hover {
+            background: #0056b3; /* Button hover ayite darker blue shade untadi */
+        }
+        
+        /* Flexbox use cheyyadam sections arrange cheyyadam ki */
+        .about-section {
+            display: flex; /* Flexbox use cheyyadam */
+            flex-direction: column; /* Content vertical ga arrange avvali */
+            align-items: center; /* Content center lo arrange cheyyadam */
+            padding: 20px; /* Space add cheyadam */
+        }
+        
+        /* Responsive Design (Mobile lo adjust avvadam ki) */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Mobile lo content width penchadam */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page header start -->
+    <header>
+        My Responsive Portfolio <!-- Website title display cheyadam ki -->
+    </header>
+    
+    <!-- Content section -->
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img"> <!-- Profile image display cheyyadam ki -->
+        <h2>Hi, I'm a Web Developer</h2> <!-- Web developer title -->
+        <p>HTML, CSS tho responsive webpages create cheyyadam nunchi start chesthanu.</p> <!-- Short description -->
+        <a href="#" class="btn">Contact Me</a> <!-- Contact button create cheyyadam -->
+    </div>
+    
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About Me</h2> <!-- About section title -->
+        <p>Frontend Development lo interest. Responsive design create cheyyadam na goal.</p> <!-- Short bio -->
+    </div>
+</body>
+</html>

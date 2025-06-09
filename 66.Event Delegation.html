@@ -1,0 +1,53 @@
+ <!--  What is Event Delegation?
+👀 When we use onclick for every element, it's repetitive and slow.
+
+<li onclick="doSomething()">Item 1</li>
+<li onclick="doSomething()">Item 2</li>
+<li onclick="doSomething()">Item 3</li>
+
+
+Idi small example ki okay, but 100+ items untay?
+
+✅ Solution: Use Event Delegation
+👉 One parent element ki onclick veyyadam
+👉 Children elements lo click event handle cheyyadam
+
+Example: Click list items using parent <ul>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>List Click Alert</title>
+</head>
+<body>
+
+  <!-- List of fruits -->
+  <ul id="myList">
+    <li>Apple</li>   <!-- List item 1 -->
+    <li>Banana</li>  <!-- List item 2 -->
+    <li>Mango</li>   <!-- List item 3 -->
+  </ul>
+
+  <script>
+    // Step 1: <ul> element ni access chestunnam
+    document.getElementById("myList").addEventListener("click", function (event) {
+
+      // Step 2: check chestunnam click ayina element <li> a kadha ani
+      if (event.target.tagName === "LI") {
+
+        // Step 3: click ayina item name ni alert lo chupistunnam
+        alert("You clicked: " + event.target.innerText);
+      }
+
+    });
+  </script>
+
+</body>
+</html>
+
+  <!-- | Line                             | Meaning                                             | -------------------------------- | --------------------------------------------------- |
+| `addEventListener("click", ...)` | Parent element ki click event set chestunnam        |
+| `event.target`                   | Ye element click aindho adi                         |
+| `event.target.tagName === "LI"`  | Only `<li>` elements click aithe action jarugutundi |
+
+
+

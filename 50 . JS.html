@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event + DOM Example</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+
+  <h1 id="heading">Welcome to My Page</h1>
+  <button onclick="changeEverything()">Click Me</button>
+
+  <script>
+    function changeEverything() {
+      // Text ni change cheyyadam
+      document.getElementById("heading").innerText = "Thanks for Clicking!";
+
+      // Background color change cheyyadam
+      document.body.style.backgroundColor = "lightblue";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+<html>
+<html>
+<head>
+<!-- Head section start chesam -->
+    <title>My Portfolio</title>
+    <!-- Page title "My Portfolio" set chesam -->
+    <style>
+    /*<!-- CSS style section start chesam --> */
+        /* Body style set chesam - background skyblue, center text */
+        body {
+        /* Body tag ki styles apply chesam */
+            margin: 0;
+            /* Default margin zero chesam for no extra space */
+            font-family: Arial, sans-serif;
+            /* Font Arial set chesam for text style */
+            background-color: skyblue ;
+            /* Background color skyblue set chesam as per request */
+            color: black;
+            /* Text color black set chesam */
+            text-align: center;
+            /* All text center align chesam */
+        }
+        /* Navigation bar style - white background, shadow add chesam */
+        nav {
+        /* Nav tag ki styles apply chesam */
+            background-color: pink;
+            /* Nav background white color set chesam */
+            padding: 10px 0;
+            /* Nav ki top and bottom padding 10px set chesam */
+            box-shadow: 0 2px 5px black;
+            /* Nav ki shadow add chesam for 3D effect */
+        }
+        /* Nav links style - space between links, no underline */
+        nav a {
+        /* Nav links (anchor tags) ki styles apply chesam */
+            margin: 0 20px;
+            /* Links ki left and right margin 20px set chesam for spacing */
+            text-decoration: none;
+            /* Links ki default underline remove chesam */
+            color: black;
+            /* Links text color black set chesam */
+            font-weight: bold;
+            /* Links text bold chesam for emphasis */
+        }
+        /* Nav links hover effect - blue color on hover */
+        nav a:hover {
+        /* Nav links hover effect apply chesam */
+            color: black;
+            /* Hover chesinappudu link color blue set chesam */
+        }
+        /* Section style - padding, center content vertically and horizontally */
+        section {
+        /* Section tag ki styles apply chesam */
+            padding: 50px;
+            /* Section ki all sides padding 50px set chesam */
+            min-height: 80vh;
+            /* Section minimum height 80% of viewport height set chesam */
+            display: flex;
+            /* Flexbox use chesam for centering content */
+            flex-direction: column;
+            /* Flex items vertically stack chesam */
+            justify-content: center;
+            /* Content vertically center chesam */
+            align-items: center;
+            /* Content horizontally center chesam */
+        }
+        /* Heading style - blue color, large font */
+        h1 {
+        /* H1 heading tag ki styles apply chesam */
+            color: #1E90FF;
+            /* Heading color blue set chesam */
+            font-size: 2.5em;
+            /* Heading font size 2.5 times normal set chesam */
+        }
+        /* Paragraph style - readable size, center align */
+        p {
+        /* Paragraph tag ki styles apply chesam */
+            font-size: 1.2em;
+            /* Paragraph font size 1.2 times normal set chesam */
+            max-width: 600px;
+            /* Paragraph maximum width 600px set chesam for readability */
+            margin: 20px auto;
+            /* Paragraph ki top and bottom margin 20px, left and right auto for centering */
+        }
+        /* Welcome box style - border add chesam for "Welcome to My Portfolio" */
+        .welcome-box {
+        /* Welcome-box class ki styles apply chesam */
+            border: 2px solid #000;
+            /* Box ki 2px thick black border add chesam */
+            padding: 20px;
+            /* Box ki all sides padding 20px set chesam */
+            border-radius: 10px;
+            /* Box corners round chesam with 10px radius */
+        }
+        /* About section lo underline style for "Swathi Tirumala" */
+        .underline {
+        /* Underline class ki styles apply chesam */
+            border-bottom: 2px solid #000;
+            /* Swathi Tirumala ki bottom border (underline) 2px black set chesam */
+            display: inline-block;
+            /* Underline only text width varaku undali ani inline-block set chesam */
+            padding-bottom: 5px;
+            /* Underline and text madya 5px space add chesam */
+        }
+        /* About section lo list ki box and bullets style */
+        .about-list {
+        /* About-list class ki styles apply chesam */
+            list-style-type: disc;
+            /* List items ki disc (bullet) style set chesam */
+            padding: 20px;
+            /* List ki all sides padding 20px set chesam */
+            border: 2px solid #000;
+            /* List ki 2px thick black border add chesam */
+            border-radius: 10px;
+            /* List box corners round chesam with 10px radius */
+            max-width: 600px;
+            /* List maximum width 600px set chesam */
+            text-align: left;
+            /* List text left align chesam */
+            margin: 20px auto;
+            /* List ki top and bottom margin 20px, left and right auto for centering */
+        }
+        /* Skills list style - no default bullets, left align */
+        ul {
+        /* Unordered list tag ki styles apply chesam */
+            list-style-type: none;
+            /* Default bullets remove chesam */
+            padding: 0;
+            /* List padding zero set chesam */
+            text-align: left;
+            /* List text left align chesam */
+            max-width: 300px;
+            /* List maximum width 300px set chesam */
+            margin: 0 auto;
+            /* List ki top and bottom margin 0, left and right auto for centering */
+        }
+        /* Projects table style - border, center align */
+        table {
+        /* Table tag ki styles apply chesam */
+            width: 80%;
+            /* Table width 80% of parent set chesam */
+            max-width: 600px;
+            /* Table maximum width 600px set chesam */
+            border-collapse: collapse;
+            /* Table borders merge chesam for clean look */
+            margin: 20px auto;
+            /* Table ki top and bottom margin 20px, left and right auto for centering */
+        }
+        /* Table borders add chesam */
+        table, th, td {
+        /* Table, table header, table data ki styles apply chesam */
+            border: 1px solid #000;
+            /* Table ki 1px thick black border add chesam */
+        }
+        /* Table cells padding and alignment */
+        th, td {
+        /* Table header and data cells ki styles apply chesam */
+            padding: 10px;
+            /* Cells ki all sides padding 10px set chesam */
+            text-align: left;
+            /* Cells text left align chesam */
+        }
+        /* Contact form style - center, limited width */
+        form {
+        /* Form tag ki styles apply chesam */
+            max-width: 400px;
+            /* Form maximum width 400px set chesam */
+            margin: 0 auto;
+            /* Form ki top and bottom margin 0, left and right auto for centering */
+            text-align: left;
+            /* Form text left align chesam */
+        }
+        /* Form labels style - block display, spacing */
+        form label {
+        /* Form labels ki styles apply chesam */
+            display: block;
+            /* Labels ni block display chesam for new line */
+            margin: 10px 0 5px;
+            /* Labels ki top margin 10px, bottom 5px set chesam */
+        }
+        /* Form inputs and textarea style - full width, padding */
+        form input, form textarea {
+        /* Form inputs and textarea ki styles apply chesam */
+            width: 100%;
+            /* Inputs width 100% set chesam to fill form */
+            padding: 5px;
+            /* Inputs ki all sides padding 5px set chesam */
+            margin-bottom: 10px;
+            /* Inputs ki bottom margin 10px set chesam for spacing */
+        }
+        /* Gender and interests labels spacing adjust chesam - paiki move chesam */
+        .inline-label {
+        /* Inline-label class ki styles apply chesam */
+            display: inline;
+            /* Labels ni inline display chesam for side-by-side placement */
+            margin: 0 5px 0 0;
+            /* Labels ki right margin 5px set chesam for spacing */
+        }
+        /* Submit button style - blue background, white text */
+        form input[type="submit"] {
+        /* Submit button ki styles apply chesam */
+            width: auto;
+            /* Button width auto set chesam to fit text */
+            padding: 10px 20px;
+            /* Button ki padding 10px top-bottom, 20px left-right set chesam */
+            background-color: #1E90FF;
+            /* Button background blue set chesam */
+            color: #fff;
+            /* Button text color white set chesam */
+            border: none;
+            /* Button border remove chesam */
+            cursor: pointer;
+            /* Button hover chesinappudu pointer cursor show chesam */
+        }
+        /* Footer style - black background, white text, fixed bottom */
+        footer {
+        /* Footer tag ki styles apply chesam */
+            background-color: #000;
+            /* Footer background black set chesam */
+            color: #fff;
+            /* Footer text color white set chesam */
+            padding: 10px 0;
+            /* Footer ki top and bottom padding 10px set chesam */
+            position: fixed;
+            /* Footer ni bottom ki fix chesam */
+            bottom: 0;
+            /* Footer bottom edge ki set chesam */
+            width: 100%;
+            /* Footer width 100% set chesam to span full page */
+        }
+    </style>
+    <!-- Style section end chesam -->
+</head>
+<!-- Head section end chesam -->
+<body>
+<!-- Body section start chesam -->
+    <nav>
+    <!-- Navigation bar start chesam -->
+        <a href="#home">Home</a>
+        <!-- Home section link add chesam -->
+        <a href="#about">About</a>
+        <!-- About section link add chesam -->
+        <a href="#skills">Skills</a>
+        <!-- Skills section link add chesam -->
+        <a href="#projects">Projects</a>
+        <!-- Projects section link add chesam -->
+        <a href="#contact">Contact</a>
+        <!-- Contact section link add chesam -->
+    </nav>
+    <!-- Navigation bar end chesam -->
+
+    <section id="home">
+    <!-- Home section start chesam with id "home" -->
+        <div class="welcome-box">
+        <!-- Welcome-box div start chesam for border -->
+            <h1>Welcome to My Portfolio</h1>
+            <!-- Welcome heading add chesam -->
+        </div>
+        <!-- Welcome-box div end chesam -->
+    </section>
+    <!-- Home section end chesam -->
+
+    <section id="about">
+    <!-- About section start chesam with id "about" -->
+        <h1 class="underline"> Uma Sankar </h1>
+        <!-- Swathi Tirumala heading add chesam with underline class -->
+        <ul class="about-list">
+        <!-- About list start chesam with about-list class for bullets and box -->
+            <li>I am a passionate web developer with a focus on front-end technologies.</li>
+            <!-- First list item add chesam -->
+            <li>I am currently pursuing my B.Tech in Tirumala Engineering College.</li>
+            <!-- Second list item add chesam -->
+            <li>I have learned Web Development from YouTube.</li>
+            <!-- Third list item add chesam -->
+            <li>You can click here to check what I have learned in HTML, CSS, JS.</li>
+            <!-- Fourth list item add chesam -->
+        </ul>
+        <!-- About list end chesam -->
+    </section>
+    <!-- About section end chesam -->
+
+    <section id="skills">
+    <!-- Skills section start chesam with id "skills" -->
+        <h1>My Skills</h1>
+        <!-- Skills heading add chesam -->
+        <ul>
+        <!-- Skills list start chesam -->
+            <li>1. Python Basics</li>
+            <!-- First skill add chesam -->
+            <li>2. HTML Basics</li>
+            <!-- Second skill add chesam -->
+            <li>3. CSS Basics</li>
+            <!-- Third skill add chesam -->
+            <li>4. JavaScript Basics</li>
+            <!-- Fourth skill add chesam -->
+        </ul>
+        <!-- Skills list end chesam -->
+    </section>
+    <!-- Skills section end chesam -->
+
+    <section id="projects">
+    <!-- Projects section start chesam with id "projects" -->
+        <h1>My Projects</h1>
+        <!-- Projects heading add chesam -->
+        <table>
+        <!-- Projects table start chesam -->
+            <tr>
+            <!-- Table row start chesam -->
+                <th>Project</th>
+                <!-- Table header for Project column add chesam -->
+                <th>Description</th>
+                <!-- Table header for Description column add chesam -->
+            </tr>
+            <!-- Table row end chesam -->
+            <tr>
+            <!-- Table row start chesam -->
+                <td>Portfolio Website</td>
+                <!-- Table data for first project name add chesam -->
+                <td>I have built a portfolio website by using HTML, CSS & JavaScript</td>
+                <!-- Table data for first project description add chesam -->
+            </tr>
+            <!-- Table row end chesam -->
+            <tr>
+            <!-- Table row start chesam -->
+                <td>Python Simple Calculator</td>
+                <!-- Table data for second project name add chesam -->
+                <td>I have built a simple calculator in the course by YouTube</td>
+                <!-- Table data for second project description add chesam -->
+            </tr>
+            <!-- Table row end chesam -->
+        </table>
+        <!-- Projects table end chesam -->
+    </section>
+    <!-- Projects section end chesam -->
+
+    <section id="contact">
+    <!-- Contact section start chesam with id "contact" -->
+        <h1>Contact Me</h1>
+        <!-- Contact heading add chesam -->
+        <p>Feel free to get in touch with me using the form below:</p>
+        <!-- Contact instruction paragraph add chesam -->
+        <form>
+        <!-- Contact form start chesam -->
+            <label for="name">Name:</label>
+            <!-- Label for name input add chesam -->
+            <input type="text" id="name" name="name" required>
+            <!-- Text input for name add chesam, required set chesam -->
+            <label for="email">Email:</label>
+            <!-- Label for email input add chesam -->
+            <input type="email" id="email" name="email" required>
+            <!-- Email input add chesam, required set chesam -->
+            <label>Choose your gender:</label>
+            <!-- Label for gender selection add chesam -->
+            <input type="radio" id="male" name="gender" value="male">
+            <!-- Radio button for male gender add chesam -->
+            <label for="male" class="inline-label">Male</label>
+            <!-- Label for male radio button add chesam with inline-label class -->
+            <input type="radio" id="female" name="gender" value="female">
+            <!-- Radio button for female gender add chesam -->
+            <label for="female" class="inline-label">Female</label>
+            <!-- Label for female radio button add chesam with inline-label class -->
+            <label>Select your interests:</label>
+            <!-- Label for interests selection add chesam -->
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <!-- Checkbox for coding interest add chesam -->
+            <label for="coding" class="inline-label">Coding</label>
+            <!-- Label for coding checkbox add chesam with inline-label class -->
+            <input type="checkbox" id="reading" name="interests" value="reading">
+            <!-- Checkbox for reading interest add chesam -->
+            <label for="reading" class="inline-label">Reading</label>
+            <!-- Label for reading checkbox add chesam with inline-label class -->
+            <label for="message">Message (up to 200 characters):</label>
+            <!-- Label for message textarea add chesam -->
+            <textarea id="message" name="message" maxlength="200"></textarea>
+            <!-- Textarea for message add chesam with 200 character limit -->
+            <input type="submit" value="Submit">
+            <!-- Submit button add chesam with value "Submit" -->
+        </form>
+        <!-- Contact form end chesam -->
+    </section>
+    <!-- Contact section end chesam -->
+
+    <footer>
+    <!-- Footer section start chesam -->
+        <p>© 2025 My Portfolio</p>
+        <!-- Footer text with copyright 2025 add chesam -->
+    </footer>
+    <!-- Footer section end chesam -->
+</body>
+<!-- Body section end chesam -->
+</html>
+<!-- HTML document end chesam -->

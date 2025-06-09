@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save & Show Name</title>
+</head>
+<body>
+
+  <!-- User name enter cheyyadaniki text box -->
+  <input type="text" id="username" placeholder="Enter your name">
+
+  <!-- Name ni save cheyyadaniki button -->
+  <button onclick="saveName()">Save Name</button>
+
+  <!-- Save ayyina name display cheyyadaniki button -->
+  <button onclick="showName()">Show Name</button>
+
+  <!-- Result display cheyyadaniki paragraph -->
+  <p id="result"></p>
+
+  <script>
+    // Ee function user name ni localStorage lo store chestundi
+    function saveName() {
+      let name = document.getElementById("username").value;  // User input lo enter chesina value ni theesukuntundi
+      localStorage.setItem("myName", name);                  // localStorage lo 'myName' ane key tho value store chestundi
+      alert("Name saved!");                                  // User ki alert chupistundi "Name saved!" ani
+    }
+
+    // Ee function localStorage lo nunchi name ni theesi display chestundi
+    function showName() {
+      let name = localStorage.getItem("myName");             // localStorage lo nunchi 'myName' ane key tho value ni theesukuntundi
+      document.getElementById("result").innerText = "Hi " + name;  // Result paragraph lo "Hi [name]" ani display chestundi
+    }
+  </script>
+
+</body>
+</html>
+ <!-- | Action         | Code                                   |
+| -------------- | -------------------------------------- |
+| Save           | `localStorage.setItem("key", "value")` |
+| Get            | `localStorage.getItem("key")`          |
+| Remove         | `localStorage.removeItem("key")`       |
+| Clear all data | `localStorage.clear()`                 |

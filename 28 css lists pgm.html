@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            ol.ABC {
+                list-style-type: none;
+                counter-reset: custom-counter;
+                padding-left: 0;
+            }
+            ol.ABC li {
+                counter-increment: custom-counter;
+                margin-bottom: 5px;
+            }
+            ol.ABC li :before {
+                content: counter(ABC) ". ";
+                font-weight: bold;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <ol class="ABC">
+            <li> ONE </li>
+            <li> TWO </li>
+            <li> THREE </li>
+        </ol>
+    </body>
+</html>

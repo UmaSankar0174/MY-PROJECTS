@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Destructuring Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .section {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Object Destructuring in JavaScript</h1>
+
+  <div class="section">
+    <h2>Without Destructuring:</h2>
+    <p id="name1"></p>
+    <p id="age1"></p>
+  </div>
+
+  <div class="section">
+    <h2>With Destructuring:</h2>
+    <p id="name2"></p>
+    <p id="age2"></p>
+  </div>
+
+  <script>
+    // Step 1: Create an object named 'user' with two properties: name and age
+    let user = {
+      name: "Uma",  // name property
+      age: 23       // age property
+    };
+
+    // -------------------- Without Destructuring --------------------
+
+    // Step 2: Access each property using dot notation
+    let name1 = user.name; // Assigns "Uma" to variable name1
+    let age1 = user.age;   // Assigns 23 to variable age1
+
+    // Step 3: Display values in the console
+    console.log("Without Destructuring:");
+    console.log("Name:", name1); // Output: Uma
+    console.log("Age:", age1);   // Output: 23
+
+    // Step 4: Display values on the webpage
+    document.getElementById("name1").textContent = "Name: " + name1;
+    document.getElementById("age1").textContent = "Age: " + age1;
+
+    // -------------------- With Destructuring --------------------
+
+    // Step 5: Use object destructuring to extract values
+    let { name, age } = user; 
+    // This means: name = user.name, age = user.age
+
+    // Step 6: Display destructured values in the console
+    console.log("With Destructuring:");
+    console.log("Name:", name); // Output: Uma
+    console.log("Age:", age);   // Output: 23
+
+    // Step 7: Display destructured values on the webpage
+    document.getElementById("name2").textContent = "Name: " + name;
+    document.getElementById("age2").textContent = "Age: " + age;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<head>
+    <title>CSS Image Gallery</title>
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: skyblue;       
+         }
+
+        /* Heading Styling */
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: grey;
+            margin: 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        /* Gallery Container */
+        .gallery {    /* body styling ki  use chestaru .gallery place lo adayna use cheyochu */
+            display: grid; /* line by line ga img ostay * .. use cheykapothe random ga imgs ostay */
+            gap: 50px; /* Spacing between images */
+            padding: 20px;
+        }
+
+        /* Image Styling */
+        .gallery img {   /* body lo imgs styling ki use chestaru */
+            width: 30%; /* Make images fill the container */
+            height:auto;
+            /*object-fit: cover; /* Crop images to fit */
+            border-radius: 10px; /* Rounded corners */
+            object-fit: cover; /* Crop to fit */
+        }
+
+        /* Hover Effect */
+        .gallery img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+            box-shadow: 0 8px 20px blue; /* Stronger shadow on hover */
+            filter: brightness(1.9); /* Slight brightness boost */
+            cursor: pointer; /* Hand cursor */
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">CSS Image Gallery</h2>
+
+    <div class="gallery">
+        <a href="https://www.google.com" target="blank">
+            <img src="D:/img.jpeg" alt="Image 1">
+        </a>
+        <a href="https://www.example.com" target="blank">
+            <img src="D:/img3.jpeg" alt="Image 2">
+        </a>
+        <a href="https://www.wikipedia.org" target="blank">
+            <img src="D:/img4.jpg" alt="My image from D drive">
+        </a>
+        <a href="https://www.youtube.com" target="blank">
+            <img src="D:/img5.jpg" alt="Image 4">
+        </a>
+        <a href="https://www.github.com" target="blank">
+            <img src="D:/img6.jpeg" alt="Image 5">
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Idi HTML document ani browser ki cheptundi -->
+<html>
+
+<head>
+  <title>Login Form Validation</title>
+  <!-- Page title ni browser tab lo chupistundi -->
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 50px;
+    }
+    /* Page ki Arial font apply chestundi & 20px padding istundi */
+
+    .form-box {
+      width: 400px;
+      padding: 20px;
+      border: 1px solid red;
+      border-radius: 8px;
+    }
+    /* form-box ane class ki 300px width, 20px padding,
+       gray color border & 8px rounded corners istundi */
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin-top: 20px;
+    }
+    /* Input box ki full width (100%), 8px padding,
+       10px top margin istundi */
+
+    button {
+      margin-top: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+    /* Button ki 15px top margin, 10px padding,
+       full width (100%) apply chestundi */
+  </style>
+</head>
+
+<body>
+
+  <h2>Login Form</h2>
+  <!-- Heading ga "Login Form" display chestundi -->
+
+  <!-- Login Form start -->
+  <div class="form-box">
+    <!-- form-box class to form design start -->
+
+    <input type="text" id="email" placeholder="Enter your email" />
+    <!-- Email ki input box. type="text", id=email, 
+         placeholder lo hint ga "Enter your email" untundi -->
+
+    <input type="password" id="password" placeholder="Enter your password" />
+    <!-- Password ki input box. type="password", id=password,
+         hint ga "Enter your password" chupistundi -->
+
+    <button onclick="validateLogin()">Login</button>
+    <!-- Button click aina ventane validateLogin() function call avtundi -->
+  </div>
+
+  <script>
+    // Function to validate email and password
+    function validateLogin() {
+      // Email input value ni tesukuntundi
+      let email = document.getElementById("email").value;
+
+      // Password input value ni tesukuntundi
+      let password = document.getElementById("password").value;
+
+      // Check if fields are empty
+      if (email === "" || password === "") {
+        // Email or password empty unte alert message chupistundi
+        alert("All fields are required.");
+        return; // Stop function execution
+      }
+
+      // Simple email format check
+      if (!email.includes("@") || !email.includes(".")) {
+        // email lo '@' and '.' lekapote alert istundi
+        alert("Please enter a valid email.");
+        return;
+      }
+
+      // Password length check
+      if (password.length < 6) {
+        // Password 6 characters kanna thakkuva unte alert istundi
+        alert("Password must be at least 6 characters.");
+        return;
+      }
+
+      // If all checks pass
+      alert("Login successful!");
+      // Email & password correct format lo unte success message chupistundi
+    }
+  </script>
+
+</body>
+</html>

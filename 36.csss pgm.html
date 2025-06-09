@@ -1,0 +1,161 @@
+<!DOCTYPE html> <!-- This tells the browser that this is an HTML5 document -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+<head> <!-- This section holds metadata and settings for the page -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for special characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive by adjusting to the device’s screen size -->
+    <title>Intermediate Projects</title> <!-- Sets the title of the page, shown in the browser tab -->
+    <style> <!-- Starts the CSS section where we style the page -->
+        /* Basic Reset */ /* This is a comment grouping the reset styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; } /* Removes default margins and padding from all elements and makes sizing include borders */
+        body { font-family: Arial, sans-serif; } /* Sets the font for the whole page to Arial or a similar simple font */
+
+        /* Responsive Navigation Menu with Dropdown */ /* This is a comment grouping the navigation styles */
+        nav { /* Styles the navigation bar */
+            background: #333; /* Sets the background color to a dark gray */
+            color: white; /* Makes the text inside the nav white */
+            padding: 10px; /* Adds 10 pixels of space inside the nav */
+            text-align: center; /* Centers the text inside the nav */
+        }
+        .nav-links { /* Styles the container for navigation links */
+            display: flex; /* Uses flexbox to place links side by side */
+            justify-content: center; /* Centers the links horizontally */
+            flex-wrap: wrap; /* Allows links to wrap to the next line on small screens */
+        }
+        .nav-links a { /* Styles the links inside the nav */
+            color: white; /* Makes the link text white */
+            text-decoration: none; /* Removes the underline from links */
+            padding: 10px; /* Adds 10 pixels of space around each link */
+            display: inline-block; /* Makes links sit side by side with some block-like properties */
+        }
+        .dropdown { /* Styles the dropdown container */
+            position: relative; /* Positions the dropdown relative to its normal place */
+        }
+        .dropdown-content { /* Styles the dropdown menu */
+            display: none; /* Hides the dropdown menu by default */
+            position: absolute; /* Positions the dropdown menu absolutely below the link */
+            background: #444; /* Sets the dropdown background to a slightly lighter gray */
+            min-width: 120px; /* Sets a minimum width for the dropdown menu */
+            z-index: 1; /* Ensures the dropdown appears above other elements */
+        }
+        .dropdown:hover .dropdown-content { /* Shows the dropdown menu when hovering over the dropdown */
+            display: block; /* Makes the dropdown menu visible on hover */
+        }
+        .dropdown-content a { /* Styles the links inside the dropdown */
+            display: block; /* Makes dropdown links stack vertically */
+            padding: 10px; /* Adds 10 pixels of space around each dropdown link */
+        }
+        @media (max-width: 600px) { /* Applies styles for screens smaller than 600px (mobile) */
+            .nav-links { /* Adjusts the navigation links for mobile */
+                flex-direction: column; /* Stacks the links vertically on small screens */
+            }
+            .dropdown-content { /* Adjusts the dropdown menu for mobile */
+                position: static; /* Removes absolute positioning for better mobile display */
+            }
+        }
+
+        /* CSS Grid Gallery */ /* This is a comment grouping the gallery styles */
+        .gallery { /* Styles the image gallery section */
+            display: grid; /* Uses CSS Grid to arrange items in a grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates columns that adjust automatically, each at least 200px wide but flexible */
+            gap: 10px; /* Adds 10 pixels of space between grid items */
+            padding: 20px; /* Adds 20 pixels of space around the gallery */
+        }
+        .gallery img { /* Styles the images inside the gallery */
+            width: 100%; /* Makes images take up the full width of their grid cell */
+            height: auto; /* Keeps the image height proportional to its width */
+            border-radius: 5px; /* Rounds the corners of images by 5 pixels */
+        }
+
+        /* Pricing Table */ /* This is a comment grouping the pricing styles */
+        .pricing { /* Styles the pricing section */
+            display: flex; /* Uses flexbox to arrange pricing plans side by side */
+            justify-content: center; /* Centers the plans horizontally */
+            gap: 20px; /* Adds 20 pixels of space between pricing plans */
+            padding: 20px; /* Adds 20 pixels of space around the pricing section */
+            flex-wrap: wrap; /* Allows plans to wrap to the next line on small screens */
+        }
+        .plan { /* Styles each individual pricing plan */
+            border: 1px solid #ddd; /* Adds a light gray border around each plan */
+            padding: 20px; /* Adds 20 pixels of space inside each plan */
+            text-align: center; /* Centers the text inside each plan */
+            border-radius: 5px; /* Rounds the corners of each plan by 5 pixels */
+            width: 200px; /* Sets a fixed width for each plan */
+        }
+        .plan:hover { /* Changes the style when you hover over a plan */
+            background: #f4f4f4; /* Sets a light gray background on hover */
+        }
+
+        /* Parallax Effect */ /* This is a comment grouping the parallax styles */
+        .parallax { /* Styles the parallax section */
+            background: url('https://via.placeholder.com/1200x300') no-repeat center; /* Sets a background image, centered, and doesn’t repeat */
+            background-size: cover; /* Makes the background image cover the entire section */
+            background-attachment: fixed; /* Creates the parallax effect by fixing the background while scrolling */
+            height: 300px; /* Sets the height of the parallax section to 300 pixels */
+            position: relative; /* Positions it relative to its normal place for potential layering */
+        }
+
+        /* CSS Image Slider */ /* This is a comment grouping the slider styles */
+        .slider { /* Styles the image slider section */
+            display: flex; /* Uses flexbox to place slides side by side */
+            overflow: hidden; /* Hides anything that goes beyond the slider’s width */
+            width: 100%; /* Makes the slider take up the full width of its container */
+        }
+        .slide { /* Styles each slide in the slider */
+            min-width: 100%; /* Ensures each slide is at least as wide as the slider */
+            animation: slide 9s infinite; /* Runs the ‘slide’ animation for 9 seconds, repeating forever */
+        }
+        @keyframes slide { /* Defines the animation called ‘slide’ */
+            0% { transform: translateX(0%); } /* Starts with the first slide fully visible */
+            33% { transform: translateX(-100%); } /* Moves to the second slide after 33% of the time */
+            66% { transform: translateX(-200%); } /* Moves to the third slide after 66% of the time */
+            100% { transform: translateX(0%); } /* Brings it back to the first slide at the end */
+        }
+    </style> <!-- Ends the CSS section -->
+</head> <!-- Ends the head section -->
+<body> <!-- Starts the main content of the page -->
+    <nav> <!-- Starts the navigation bar -->
+        <div class="nav-links"> <!-- Container for navigation links -->
+            <a href="#">Home</a> <!-- Link to the home page (placeholder link) -->
+            <div class="dropdown"> <!-- Starts the dropdown menu for Gallery -->
+                <a href="#">Gallery</a> <!-- Main link for the Gallery dropdown -->
+                <div class="dropdown-content"> <!-- Starts the dropdown menu content -->
+                    <a href="#">Photos</a> <!-- Dropdown link for Photos -->
+                    <a href="#">Videos</a> <!-- Dropdown link for Videos -->
+                </div> <!-- Ends the dropdown menu content -->
+            </div> <!-- Ends the Gallery dropdown -->
+            <div class="dropdown"> <!-- Starts the dropdown menu for Pricing -->
+                <a href="#">Pricing</a> <!-- Main link for the Pricing dropdown -->
+                <div class="dropdown-content"> <!-- Starts the dropdown menu content -->
+                    <a href="#">Basic</a> <!-- Dropdown link for Basic plan -->
+                    <a href="#">Premium</a> <!-- Dropdown link for Premium plan -->
+                </div> <!-- Ends the dropdown menu content -->
+            </div> <!-- Ends the Pricing dropdown -->
+        </div> <!-- Ends the container for navigation links -->
+    </nav> <!-- Ends the navigation bar -->
+
+    <div class="gallery"> <!-- Starts the gallery section -->
+        <img src="D:/img3.jpeg" alt="Gallery Image 1"> <!-- Displays the first image in the gallery -->
+        <img src="D:/img3.jpeg" alt="Gallery Image 2"> <!-- Displays the second image in the gallery -->
+        <img src="D:/img3.jpeg" alt="Gallery Image 3"> <!-- Displays the third image in the gallery -->
+    </div> <!-- Ends the gallery section -->
+
+    <div class="pricing"> <!-- Starts the pricing section -->
+        <div class="plan"> <!-- Starts the first pricing plan -->
+            <h3>Basic</h3> <!-- Title of the plan: Basic -->
+            <p>$9/month</p> <!-- Price of the Basic plan -->
+        </div> <!-- Ends the first pricing plan -->
+        <div class="plan"> <!-- Starts the second pricing plan -->
+            <h3>Premium</h3> <!-- Title of the plan: Premium -->
+            <p>$19/month</p> <!-- Price of the Premium plan -->
+        </div> <!-- Ends the second pricing plan -->
+    </div> <!-- Ends the pricing section -->
+
+    <div class="parallax"></div> <!-- Creates a parallax section with a background image -->
+
+    <div class="slider"> <!-- Starts the image slider section -->
+        <img class="slide" src="D:/img10.jpg" alt="Slide 1"> <!-- First slide with an image -->
+        <img class="slide" src="D:/img10.jpg" alt="Slide 2"> <!-- Second slide with an image -->
+        <img class="slide" src="D:/img10.jpg" alt="Slide 3"> <!-- Third slide with an image -->
+    </div> <!-- Ends the slider section -->
+</body> <!-- Ends the main content -->
+</html> <!-- Ends the HTML document -->

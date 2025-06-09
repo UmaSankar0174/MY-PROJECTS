@@ -1,0 +1,77 @@
+<!--   Async / Await
+Idi promises ni use cheyyadam chala easy style. 
+
+What It Does:
+Shows "Loading..." immediately.
+
+Waits for 1 second.
+
+Shows "🌟 Data Loaded"
+
+async function lets you use await keyword inside it.
+
+await getData() waits until the Promise returned by getData() resolves.
+
+Makes asynchronous code look clean and readable like synchronous code.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Async Await Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f9ff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .box {
+      background-color: #fff;
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Async/Await with Promise</h1>
+
+  <div class="box" id="output">Waiting...</div>
+
+  <script>
+    // Simulate fetching data with a Promise
+    function getData() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve("🌟 Data Loaded");
+        }, 1000); // 1 second delay
+      });
+    }
+
+    // Async function to handle the process
+    async function showData() {
+      console.log("Loading..."); // 1. Console log
+      document.getElementById("output").textContent = "Loading...";
+
+      let data = await getData(); // 2. Waits here until the promise resolves
+
+      console.log(data); // 3. Console log after promise resolves
+      document.getElementById("output").textContent = data;
+    }
+
+    // Call the function
+    showData();
+  </script>
+
+</body>
+</html>

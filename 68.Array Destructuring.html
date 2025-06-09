@@ -1,0 +1,23 @@
+// Create an array of fruits
+let fruits = ["Apple", "Banana", "Mango"];
+
+// ---------- Without Destructuring ----------
+
+// Accessing array elements one by one using their index
+let first = fruits[0];  // Assigns "Apple" to 'first'
+let second = fruits[1]; // Assigns "Banana" to 'second'
+
+// Display the values using console.log
+console.log("Without Destructuring:");
+console.log("First fruit:", first);   // Output: Apple
+console.log("Second fruit:", second); // Output: Banana
+
+// ---------- With Destructuring ----------
+
+// Using array destructuring to assign first two values of the array to variables 'a' and 'b'
+let [a, b] = fruits; // a = "Apple", b = "Banana"
+
+// Display the values using console.log
+console.log("With Destructuring:");
+console.log("First fruit:", a); // Output: Apple
+console.log("Second fruit:", b); // Output: Banana

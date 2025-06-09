@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- HTML document ani chepthundi -->
+<html>
+<head>
+  <title>To-Do List</title> <!-- Browser tab title -->
+  <style>
+    /* Page ki font and padding icham */
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    /* Input box ki width and padding */
+    #taskInput {
+      width: 70%;
+      padding: 10px;
+    }
+
+    /* Add Task button ki padding */
+    #addBtn {
+      padding: 10px;
+    }
+
+    /* Unordered list (task list) ki spacing */
+    ul {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+
+    /* Task item style */
+    li {
+      list-style: none; /* bullets remove cheyyadam */
+      background-color: #f0f0f0; /* light background */
+      padding: 10px;
+      margin-top: 5px;
+      display: flex; /* button and text side by side */
+      justify-content: space-between; /* space between text and delete button */
+    }
+
+    /* Delete button style */
+    button.delete {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📝 To-Do List</h2> <!-- Heading -->
+
+  <!-- Task enter cheyyadam ki input -->
+  <input type="text" id="taskInput" placeholder="Enter your task">
+
+  <!-- Add button, click avuthe function call -->
+  <button id="addBtn" onclick="addTask()">Add Task</button>
+
+  <!-- Task list display cheyyadam ki <ul> -->
+  <ul id="taskList"></ul>
+
+  <script>
+    // Function to add task
+    function addTask() {
+      // Task input field value ni theesukuntundi
+      let taskInput = document.getElementById("taskInput");
+      let task = taskInput.value;
+
+      // User empty ga task enter cheste alert chupistundi
+      if (task === "") {
+        alert("Please enter a task.");
+        return; // stop function
+      }
+
+      // <li> (list item) create cheyyadam
+      let li = document.createElement("li");
+
+      // <li> ki task text and delete button add cheyyadam
+      li.innerHTML = `
+        ${task} <!-- user enter chesina task -->
+        <button class="delete" onclick="deleteTask(this)">Delete</button>
+      `;
+
+      // list ki (ul) li ni add cheyyadam
+      document.getElementById("taskList").appendChild(li);
+
+      // Task enter ayyaka input box clear cheyyadam
+      taskInput.value = "";
+    }
+
+    // Function to delete task
+    function deleteTask(btn) {
+      // button parent element ni theesukuntundi (li)
+      let li = btn.parentElement;
+
+      // a task (li) ni remove cheyyadam
+      li.remove();
+    }
+  </script>
+
+</body>
+</html>

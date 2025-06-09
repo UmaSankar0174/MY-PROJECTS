@@ -1,0 +1,113 @@
+  <!--   What is sessionStorage?
+sessionStorage is a browser storage.
+
+It stores data only for one tab/session.
+
+Once tab close aithe, data remove avutundi.
+
+Similar to localStorage, but temporary.
+
+Difference between localStorage & sessionStorage
+| Feature       | `localStorage`         | `sessionStorage` |
+| ------------- | ---------------------- | ---------------- |
+| Data lifetime | Until manually cleared | Until tab closed |
+| Accessible in | All tabs/windows       | Same tab only    |
+| Size limit    | \~5MB                  | \~5MB            |
+
+
+Syntax (same as localStorage)
+👉 Store Data
+sessionStorage.setItem("name", "Uma Sankar");
+
+👉 Get Data
+let name = sessionStorage.getItem("name");
+console.log(name); // Uma Sankar
+
+👉 Remove Specific Item
+sessionStorage.removeItem("name");
+
+👉 Clear All
+sessionStorage.clear();
+
+| Task        | Code Example          |
+| ----------- | --------------------- |
+| Save data   | `setItem(key, value)` |
+| Get data    | `getItem(key)`        |
+| Remove data | `removeItem(key)`     |
+| Clear all   | `clear()`             |
+
+
+
+Save button: Stores the city name "Hyderabad" in sessionStorage.
+
+Get button: Retrieves and shows the city name saved.
+
+Clear button: Clears all sessionStorage data.  
+sessionStorage.setItem(key, value) saves data (only for current tab session).
+
+sessionStorage.getItem(key) retrieves data by key.
+
+sessionStorage.clear() clears all stored data for that session  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Session Storage Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background-color: #4caf50;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Session Storage Demo</h1>
+
+  <!-- Buttons to save, get and clear data -->
+  <button onclick="saveData()">Save</button>
+  <button onclick="getData()">Get</button>
+  <button onclick="clearData()">Clear</button>
+
+  <script>
+    // Save "Hyderabad" as city in sessionStorage
+    function saveData() {
+      sessionStorage.setItem("city", "Hyderabad");
+      alert("City saved to sessionStorage!");
+    }
+
+    // Get city from sessionStorage and alert it
+    function getData() {
+      let city = sessionStorage.getItem("city");
+      if(city) {
+        alert("City: " + city);
+      } else {
+        alert("No city found in sessionStorage.");
+      }
+    }
+
+    // Clear all data from sessionStorage
+    function clearData() {
+      sessionStorage.clear();
+      alert("Session storage cleared!");
+    }
+  </script>
+
+</body>
+</html>

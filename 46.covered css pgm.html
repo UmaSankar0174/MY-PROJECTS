@@ -1,0 +1,801 @@
+<!-- Ee line tho HTML file start avuthundi, browser ki idi HTML ani chepthundi -->
+<html>
+    <!-- Head section start avuthundi, idi webpage ki basic info and settings isthundi -->
+    <head>
+        <!-- Ee line charset UTF-8 set chesthundi, Telugu letters kuda correct ga kanipisthayi -->
+        <meta charset="UTF-8">
+        <!-- Ee line viewport set chesthundi, mobile lo correct size lo webpage kanipinchadaniki -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Ee line webpage title set chesthundi, browser tab lo "CSS" ani kanipisthundi -->
+        <title>CSS</title>
+        <!-- Style tag start avuthundi, idi CSS code ni HTML lone rayadaniki use avuthundi -->
+        <style>
+            /* h2 tag ki pink background isthundi, heading 2 text background pink ga kanipisthundi */
+            h2 { 
+                background-color: pink; 
+            }
+            /* Body tag ki skyblue background and zero margin isthundi, full page skyblue avuthundi, edges lo gap undadu */
+            body { 
+                background-color: skyblue; 
+                margin: 0; 
+            }
+            /* p.dashed class ki dashed border isthundi, paragraph text ki dotted line border kanipisthundi */
+            p.dashed { 
+                border-style: dashed; 
+            }
+            /* p.double class ki double border isthundi, paragraph text ki double line border kanipisthundi */
+            p.double { 
+                border-style: double; 
+            }
+            /* p.solid class ki solid border isthundi, paragraph text ki continuous line border kanipisthundi */
+            p.solid { 
+                border-style: solid; 
+            }
+            /* h3.dotted class ki dotted border isthundi, heading 3 text ki small dots border kanipisthundi */
+            h3.dotted { 
+                border-style: dotted; 
+            }
+            /* h4 tag ki margins and olive border isthundi, top 10px, right 10px, bottom 20px, left 30px gaps tho olive color border kanipisthundi */
+            h4 { 
+                margin: 10px 10px 20px 30px; 
+                border: 4px solid olive; 
+            }
+            /* h5 tag ki left side 70px padding isthundi, text left nunchi 70px duram lo start avuthundi */
+            h5 { 
+                padding-left: 70px; 
+            }
+            /* .p1 class ki flex use chesi right side align chesthundi, text right side ki vellipothundi with 100px padding */
+            .p1 { 
+                display: flex; 
+                justify-content: flex-end; 
+                align-items: center; 
+                padding-right: 100px; 
+            }
+            /* .p2 class ki greenyellow color 1px solid border isthundi, text chuttu greenyellow line kanipisthundi */
+            .p2 { 
+                border: 1px solid greenyellow; 
+            }
+            /* .p3 class ki pink border, padding, and flex isthundi, text chuttu pink border tho top 60px, right 100px, bottom 70px, left 80px gaps untayi */
+            .p3 { 
+                border: 1px solid pink; 
+                padding: 60px 100px 70px 80px; 
+                display: flex; 
+            }
+            /* .p4 class ki flex use chesi center align chesthundi, text perfect center lo kanipisthundi */
+            .p4 { 
+                display: flex; 
+                justify-content: center; 
+            }
+            /* .p5 class ki pink border, darkgray background, center align isthundi, text center lo darkgray background tho pink border lo untundi */
+            .p5 { 
+                border: 1px solid pink; 
+                background-color: darkgray; 
+                padding: 60px 100px 0 80px; 
+                display: flex; 
+                margin: auto; 
+                justify-content: center; 
+            }
+            /* .p6 class ki pink border, column flex, padding isthundi, text vertical ga align avuthundi with 20px pink border */
+            .p6 { 
+                border: 20px solid pink; 
+                display: flex; 
+                flex-direction: column; 
+                padding: 10px; 
+            }
+            /* .p7 class ki navy border, grey background isthundi, text chuttu 2px navy border tho grey background lo untundi */
+            .p7 { 
+                border: 2px solid navy; 
+                padding: 1px; 
+                margin: 25px; 
+                background-color: grey; 
+            }
+            /* .p8 class ki pink border, grey background isthundi, text chuttu 2px pink border tho grey background lo untundi */
+            .p8 { 
+                border: 2px solid pink; 
+                background-color: grey; 
+            }
+            /* .p9 class ki 80vw width, 50vh height, green border isthundi, text box peddaga green border tho kanipisthundi */
+            .p9 { 
+                width: 80vw; 
+                height: 50vh; 
+                border: 2px solid green; 
+            }
+            /* .p10 class ki orange color, big bold italic text isthundi, text orange lo 50px size lo uppercase bold italic ga kanipisthundi */
+            .p10 { 
+                color: orange; 
+                font-size: 50px; 
+                text-transform: uppercase; 
+                font-weight: bold; 
+                font-style: italic; 
+            }
+            /* .p11 class ki Arial font, spacing, underline isthundi, text Arial font lo line height 1.5, letters 2px gap, words 5px gap tho underline tho untundi */
+            .p11 { 
+                font-family: Arial, sans-serif; 
+                line-height: 1.5; 
+                letter-spacing: 2px; 
+                word-spacing: 5px; 
+                text-decoration: underline; 
+            }
+            /* .p12 class ki red shadow text isthundi, text ki 2px right, 2px down, 5px blur red shadow kanipisthundi */
+            .p12 { 
+                text-shadow: 2px 2px 5px red; 
+            }
+            /* .p13 class ki center align, lightcoral background isthundi, 100px x 100px box center lo lightcoral color lo untundi */
+            .p13 { 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background-color: lightcoral; 
+                width: 100px; 
+                height: 100px; 
+            }
+            /* .p14 class ki cursive font isthundi, text cursive style lo kanipisthundi */
+            .p14 { 
+                font-family: cursive; 
+            }
+            /* Links ki underline isthundi, all <a> tags text ki line kanipisthundi */
+            a { 
+                text-decoration: underline; 
+            }
+            /* Visited links ki green color isthundi, click chesina links green ga kanipisthayi */
+            a:visited { 
+                color: green; 
+            }
+            /* Hover cheste links blue avuthundi, mouse link paina pettite blue color lo kanipisthundi */
+            a:hover { 
+                color: blue; 
+            }
+            /* Active links ki red color isthundi, link click chesthunnapudu red ga kanipisthundi */
+            a:active { 
+                color: red; 
+            }
+            /* .ol1 class ki blue color, no list style isthundi, ordered list blue lo bullets lekunda kanipisthundi */
+            .ol1 { 
+                color: blue; 
+                list-style-type: none; 
+            }
+            /* Unordered lists ki pink color isthundi, <ul> lo items pink ga kanipisthayi */
+            ul { 
+                color: pink; 
+            }
+            /* List items ki Arial font isthundi, <li> tags text Arial font lo untundi */
+            li { 
+                font-family: "Arial", sans-serif; 
+            }
+            /* ol.ABC class ki bold text, margins isthundi, ordered list bold lo 5px bottom and right margins tho untundi */
+            ol.ABC { 
+                margin-bottom: 5px; 
+                font-weight: bold; 
+                margin-right: 5px; 
+            }
+            /* .gallery class ki grid layout, 20px gap isthundi, images grid lo 20px gap tho arrange avuthayi */
+            .gallery { 
+                display: grid; 
+                gap: 20px; 
+                padding: 20px; 
+            }
+            /* Gallery lo images ki size, rounded corners isthundi, images 100px width lo round edges tho untayi */
+            .gallery img { 
+                width: 100px; 
+                height: auto; 
+                border-radius: 5px; 
+                object-fit: cover; 
+            }
+            /* Gallery images hover cheste zoom, shadow isthundi, mouse pettite image peddaga blue shadow tho kanipisthundi */
+            .gallery img:hover { 
+                transform: scale(1.1); 
+                box-shadow: 1px 1px 1px blue; 
+                filter: brightness(1.1); 
+                cursor: pointer; 
+            }
+            /* .asus class ki padding, width isthundi, div 300px width lo 10px padding tho untundi */
+            .asus { 
+                padding: 10px; 
+                width: 300px; 
+            }
+            /* .AA class ki bold text, block display isthundi, labels bold lo line by line kanipisthayi */
+            .AA { 
+                font-weight: bold; 
+                display: block; 
+                margin-bottom: 5px; 
+            }
+            /* Input fields ki full width, pink border isthundi, inputs 100% width lo aqua background tho pink border lo untayi */
+            input { 
+                width: 100%; 
+                padding: 15px; 
+                margin-bottom: 15px; 
+                border: 2px solid pink; 
+                border-radius: 5px; 
+                font-size: 18px; 
+                background-color: aqua; 
+            }
+            /* Input focus cheste green border isthundi, type chesetappudu border green ga maaruthundi */
+            input:focus { 
+                border-color: green; 
+                outline: none; 
+            }
+            /* Buttons ki purple background, white text isthundi, buttons full width lo purple lo white text tho untayi */
+            button { 
+                width: 100%; 
+                padding: 15px; 
+                background: purple; 
+                color: white; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 18px; 
+            }
+            /* Button hover cheste red background isthundi, mouse button paina pettite red ga maaruthundi */
+            button:hover { 
+                background: red; 
+            }
+            /* .AAA class ki black background, white text isthundi, div black lo white text tho untundi */
+            .AAA { 
+                background-color: black; 
+                color: white; 
+            }
+            /* .ABC class ki padding, font size isthundi, buttons 10px 20px padding tho 16px text size lo untayi */
+            .ABC { 
+                padding: 10px 20px; 
+                font-size: 16px; 
+                border: none; 
+                cursor: pointer; 
+                margin-top: 20px; 
+            }
+            /* .dark-mode-section ki white background, pink text isthundi, div white lo pink text tho untundi */
+            .dark-mode-section { 
+                background-color: white; 
+                padding: 20px; 
+                border-radius: 10px; 
+                color: pink; 
+            }
+            /* .portfolio-body ki Arial font, center text isthundi, full page Arial font lo center align lo untundi */
+            .portfolio-body { 
+                font-family: Arial, sans-serif; 
+                text-align: center; 
+                margin: 0; 
+                background-color: white; 
+            }
+            /* .portfolio-nav ki pink background isthundi, navigation bar pink color lo untundi */
+            .portfolio-nav { 
+                background-color: pink; 
+                padding: 10px; 
+            }
+            /* Portfolio nav links ki red color, no underline isthundi, links red lo 15px gaps tho untayi */
+            .portfolio-nav a { 
+                margin: 0 15px; 
+                text-decoration: none; 
+                color: red; 
+            }
+            /* Nav links hover cheste orange avuthundi, mouse pettite links orange ga maaruthayi */
+            nav a:hover { 
+                color: orange; 
+            }
+            /* h1 tags ki violet color, big font isthundi, headings violet lo 2.5em size lo untayi */
+            h1 { 
+                color: violet; 
+                font-size: 2.5em; 
+            }
+            /* Paragraphs ki 1.2em font, max width isthundi, text 1.2em size lo 600px width lo center lo untundi */
+            p { 
+                font-size: 1.2em; 
+                max-width: 600px; 
+                margin: 20px auto; 
+            }
+            /* .underline class ki red bottom border isthundi, text ki red line bottom lo kanipisthundi */
+            .underline { 
+                border-bottom: 2px solid red; 
+                display: inline-block; 
+                padding-bottom: 5px; 
+            }
+            /* .skills-box ki violet border, padding isthundi, skills box 300px width lo violet border tho untundi */
+            .skills-box { 
+                border: 2px solid violet; 
+                padding: 20px; 
+                border-radius: 10px; 
+                max-width: 300px; 
+                margin: 20px auto; 
+            }
+            /* .portfolio-section ki padding isthundi, each section 10px padding tho untundi */
+            .portfolio-section { 
+                padding: 10px; 
+            }
+            /* Portfolio ul, table, form ki max width, left align isthundi, 500px width lo left side text untundi */
+            .portfolio-ul, .portfolio-table, .portfolio-form { 
+                max-width: 500px; 
+                margin: 20px auto; 
+                text-align: left; 
+            }
+            /* .portfolio-table ki full width, collapse borders isthundi, table 100% width lo borders join avuthayi */
+            .portfolio-table { 
+                border-collapse: collapse; 
+                width: 100%; 
+            }
+            /* Table th, td ki black border, padding isthundi, table cells chuttu 1px black border tho 10px padding untundi */
+            .portfolio-th, .portfolio-td { 
+                border: 1px solid black; 
+                padding: 10px; 
+            }
+            /* Portfolio form inputs, textarea ki full width isthundi, form fields 100% width lo 2px gaps tho untayi */
+            .portfolio-form input, .portfolio-form textarea { 
+                width: 100%; 
+                margin: 2px 0; 
+            }
+            /* .portfolio-footer ki grey background, full width isthundi, footer grey lo 100% width lo untundi */
+            .portfolio-footer { 
+                background-color: grey; 
+                padding: 2px; 
+                width: 100%; 
+            }
+            /* Social icons images ki size, margin isthundi, icons 30px x 30px lo 10px gaps tho untayi */
+            .social-icons img { 
+                width: 30px; 
+                height: 30px; 
+                margin: 0 10px; 
+                object-fit: cover; 
+            }
+            /* Header ki background image, center text isthundi, header lo placeholder image tho center align untundi */
+            header { 
+                background-image: url('https://via.placeholder.com/1500x100'); 
+                background-size: cover; 
+                padding: 20px; 
+                text-align: center; 
+            }
+            /* Aside ki fixed position right side isthundi, sidebar right top lo fixed ga 150px width lo untundi */
+            aside { 
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                width: 150px; 
+                background: rgba(255, 255, 255, 0.8); 
+                padding: 10px; 
+                border-radius: 5px; 
+            }
+            /* .sticky-note ki yellow background, sticky top isthundi, note yellow lo top lo stick ayi untundi */
+            .sticky-note { 
+                position: sticky; 
+                top: 10px; 
+                background: yellow; 
+                padding: 10px; 
+                margin: 10px auto; 
+                width: 200px; 
+            }
+            /* Video and audio ki 300px width, center align isthundi, media center lo 300px width lo untundi */
+            video, audio { 
+                width: 300px; 
+                margin: 10px auto; 
+                display: block; 
+            }
+            /* Select box ki pink border, padding isthundi, dropdown 100% width lo pink border tho untundi */
+            select { 
+                width: 100%; 
+                padding: 15px; 
+                margin-bottom: 15px; 
+                border: 2px solid pink; 
+                border-radius: 5px; 
+                font-size: 18px; 
+            }
+            /* .animate-box ki transition effect isthundi, div lo changes smooth ga 0.5s lo jaruguthayi */
+            .animate-box { 
+                transition: all 0.5s ease; 
+                background: lightblue; 
+                padding: 10px; 
+            }
+            /* Animate box hover cheste opacity, rotate isthundi, mouse pettite div transparent ga rotate avuthundi */
+            .animate-box:hover { 
+                opacity: 0.7; 
+                transform: rotate(5deg); 
+            }
+            /* Bounce animation define chesthundi, button bounce effect 2s lo repeat avuthundi */
+            @keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% { 
+                    transform: translateY(0); 
+                } 
+                40% { 
+                    transform: translateY(-20px); 
+                } 
+                60% { 
+                    transform: translateY(-10px); 
+                } 
+            }
+            /* .bounce class ki animation apply chesthundi, button continuously bounce chesthundi */
+            .bounce { 
+                animation: bounce 2s infinite; 
+            }
+            /* Figure ki max width, center align isthundi, images with captions 300px width lo center lo untayi */
+            figure { 
+                margin: 20px auto; 
+                max-width: 300px; 
+            }
+            /* Figcaption ki italic text, center align isthundi, captions italic lo center lo untayi */
+            figcaption { 
+                text-align: center; 
+                font-style: italic; 
+            }
+            /* Blockquote ki green left border isthundi, quote text left side green line tho untundi */
+            blockquote { 
+                border-left: 5px solid green; 
+                padding-left: 10px; 
+                margin: 20px; 
+            }
+            /* .overflow-box ki scroll, border isthundi, 400px x 150px box lo scroll bar tho content kanipisthundi */
+            .overflow-box { 
+                width: 400px; 
+                height: 150px; 
+                overflow-y: scroll; 
+                border: 1px solid black; 
+                margin: 20px auto; 
+            }
+            /* .highlight ki star symbol add chesthundi, text mundu gold star kanipisthundi */
+            .highlight::before { 
+                content: "★ "; 
+                color: gold; 
+            }
+            /* Portfolio form labels ki block display isthundi, labels line by line 10px gap tho untayi */
+            .portfolio-form label { 
+                display: block; 
+                margin-bottom: 10px; 
+            }
+            /* Radio and checkbox groups ki flex, gap isthundi, options side by side 15px gap tho untayi */
+            .portfolio-form .radio-group, .portfolio-form .checkbox-group { 
+                display: flex; 
+                gap: 15px; 
+                margin-bottom: 10px; 
+            }
+            /* Radio and checkbox inputs ki margin adjust chesthundi, options 5px gap tho align avuthayi */
+            .portfolio-form input[type="radio"], .portfolio-form input[type="checkbox"] { 
+                margin: 0 5px 0 0; 
+            }
+            /* .p6 class ki pink border, padding adjust chesthundi, form 20px pink border lo content fit avuthundi */
+            .p6 { 
+                border: 20px solid pink; 
+                padding: 20px; 
+                box-sizing: border-box; 
+            }
+        /* Style tag end avuthundi, CSS code ikkada complete avuthundi */
+        </style>
+    <!-- Head section end avuthundi, webpage settings ikkada complete -->
+    </head>
+    <!-- Body section start avuthundi, idi webpage lo visible content kanipisthundi -->
+    <body>
+        <!-- Header tag start avuthundi, page top section lo background image tho title kanipisthundi -->
+        <header>
+            <!-- h1 tag lo white color text "CSS Playground" ani center lo kanipisthundi -->
+            <h1 style="color: white;">CSS Playground</h1>
+        <!-- Header tag end avuthundi -->
+        </header>
+        <!-- Main tag start avuthundi, idi main content ni hold chesthundi -->
+        <main>
+            <!-- h1 tag lo red color text "Hello" ani kanipisthundi -->
+            <h1 style="color:red">Hello</h1>
+            <!-- h2 tag lo center align text "HELLOOOO" pink background tho kanipisthundi -->
+            <h2 style="text-align: center;">HELLOOOO</h2>
+            <!-- p.dashed class tho "HELLO" text dashed border lo kanipisthundi -->
+            <p class="dashed">HELLO</p>
+            <!-- p.double class tho "AAA" text double border lo kanipisthundi -->
+            <p class="double">AAA</p>
+            <!-- p.solid class tho "BBB" text solid border lo kanipisthundi -->
+            <p class="solid">BBB</p>
+            <!-- h3.dotted class tho "CCC" text dotted border lo kanipisthundi -->
+            <h3 class="dotted">CCC</h3>
+            <!-- h1 tag lo 10px pink border tho "DDD" text kanipisthundi -->
+            <h1 style="border: 10px solid pink;">DDD</h1>
+            <!-- h2 tag lo top pink border tho "EEE" text kanipisthundi, horizontal line kuda untundi -->
+            <h2 style="border-top: 10px solid pink;">EEE</h2> <hr>
+            <!-- h4 tag lo "FFF" text margins and olive border tho kanipisthundi, two horizontal lines untayi -->
+            <h4>FFF</h4> <hr> <hr>
+            <!-- h5 tag lo "GGG" text left padding 70px tho kanipisthundi, horizontal line untundi -->
+            <h5>GGG</h5> <hr>
+            <!-- .p1 class tho "HHH" text right side align lo kanipisthundi, horizontal line untundi -->
+            <p class="p1">HHH</p> <hr>
+            <!-- .p2 class tho "III" text greenyellow border lo kanipisthundi, horizontal line untundi -->
+            <p class="p2">III</p> <hr>
+            <!-- .p3 class tho "JJJ" text pink border lo big padding tho kanipisthundi -->
+            <p class="p3">JJJ</p>
+            <!-- .p4 class tho "KKK" text center align lo kanipisthundi, horizontal line untundi -->
+            <p class="p4">KKK</p> <hr>
+            <!-- .p5 class tho "LLL" text darkgray background lo pink border tho center lo kanipisthundi, horizontal line untundi -->
+            <p class="p5">LLL</p> <hr>
+            <!-- .p6 class tho "MMM" text vertical align lo 20px pink border tho kanipisthundi, two horizontal lines untayi -->
+            <p class="p6">MMM</p> <hr> <hr>
+            <!-- .p7 class tho "NNN" text navy border lo grey background tho kanipisthundi, two horizontal lines untayi -->
+            <p class="p7">NNN</p> <hr> <hr>
+            <!-- .p8 class tho "OOO" text pink border lo grey background tho kanipisthundi, horizontal line untundi -->
+            <p class="p8">OOO</p> <hr>
+            <!-- .p9 class tho "PPP" text big green border box lo kanipisthundi, horizontal line untundi -->
+            <p class="p9">PPP</p> <hr>
+            <!-- .p10 class tho "qqq" text orange lo bold italic uppercase lo kanipisthundi, horizontal line untundi -->
+            <p class="p10">qqq</p> <hr>
+            <!-- .p11 class tho "RRR RRR RRR" text Arial font lo underline tho spacing tho kanipisthundi, horizontal line untundi -->
+            <p class="p11">RRR RRR RRR</p> <hr>
+            <!-- h1 tag lo "ABC" text red dotted outline tho kanipisthundi, horizontal line untundi -->
+            <h1 style="outline: 2px dotted red;">ABC</h1> <hr>
+            <!-- .p12 class tho "SSS" text red shadow tho kanipisthundi, horizontal line untundi -->
+            <p class="p12">SSS</p> <hr>
+            <!-- .p13 class tho "TTT" text lightcoral 100px box lo center lo kanipisthundi, horizontal line untundi -->
+            <p class="p13">TTT</p> <hr>
+            <!-- .p14 class tho "ASUS VIVOBOOK" text cursive font lo kanipisthundi, horizontal line untundi -->
+            <p class="p14">ASUS VIVOBOOK</p> <hr>
+            <!-- Google link "Google" text underline tho kanipisthundi, horizontal line untundi -->
+            <p><a href="https://www.google.com/">Google</a></p> <hr>
+            <!-- .ol1 class tho ordered list blue lo bullets lekunda kanipisthundi -->
+            <ol class="ol1">
+                <!-- List item "UUU" blue lo kanipisthundi -->
+                <li>UUU</li>
+                <!-- List item "UUU" blue lo kanipisthundi -->
+                <li>UUU</li>
+            <!-- Ordered list end -->
+            </ol>
+            <!-- Simple ordered list start, normal numbers tho kanipisthundi -->
+            <ol>
+                <!-- List item "AAA" kanipisthundi -->
+                <li>AAA</li>
+            <!-- Ordered list end -->
+            </ol>
+            <!-- Unordered list start, pink bullets tho kanipisthundi -->
+            <ul>
+                <!-- List item "WWW" pink lo kanipisthundi -->
+                <li>WWW</li>
+                <!-- List item "WWW" pink lo kanipisthundi -->
+                <li>WWW</li>
+            <!-- Unordered list end, horizontal line untundi -->
+            </ul> <hr>
+            <!-- .ABC class tho ordered list bold lo margins tho kanipisthundi -->
+            <ol class="ABC">
+                <!-- List item "ONE" bold lo kanipisthundi -->
+                <li>ONE</li>
+                <!-- List item "TWO" bold lo kanipisthundi -->
+                <li>TWO</li>
+            <!-- Ordered list end, horizontal line untundi -->
+            </ol> <hr>
+            <!-- .gallery class tho div start, images grid lo kanipisthayi -->
+            <div class="gallery">
+                <!-- Figure tag start, image and caption kanipisthundi -->
+                <figure>
+                    <!-- Google link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                    <a href="https://www.google.com" target="_blank">
+                        <img src="D:/img.jpeg" alt="Image 1">
+                    </a>
+                    <!-- Caption "First Image" italic lo center lo kanipisthundi -->
+                    <figcaption>First Image</figcaption>
+                <!-- Figure tag end -->
+                </figure>
+                <!-- Figure tag start, image and caption kanipisthundi -->
+                <figure>
+                    <!-- Google link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                    <a href="https://www.google.com" target="_blank">
+                        <img src="D:/img.jpeg" alt="Image 2">
+                    </a>
+                    <!-- Caption "Second Image" italic lo center lo kanipisthundi -->
+                    <figcaption>Second Image</figcaption>
+                <!-- Figure tag end -->
+                </figure>
+                <!-- Figure tag start, image and caption kanipisthundi -->
+                <figure>
+                    <!-- Wikipedia link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                    <a href="https://www.wikipedia.org" target="_blank">
+                        <img src="D:/img4.jpg" alt="My image from D drive">
+                    </a>
+                    <!-- Caption "Wiki Image" italic lo center lo kanipisthundi -->
+                    <figcaption>Wiki Image</figcaption>
+                <!-- Figure tag end -->
+                </figure>
+            <!-- Gallery div end, two horizontal lines untayi -->
+            </div> <hr> <hr>
+            <!-- .asus class tho div start, form section 300px width lo kanipisthundi -->
+            <div class="asus">
+                <!-- Name label bold lo kanipisthundi, input field ki connect avuthundi -->
+                <label class="AA" for="name">Name:</label>
+                <!-- Text input field full width lo aqua background tho "Enter your Name" placeholder tho kanipisthundi -->
+                <input type="text" id="name" placeholder="Enter your Name">
+                <!-- Email label bold lo kanipisthundi, input field ki connect avuthundi -->
+                <label class="AA" for="email">Email:</label>
+                <!-- Email input field full width lo aqua background tho "Enter your Email" placeholder tho kanipisthundi -->
+                <input type="email" id="email" placeholder="Enter your Email">
+                <!-- Choice label bold lo kanipisthundi, dropdown ki connect avuthundi -->
+                <label class="AA" for="choice">Pick One:</label>
+                <!-- Select dropdown start, full width lo pink border tho kanipisthundi -->
+                <select id="choice">
+                    <!-- Option "Yes" dropdown lo kanipisthundi -->
+                    <option value="yes">Yes</option>
+                    <!-- Option "No" dropdown lo kanipisthundi -->
+                    <option value="no">No</option>
+                <!-- Select dropdown end -->
+                </select>
+                <!-- Submit button purple lo white text tho full width lo kanipisthundi -->
+                <button type="submit">Submit</button>
+            <!-- Asus div end, two horizontal lines untayi -->
+            </div> <hr> <hr>
+            <!-- .dark-mode-section div start, white background lo pink text tho animation effect untundi -->
+            <div class="dark-mode-section animate-box">
+                <!-- h1 tag lo "Dark Mode Toggle" pink color lo kanipisthundi -->
+                <h1>Dark Mode Toggle</h1>
+                <!-- Button "Dark Mode" purple lo bounce effect tho kanipisthundi, click cheste dark mode toggle avuthundi -->
+                <button class="ABC bounce" onclick="DarkMode()">Dark Mode</button>
+            <!-- Dark mode div end, three horizontal lines untayi -->
+            </div> <hr> <hr> <hr>
+            <!-- .portfolio-body div start, full page Arial font lo center align lo white background lo kanipisthundi -->
+            <div class="portfolio-body">
+                <!-- Navigation bar start, pink background lo links kanipisthayi -->
+                <nav class="portfolio-nav">
+                    <!-- Home link red lo kanipisthundi, click cheste home section ki vellipothundi -->
+                    <a href="#home">Home</a>
+                    <!-- About link red lo kanipisthundi, click cheste about section ki vellipothundi -->
+                    <a href="#about">About</a>
+                    <!-- Skills link red lo kanipisthundi, click cheste skills section ki vellipothundi -->
+                    <a href="#skills">Skills</a>
+                    <!-- Projects link red lo kanipisthundi, click cheste projects section ki vellipothundi -->
+                    <a href="#projects">Projects</a>
+                    <!-- Contact link red lo kanipisthundi, click cheste contact section ki vellipothundi -->
+                    <a href="#contact">Contact</a>
+                <!-- Navigation bar end -->
+                </nav>
+                <!-- Home section start, id="home" tho identify avuthundi -->
+                <section class="portfolio-section" id="home">
+                    <!-- Welcome box div start -->
+                    <div class="welcome-box">
+                        <!-- h1 tag lo "Welcome to My Portfolio" violet color lo red underline tho kanipisthundi -->
+                        <h1 class="underline">Welcome to My Portfolio</h1>
+                        <!-- Video player start, 300px width lo center lo kanipisthundi -->
+                        <video controls>
+                            <!-- Video source from w3schools, mp4 format lo play avuthundi -->
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <!-- Browser support lekunte ee text kanipisthundi -->
+                            Your browser does not support video.
+                        <!-- Video player end -->
+                        </video>
+                    <!-- Welcome box div end -->
+                    </div>
+                <!-- Home section end -->
+                </section>
+                <!-- About section start, id="about" tho identify avuthundi -->
+                <section class="portfolio-section" id="about">
+                    <!-- h1 tag lo "Uma Sankar" violet color lo red underline tho kanipisthundi -->
+                    <h1 class="underline">Uma Sankar</h1>
+                    <!-- Blockquote lo "I’m passionate about coding!" green left border tho kanipisthundi -->
+                    <blockquote>I’m passionate about coding!</blockquote>
+                    <!-- Unordered list start, green text tho darkgray background lo pink border lo kanipisthundi -->
+                    <ul class="portfolio-ul p5" style="color: green;">
+                        <!-- List item 1: Web developer info green lo kanipisthundi -->
+                        <li>Passionate web developer focusing on front-end.</li>
+                        <!-- List item 2: College info green lo kanipisthundi -->
+                        <li>B.Tech student at Tirumala Engineering College.</li>
+                        <!-- List item 3: Learning info green lo kanipisthundi -->
+                        <li>Learned web development from YouTube.</li>
+                    <!-- Unordered list end -->
+                    </ul>
+                <!-- About section end -->
+                </section>
+                <!-- Skills section start, id="skills" tho skyblue text lo kanipisthundi -->
+                <section class="portfolio-section" id="skills" style="color: skyblue;">
+                    <!-- h1 tag lo "My Skills" violet color lo red underline tho kanipisthundi -->
+                    <h1 class="underline">My Skills</h1>
+                    <!-- Skills box div start, violet border tho center lo kanipisthundi -->
+                    <div class="skills-box">
+                        <!-- Audio player start, 300px width lo center lo kanipisthundi -->
+                        <audio controls>
+                            <!-- Audio source from w3schools, mp3 format lo play avuthundi -->
+                            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                            <!-- Browser support lekunte ee text kanipisthundi -->
+                            Your browser does not support audio.
+                        <!-- Audio player end -->
+                        </audio>
+                        <!-- Unordered list start, black text tho kanipisthundi -->
+                        <ul class="portfolio-ul" style="color: black;">
+                            <!-- Skill 1: Python basics black lo kanipisthundi -->
+                            <li>Python Basics</li>
+                            <!-- Skill 2: HTML basics black lo kanipisthundi -->
+                            <li>HTML Basics</li>
+                            <!-- Skill 3: CSS basics black lo kanipisthundi -->
+                            <li>CSS Basics</li>
+                            <!-- Skill 4: JavaScript basics black lo kanipisthundi -->
+                            <li>JavaScript Basics</li>
+                        <!-- Unordered list end -->
+                        </ul>
+                    <!-- Skills box div end -->
+                    </div>
+                <!-- Skills section end -->
+                </section>
+                <!-- Projects section start, id="projects" tho identify avuthundi -->
+                <section class="portfolio-section" id="projects">
+                    <!-- h1 tag lo "My Projects" violet color lo red underline tho kanipisthundi -->
+                    <h1 class="underline">My Projects</h1>
+                    <!-- Overflow box div start, 400px x 150px lo scroll bar tho kanipisthundi -->
+                    <div class="overflow-box">
+                        <!-- Table start, .p7 class tho navy border lo grey background lo kanipisthundi -->
+                        <table class="portfolio-table p7">
+                            <!-- Table header row, "Project" and "Description" black border lo kanipisthundi -->
+                            <tr><th class="portfolio-th">Project</th><th class="portfolio-th">Description</th></tr>
+                            <!-- Row 1: Portfolio website info kanipisthundi -->
+                            <tr><td class="portfolio-td">Portfolio Website</td><td class="portfolio-td">Built with HTML, CSS, JavaScript</td></tr>
+                            <!-- Row 2: Python calculator info kanipisthundi -->
+                            <tr><td class="portfolio-td">Python Calculator</td><td class="portfolio-td">Simple calculator from YouTube course</td></tr>
+                            <!-- Row 3: Extra project info kanipisthundi, scroll test ki -->
+                            <tr><td class="portfolio-td">Extra Project</td><td class="portfolio-td">Just to test overflow</td></tr>
+                        <!-- Table end -->
+                        </table>
+                    <!-- Overflow box div end -->
+                    </div>
+                <!-- Projects section end -->
+                </section>
+                <!-- Contact section start, id="contact" tho identify avuthundi -->
+                <section class="portfolio-section" id="contact">
+                    <!-- h1 tag lo "Contact Me" violet color lo red underline tho kanipisthundi -->
+                    <h1 class="underline">Contact Me</h1>
+                    <!-- Form start, .p6 class tho 20px pink border lo blue text tho kanipisthundi -->
+                    <form class="portfolio-form p6" style="color: blue;">
+                        <!-- Name label and input field, full width lo required field ga kanipisthundi -->
+                        <label>Name: <input type="text" name="name" required></label>
+                        <!-- Email label and input field, full width lo required field ga kanipisthundi -->
+                        <label>Email: <input type="email" name="email" required></label>
+                        <!-- Gender label start, radio buttons side by side kanipisthundi -->
+                        <label>Gender: 
+                            <!-- Radio group div start, Male and Female options flex lo untayi -->
+                            <div class="radio-group">
+                                <!-- Male radio button blue lo kanipisthundi -->
+                                <input type="radio" name="gender" value="male"> Male
+                                <!-- Female radio button blue lo kanipisthundi -->
+                                <input type="radio" name="gender" value="female"> Female
+                            <!-- Radio group div end -->
+                            </div>
+                        <!-- Gender label end -->
+                        </label>
+                        <!-- Interests label start, checkboxes side by side kanipisthundi -->
+                        <label>Interests: 
+                            <!-- Checkbox group div start, Coding and Design options flex lo untayi -->
+                            <div class="checkbox-group">
+                                <!-- Coding checkbox blue lo kanipisthundi -->
+                                <input type="checkbox" name="interest" value="coding"> Coding
+                                <!-- Design checkbox blue lo kanipisthundi -->
+                                <input type="checkbox" name="interest" value="design"> Design
+                            <!-- Checkbox group div end -->
+                            </div>
+                        <!-- Interests label end -->
+                        </label>
+                        <!-- Message label and textarea, 200 characters limit tho full width lo kanipisthundi -->
+                        <label>Message: <textarea name="message" maxlength="200"></textarea></label>
+                        <!-- Submit button default style lo "Submit" text tho kanipisthundi -->
+                        <input type="submit" value="Submit">
+                    <!-- Form end -->
+                    </form>
+                <!-- Contact section end -->
+                </section>
+                <!-- Footer start, grey background lo full width lo kanipisthundi -->
+                <footer class="portfolio-footer">
+                    <!-- Copyright text "© 2025 My Portfolio" grey lo kanipisthundi -->
+                    <p>© 2025 My Portfolio</p>
+                    <!-- Social icons div start -->
+                    <div class="social-icons">
+                        <!-- PrimeVideo link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                        <a href="https://www.primevideo.com/storefront/ref=atv_dl_rdr" target="_blank"><img src="D:/img6.jpeg" alt="PrimeVideo"></a>
+                        <!-- Aha link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                        <a href="https://www.aha.video/" target="_blank"><img src="D:/img7.jpg" alt="Aha"></a>
+                        <!-- Netflix link lo image kanipisthundi, click cheste new tab lo open avuthundi -->
+                        <a href="https://netfree.cc/mobile/home" target="_blank"><img src="D:/img8.jpeg" alt="Netflix"></a>
+                    <!-- Social icons div end -->
+                    </div>
+                <!-- Footer end -->
+                </footer>
+            <!-- Portfolio body div end -->
+            </div>  
+            <!-- Aside start, right top lo fixed yellow note kanipisthundi -->
+            <aside>
+                <!-- .sticky-note class tho "Quick Note: Check my portfolio!" yellow lo kanipisthundi -->
+                <div class="sticky-note">Quick Note: Check my portfolio!</div>
+            <!-- Aside end -->
+            </aside>
+        <!-- Main tag end, main content ikkada complete avuthundi -->
+        </main>
+        <!-- Script tag start, JavaScript code ni hold chesthundi -->
+        <script>
+            // DarkMode function define chesthundi, button click cheste body ki .AAA class toggle avuthundi -->
+            function DarkMode() {
+                // Body ki AAA class add/remove chesthundi, black background white text toggles avuthundi -->
+                document.body.classList.toggle('AAA');
+            }
+        // Script tag end -->
+        </script>
+    <!-- Body section end, visible content ikkada complete avuthundi -->
+    </body>
+<!-- HTML file end avuthundi -->
+</html>

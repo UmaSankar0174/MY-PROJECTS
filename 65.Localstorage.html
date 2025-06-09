@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LocalStorage Object Example</title>
+</head>
+<body>
+
+  <!-- User name display cheyyadaniki place -->
+  <p>Name: <span id="username"></span></p>
+
+  <script>
+    // Step 1: Object create cheyyadam with name and age
+    let user = {
+      name: "Teja",   // name property
+      age: 22         // age property
+    };
+
+    // Step 2: Object ni string ga marchi localStorage lo store cheyyadam
+    localStorage.setItem("userData", JSON.stringify(user));
+
+    // Step 3: localStorage nunchi data ni theesukoni, string ni malli object ga marchadam
+    let data = JSON.parse(localStorage.getItem("userData"));
+
+    // Step 4: Object lo unna name ni webpage lo display cheyyadam
+    document.getElementById("username").innerText = data.name;
+  </script>
+
+</body>
+</html>
+
+<!--  Method        | Meaning         | Used For                              |
+| ------------- | --------------- | ------------------------------------- |
+| `stringify()` | Object → String | Save in localStorage / send to server |
+| `parse()`     | String → Object | Read from storage / API               |

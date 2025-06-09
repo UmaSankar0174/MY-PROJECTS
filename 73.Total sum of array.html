@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Reduce Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2fbff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Array Reduce() Method in JavaScript</h1>
+
+  <div class="box">
+    <p><strong>Original Numbers:</strong> <span id="arrayOutput"></span></p>
+    <p><strong>Total Sum using reduce():</strong> <span id="totalOutput"></span></p>
+  </div>
+
+  <script>
+    // Step 1: Create an array with numbers
+    let numbers = [10, 20, 30];
+    // Array has 3 numbers: 10, 20, and 30
+
+    // Step 2: Use reduce() method to calculate the total sum
+    let total = numbers.reduce(function (acc, curr) {
+      // acc = accumulator (initially 0)
+      // curr = current item in the array (10, then 20, then 30)
+      return acc + curr; // Add current item to accumulator
+    }, 0); // 0 is the initial value of the accumulator
+
+    // Step 3: Output to console
+    console.log("Array:", numbers);     // Output: [10, 20, 30]
+    console.log("Total:", total);       // Output: 60
+
+    // Step 4: Show output on the webpage
+    document.getElementById("arrayOutput").textContent = JSON.stringify(numbers);
+    document.getElementById("totalOutput").textContent = total;
+  </script>
+
+</body>
+</html>
+
+ <!--  .reduce() is used to go through each item and calculate something (here: total).
+
+acc (accumulator) starts at 0, and each number is added to it.
+
+curr represents the current element in the array during each loop.
+
+Final output is the sum of all elements.
+reduce() method ni use chesi array lo values ni oka single result ga reduce cheyyachu (ex: total, product, max, etc).
+
+| Step | acc | curr | acc + curr |
+| ---- | --- | ---- | ---------- |
+| 1    | 0   | 10   | 10         |
+| 2    | 10  | 20   | 30         |
+| 3    | 30  | 30   | 60         |

@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- Document type HTML5 -->
+<html>
+<head>
+  <title>Simple Form Validation</title> <!-- Page title -->
+</head>
+<body style="text-align: center; padding-top: 50px; font-family: Arial;">
+  
+  <h2>Form Validation Example</h2> <!-- Heading -->
+
+  <!-- Input box for name -->
+  <input type="text" id="username" placeholder="Enter your name"><br><br>
+  
+  <!-- Input box for email -->
+  <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+  <!-- Button that calls validateForm() when clicked -->
+  <button onclick="validateForm()">Submit</button>
+
+  <!-- Paragraph to show messages to user -->
+  <p id="message" style="font-weight: bold;"></p>
+
+  <script>
+    // Function to check form inputs when button clicked
+    function validateForm() {
+      
+      // Get value from name input box
+      let name = document.getElementById("username").value;
+
+      // Get value from email input box
+      let email = document.getElementById("email").value;
+
+      // Select the paragraph to show messages
+      let msg = document.getElementById("message");
+
+      // Check if name or email is empty
+      if (name === "" || email === "") {
+        // Show error message in red color
+        msg.innerText = "Please fill in all fields.";
+        msg.style.color = "red";
+      } else {
+        // Show success message in green color
+        msg.innerText = "Form submitted successfully!";
+        msg.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+</html>

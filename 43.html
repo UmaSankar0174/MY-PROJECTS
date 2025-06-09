@@ -1,0 +1,298 @@
+<html>
+<head>
+    <title>CSS</title>
+    <style>
+        h2 {
+            background-color: pink;
+        }
+        body {
+            background-color: skyblue;
+            color: violet;
+        }
+        p.dashed { border-style: dashed; }
+        p.double { border-style: double; }
+        p.solid { border-style: solid; }
+        h3.dotted { border-style: dotted; }
+        h4 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            margin-right: 10px;
+            border: 4px solid olive;
+        }
+        h5 {
+            padding-left: 70px;
+        }
+        .p1 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 100px;
+        }
+        .p2 {
+            border : 1px solid greenyellow;
+        }
+        .p3 {
+            border: 1px solid pink;
+            padding-left: 80px;
+            padding-right: 100px;
+            padding-top: 60px;
+            padding-bottom: 70px;
+            display: flex;
+        }
+        .p4 {
+            display: flex;
+            justify-content: center;
+        }
+        .p5 {
+            border: 1px solid pink;
+            background-color: darkgray;
+            padding-left: 80px;
+            padding-right: 100px;
+            padding-top: 60px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+        .p6 {
+            border: 20px solid pink;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 70px;
+            padding-right: 50px;
+        }
+        .p7 {
+            border: 2px solid navy;
+            padding: 1px;
+            margin: 25px;
+            background-color: grey;
+        }
+        .p8 {
+            border: 2px solid pink;
+            background-color: grey;
+        }
+        .p9 {
+            width: 80vw;
+            height: 50vh;
+            border: 2px solid green;
+        }
+        .p10 {
+            color: orange;
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .p11 {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            text-decoration: underline;
+        }
+        .p12 {
+            text-shadow: 2px 2px 5px red;
+        }
+        .p13 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcoral;
+            width: 100px;
+            height: 100px;
+        }
+        .p14 {
+            font-family: cursive;
+        }
+        a {
+            text-decoration: underline;
+        }
+        a:visited { color: green; }
+        a:hover { color: blue; }
+        a:active { color: red; }
+        .ol1 {
+            color: blue;
+            list-style-type: none;
+        }
+        ul {
+            color: pink;
+        }
+        li {
+            font-family: "Arial", sans-serif;
+        }
+        ol.ABC {
+            margin-bottom: 5px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .gallery {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 1px 1px blue;
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
+        .form-container {
+            background: white; /* Default white background for form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px red;
+            width: 300px;
+        }
+        .label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid pink;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: aqua;
+        }
+        input:focus {
+            border-color: green;
+            outline: none;
+        }
+        button {
+            width: 50%;
+            padding: 10px;
+            background: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: red;
+        }
+        .AAA {
+            background-color: black;
+            color: white;
+        }
+        .ABC {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .dark-mode-section {
+            background-color: white; /* Default white background for dark mode toggle area */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red">Hello</h1>
+    <h2 style="text-align: center;">HELLOOOO</h2>
+    <p class="dashed">HELLO</p>
+    <p class="double">AAA</p>
+    <p class="solid">BBB</p>
+    <h3 class="dotted">CCC</h3>
+    <h1 style="border: 10px solid pink;">DDD</h1>
+    <h2 style="border-top: 10px solid pink;">EEE</h2>
+    <hr>
+    <h4>FFF</h4>
+    <hr><hr>
+    <h5>GGG</h5>
+    <hr>
+    <div class="p1">HHH</div>
+    <hr>
+    <div class="p2">III</div>
+    <hr>
+    <div class="p3">JJJ</div>
+    <div class="p4">KKK</div>
+    <hr>
+    <div class="p5">LLL</div>
+    <hr>
+    <div class="p6">MMM</div>
+    <hr><hr>
+    <div class="p7">NNN</div>
+    <hr><hr>
+    <div class="p8">OOO</div>
+    <hr>
+    <div class="p9">PPP</div>
+    <hr>
+    <div class="p10">qqq</div>
+    <hr>
+    <div class="p11">RRR RRR RRR</div>
+    <hr>
+    <h1 style="outline: 2px dotted red;">ABC</h1>
+    <hr>
+    <div class="p12">SSS</div>
+    <hr>
+    <div class="p13">TTT</div>
+    <hr>
+    <div class="p14">ASUS VIVOBOOK</div>
+    <hr>
+    <p><a href="https://www.google.com/">Google</a></p>
+    <hr>
+    <ol class="ol1">
+        <li>UUU</li>
+        <li>UUU</li>
+    </ol>
+    <ol>
+        <li>AAA</li>
+    </ol>
+    <ul>
+        <li>WWW</li>
+        <li>WWW</li>
+    </ul>
+    <hr>
+    <ol class="ABC">
+        <li>ONE</li>
+        <li>TWO</li>
+    </ol>
+    <hr>
+    <div class="gallery">
+        <a href="https://www.google.com" target="_blank">
+            <img src="D:/img.jpeg" alt="Image 1">
+        </a>
+        <a href="https://www.google.com" target="_blank">
+            <img src="D:/img.jpeg" alt="Image 2">
+        </a>
+        <a href="https://www.wikipedia.org" target="_blank">
+            <img src="D:/img4.jpg" alt="My image from D drive">
+        </a>
+    </div>
+    <hr><hr>
+    <div class="form-container">
+        <label class="label" for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your Name">
+        <label class="label" for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your Email">
+        <label class="label" for="message">Message:</label>
+        <input type="text" id="message" placeholder="Enter your Message">
+        <button type="submit">Submit</button>
+    </div>
+    <hr><hr>
+    <div class="dark-mode-section">
+        <h1>Dark Mode Toggle</h1>
+        <button class="ABC" onclick="DarkMode()">Dark Mode</button>
+    </div>
+    <script>
+        function DarkMode() {
+            document.body.classList.toggle('AAA');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread Operator with Objects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4fcff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Spread Operator with Objects</h1>
+
+  <div class="box">
+    <p><strong>Original User:</strong> <span id="user1"></span></p>
+    <p><strong>New User (with Job):</strong> <span id="user2"></span></p>
+  </div>
+
+  <script>
+    // Step 1: Create the first user object
+    let user1 = { name: "Uma", age: 23 };
+    // user1 has two properties: name and age
+
+    // Step 2: Use the spread operator to copy user1's properties and add a new one: job
+    let user2 = { ...user1, job: "Developer" };
+    // This means:
+    // - Copy all key-value pairs from user1 (name and age)
+    // - Add a new key-value pair: job: "Developer"
+
+    // Step 3: Print user2 in the browser console
+    console.log("User 1:", user1);   // { name: "Uma", age: 23 }
+    console.log("User 2:", user2);   // { name: "Uma", age: 23, job: "Developer" }
+
+    // Step 4: Show both objects on the webpage
+    document.getElementById("user1").textContent = JSON.stringify(user1);
+    document.getElementById("user2").textContent = JSON.stringify(user2);
+  </script>
+
+</body>
+</html>
+
+
+ <!-- | Feature         | Use case                               |
+| --------------- | -------------------------------------- |
+| Destructuring   | Easy extraction of array/object values |
+| Spread Operator | Copy or merge arrays/objects quickly   |

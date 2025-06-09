@@ -1,0 +1,81 @@
+<!-- What is a Promise?
+Promise = Future lo result osthadi ani cheppe object.
+
+✅ What It Does:
+If success = true, it resolves the promise and prints "✅ Success"
+If success = false, it rejects the promise and prints "❌ Error"
+
+
+resolve() = success → goes to .then()
+
+reject() = failure → goes to .catch()
+
+Promises are useful for asynchronous operations (like API calls, file loading, etc.)  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Promise Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f6ff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .result-box {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Promise Example</h1>
+
+  <div class="result-box" id="resultBox">
+    Waiting for result...
+  </div>
+
+  <script>
+    const output = document.getElementById("resultBox");
+
+    // Step 1: Create a new Promise
+    let myPromise = new Promise(function(resolve, reject) {
+      let success = true; // Change to false to test reject case
+
+      if (success) {
+        resolve("✅ Success"); // Resolve the promise
+      } else {
+        reject("❌ Error"); // Reject the promise
+      }
+    });
+
+    // Step 2: Handle promise result using .then() and .catch()
+    myPromise
+      .then(function(result) {
+        console.log(result);           // Console: ✅ Success
+        output.textContent = result;  // Page: ✅ Success
+        output.style.color = "green";
+      })
+      .catch(function(error) {
+        console.log(error);           // Console: ❌ Error
+        output.textContent = error;   // Page: ❌ Error
+        output.style.color = "red";
+      });
+  </script>
+
+</body>
+</html>

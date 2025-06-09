@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+  <h2>Simple Form</h2>
+
+  <!-- Form start, on submit validateForm() function call avutundi -->
+  <form onsubmit="return validateForm()">
+    <!-- User name enter cheyyadam kosam input field -->
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Function to validate the form
+    function validateForm() {
+      // Username field lo user enter chesina value ni this line fetch chesthundi
+      let name = document.getElementById("username").value;
+
+      // If name empty unte alert chupistam and form submit avvakudadhu
+      if (name === "") {
+        alert("Name cannot be empty!");
+        return false; // Stops form submission
+      }
+
+      // If valid, success message ichesi form sub

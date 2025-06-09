@@ -1,0 +1,1307 @@
+<html>
+  <!-- Ee line HTML file start chesthundi, browser ki HTML ani chepthundi, webpage create cheyadaniki use chestham -->
+
+  <head>
+    <!-- Head section start avuthundi, webpage ki settings, title, styles add cheyadaniki use chestham -->
+    <meta charset="UTF-8" />
+    <!-- Ee line UTF-8 charset set chesthundi, Telugu letters correct ga kanipinchadaniki use chestham -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ee line viewport set chesthundi, mobile lo webpage size adjust cheyadaniki use chestham -->
+    <title>CSS Playground</title>
+    <!-- Ee line title "CSS Playground" set chesthundi, browser tab lo name kanipinchadaniki use chestham -->
+    <style>
+      /* Style tag start chesthundi, CSS code HTML lone rayadaniki, design cheyadaniki use chestham */
+      :root {
+        /* :root lo variables set chestham, colors and sizes easy ga reuse cheyadaniki use chestham */
+        --main-color: grey;
+        /* Pink color ni variable ga set chestham, repeat use kosam */
+        --border-radius: 5px;
+        /* 5px border radius set chestham, rounded corners kosam */
+      }
+
+      h2 {
+        /* h2 ki pink background isthundi, heading ni highlight cheyadaniki use chestham */
+        background-color: var(--main-color);
+        /* Pink background heading 2 ki apply chesthundi, style kosam */
+      }
+
+      body {
+        /* Body ki design settings isthundi, full page look set cheyadaniki use chestham */
+        background-color: skyblue;
+        /* Skyblue color background ki isthundi, page ki color kosam */
+        margin: 0;
+        /* Margin zero chesthundi, extra space remove cheyadaniki */
+        font-size: 1rem;
+        /* Font size 1rem set chesthundi, text size control cheyadaniki */
+      }
+
+      p.dashed {
+        /* p.dashed class ki dashed border isthundi, text ki style kosam */
+        border-style: dashed;
+        /* Dashed border apply chesthundi, dotted line effect kosam */
+      }
+
+      p.double {
+        /* p.double class ki double border isthundi, text ki unique style kosam */
+        border-style: double;
+        /* Double border apply chesthundi, double line effect kosam */
+      }
+
+      p.solid {
+        /* p.solid class ki solid border isthundi, text ki continuous line kosam */
+        border-style: solid;
+        /* Solid border apply chesthundi, single line effect kosam */
+      }
+
+      h3.dotted {
+        /* h3.dotted class ki dotted border isthundi, heading ki style kosam */
+        border-style: dotted;
+        /* Dotted border apply chesthundi, small dots effect kosam */
+      }
+
+      h4 {
+        /* h4 ki margins and border isthundi, heading ki space and style kosam */
+        margin: 1em 1em 2em 3em;
+        /* Margins set chesthundi, heading ki space kosam */
+        border: 4px solid greenyellow;
+        /* 4px olive border apply chesthundi, heading ki design kosam */
+      }
+
+      h5 {
+        /* h5 ki padding isthundi, text position adjust cheyadaniki */
+        padding-left: 70px;
+        /* Left padding 70px isthundi, text ni left nunchi shift cheyadaniki */
+      }
+
+      .p1 {
+        /* .p1 class ki flex use chesthundi, text right side align cheyadaniki */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        justify-content: flex-end;
+        /* Text right side align chesthundi, position kosam */
+        align-items: center;
+        /* Text vertically center chesthundi, alignment kosam */
+        padding-right: 100px;
+        /* Right padding 100px isthundi, space kosam */
+      }
+
+      .p2 {
+        /* .p2 class ki greenyellow border isthundi, text ki style kosam */
+        border: 1px solid greenyellow;
+        /* 1px greenyellow border apply chesthundi, thin stylish border kosam */
+      }
+
+      .p3 {
+        /* .p3 class ki pink border and padding isthundi, text ki design kosam */
+        border: 1px solid pink;
+        /* 1px pink border apply chesthundi, text ki outline kosam */
+        padding: 60px 100px 70px 80px;
+        /* Padding set chesthundi, text ki space kosam */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+      }
+
+      .p4 {
+        /* .p4 class ki center flex isthundi, text center lo kanipinchadaniki */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        justify-content: center;
+        /* Text center align chesthundi, perfect center kosam */
+      }
+
+      .p5 {
+        /* .p5 class ki pink border and background isthundi, stylish text kosam */
+        border: 1px solid pink;
+        /* 1px pink border apply chesthundi, text ki outline kosam */
+        background-color: darkgray;
+        /* Darkgray background set chesthundi, stylish look kosam */
+        padding: 60px 100px 0 80px;
+        /* Padding set chesthundi, text ki space kosam */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        margin: auto;
+        /* Margin auto set chesthundi, center alignment kosam */
+        justify-content: center;
+        /* Text center align chesthundi, perfect center kosam */
+      }
+
+      .p6 {
+        /* .p6 class ki thick border and column flex isthundi, vertical text kosam */
+        border: 20px solid pink;
+        /* 20px pink border apply chesthundi, thick outline kosam */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        flex-direction: column;
+        /* Column direction set chesthundi, vertical align kosam */
+        padding: 20px;
+        /* Padding 20px isthundi, text ki space kosam */
+        box-sizing: border-box;
+        /* Box-sizing set chesthundi, border tho padding adjust cheyadaniki */
+      }
+
+      .p7 {
+        /* .p7 class ki navy border and float isthundi, text left float cheyadaniki */
+        border: 2px solid navy;
+        /* 2px navy border apply chesthundi, text ki outline kosam */
+        padding: 1px;
+        /* Padding 1px isthundi, slight space kosam */
+        margin: 25px;
+        /* Margin 25px set chesthundi, space around text kosam */
+        background-color: grey;
+        /* Grey background set chesthundi, stylish look kosam */
+        float: left;
+        /* Float left set chesthundi, text left side float cheyadaniki */
+      }
+
+      .p8 {
+        /* .p8 class ki pink border and grey background isthundi, simple style kosam */
+        border: 2px solid pink;
+        /* 2px pink border apply chesthundi, text ki outline kosam */
+        background-color: grey;
+        /* Grey background set chesthundi, stylish look kosam */
+      }
+
+      .p9 {
+        /* .p9 class ki green border and clip-path isthundi, unique shape kosam */
+        width: 80vw;
+        /* Width 80% viewport set chesthundi, responsive size kosam */
+        height: 50vh;
+        /* Height 50% viewport set chesthundi, responsive size kosam */
+        border: 2px solid green;
+        /* 2px green border apply chesthundi, outline kosam */
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        /* Clip-path set chesthundi, unique shape box kosam */
+      }
+
+      .p10 {
+        /* .p10 class ki orange bold text isthundi, big stylish text kosam */
+        color: orange;
+        /* Orange color set chesthundi, text highlight kosam */
+        font-size: 3em;
+        /* Font size 3em set chesthundi, big text kosam */
+        text-transform: uppercase;
+        /* Text uppercase chesthundi, all caps kosam */
+        font-weight: bold;
+        /* Bold font set chesthundi, thick text kosam */
+        font-style: italic;
+        /* Italic style set chesthundi, slanted text kosam */
+      }
+
+      .p11 {
+        /* .p11 class ki Arial font and spacing isthundi, text formatting kosam */
+        font-family: Arial, sans-serif;
+        /* Arial font set chesthundi, clean text look kosam */
+        line-height: 1.5;
+        /* Line height 1.5 set chesthundi, line spacing kosam */
+        letter-spacing: 2px;
+        /* Letter spacing 2px set chesthundi, letters madya gap kosam */
+        word-spacing: 5px;
+        /* Word spacing 5px set chesthundi, words madya gap kosam */
+        text-decoration: underline;
+        /* Underline set chesthundi, text highlight kosam */
+      }
+
+      .p11::first-line {
+        /* .p11 first line ki red color isthundi, highlight kosam */
+        color: red;
+        /* Red color set chesthundi, first line highlight cheyadaniki */
+      }
+
+      .p12 {
+        /* .p12 class ki red shadow isthundi, text effect kosam */
+        text-shadow: 2px 2px 5px red;
+        /* Red shadow set chesthundi, text ki shadow effect kosam */
+      }
+
+      .p13 {
+        /* .p13 class ki skew transform isthundi, tilted box kosam */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        justify-content: center;
+        /* Text center align chesthundi, perfect center kosam */
+        align-items: center;
+        /* Text vertically center chesthundi, alignment kosam */
+        background-color: lightcoral;
+        /* Lightcoral background set chesthundi, stylish look kosam */
+        width: 100px;
+        /* Width 100px set chesthundi, box size kosam */
+        height: 100px;
+        /* Height 100px set chesthundi, box size kosam */
+        transform: skew(10deg);
+        /* Skew 10deg set chesthundi, tilted effect kosam */
+      }
+
+      .p14 {
+        /* .p14 class ki cursive font isthundi, stylish text kosam */
+        font-family: cursive;
+        /* Cursive font set chesthundi, handwritten style kosam */
+      }
+
+      a {
+        /* Links ki underline isthundi, clickable ani indicate cheyadaniki */
+        text-decoration: underline;
+        /* Underline set chesthundi, link highlight kosam */
+      }
+
+      a:visited {
+        /* Visited links ki green color isthundi, clicked links identify cheyadaniki */
+        color: green;
+        /* Green color set chesthundi, visited link highlight kosam */
+      }
+
+      a:hover {
+        /* Hover cheste links blue avuthundi, mouse over effect kosam */
+        color: blue;
+        /* Blue color set chesthundi, hover effect kosam */
+      }
+
+      a:active {
+        /* Active links ki red color isthundi, click chestunnapudu effect kosam */
+        color: red;
+        /* Red color set chesthundi, active link effect kosam */
+      }
+
+      .ol1 {
+        /* .ol1 class ki blue color and no bullets isthundi, custom list kosam */
+        color: blue;
+        /* Blue color set chesthundi, list text highlight kosam */
+        list-style-type: none;
+        /* No bullets set chesthundi, plain list kosam */
+      }
+
+      ul {
+        /* Unordered lists ki pink color isthundi, bullets style kosam */
+        color: pink;
+        /* Pink color set chesthundi, list text highlight kosam */
+      }
+
+      li {
+        /* List items ki Arial font isthundi, consistent text style kosam */
+        font-family: "Arial", sans-serif;
+        /* Arial font set chesthundi, clean text look kosam */
+      }
+
+      ol.ABC {
+        /* ol.ABC class ki bold text isthundi, list highlight kosam */
+        margin-bottom: 5px;
+        /* Margin bottom 5px set chesthundi, space kosam */
+        font-weight: bold;
+        /* Bold font set chesthundi, thick text kosam */
+        margin-right: 5px;
+        /* Margin right 5px set chesthundi, space kosam */
+      }
+
+      .gallery {
+        /* .gallery class ki grid layout isthundi, images arrange cheyadaniki */
+        display: grid;
+        /* Grid display set chesthundi, grid layout kosam */
+        grid-template-areas: "img1 img2" "img3 img3";
+        /* Grid areas set chesthundi, image positions kosam */
+        gap: 20px;
+        /* Gap 20px set chesthundi, images madya space kosam */
+        padding: 20px;
+        /* Padding 20px set chesthundi, gallery ki space kosam */
+      }
+
+      .gallery img {
+        /* Gallery images ki size and style isthundi, uniform look kosam */
+        width: 100px;
+        /* Width 100px set chesthundi, image size kosam */
+        height: auto;
+        /* Height auto set chesthundi, image proportion maintain cheyadaniki */
+        border-radius: var(--border-radius);
+        /* Rounded corners set chesthundi, stylish look kosam */
+        object-fit: cover;
+        /* Object-fit cover set chesthundi, image fit cheyadaniki */
+        filter: grayscale(0%);
+        /* Grayscale 0% set chesthundi, normal color kosam */
+      }
+
+      .gallery img:hover {
+        /* Gallery images hover cheste effects isthundi, interactive look kosam */
+        transform: scale(1.1) translateX(10px);
+        /* Scale and translate set chesthundi, zoom and shift effect kosam */
+        box-shadow: 1px 1px 1px blue;
+        /* Blue shadow set chesthundi, hover effect kosam */
+        filter: blur(1px) brightness(1.1);
+        /* Blur and brightness set chesthundi, hover style kosam */
+        cursor: pointer;
+        /* Pointer cursor set chesthundi, clickable ani indicate cheyadaniki */
+      }
+
+      .gallery img:nth-child(1) {
+        /* First image ki grid area set chesthundi, position fix cheyadaniki */
+        grid-area: img1;
+        /* Img1 area set chesthundi, grid lo place cheyadaniki */
+      }
+
+      .gallery img:nth-child(2) {
+        /* Second image ki grid area set chesthundi, position fix cheyadaniki */
+        grid-area: img2;
+        /* Img2 area set chesthundi, grid lo place cheyadaniki */
+      }
+
+      .gallery img:nth-child(3) {
+        /* Third image ki grid area set chesthundi, position fix cheyadaniki */
+        grid-area: img3;
+        /* Img3 area set chesthundi, grid lo place cheyadaniki */
+      }
+
+      .asus {
+        /* .asus class ki padding and width isthundi, form section size kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+        width: 300px;
+        /* Width 300px set chesthundi, form size kosam */
+        z-index: 1;
+        /* Z-index 1 set chesthundi, layer order kosam */
+      }
+
+      .AA {
+        /* .AA class ki bold text isthundi, labels highlight cheyadaniki */
+        font-weight: bold;
+        /* Bold font set chesthundi, thick text kosam */
+        display: block;
+        /* Block display set chesthundi, line by line kosam */
+        margin-bottom: 5px;
+        /* Margin bottom 5px set chesthundi, space kosam */
+      }
+
+      input {
+        /* Input fields ki style isthundi, user input collect cheyadaniki */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+        padding: 15px;
+        /* Padding 15px set chesthundi, space kosam */
+        margin-bottom: 15px;
+        /* Margin bottom 15px set chesthundi, space kosam */
+        border: 2px solid var(--main-color);
+        /* 2px pink border set chesthundi, outline kosam */
+        border-radius: var(--border-radius);
+        /* Rounded corners set chesthundi, stylish look kosam */
+        font-size: 18px;
+        /* Font size 18px set chesthundi, text size kosam */
+        background-color: aqua;
+        /* Aqua background set chesthundi, stylish look kosam */
+      }
+
+      input:focus {
+        /* Input focus cheste green border isthundi, active field highlight kosam */
+        border-color: green;
+        /* Green border set chesthundi, focus effect kosam */
+        outline: none;
+        /* Outline remove chesthundi, clean look kosam */
+      }
+
+      button {
+        /* Buttons ki purple style isthundi, clickable design kosam */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+        padding: 15px;
+        /* Padding 15px set chesthundi, space kosam */
+        background: purple;
+        /* Purple background set chesthundi, stylish look kosam */
+        color: white;
+        /* White color set chesthundi, text highlight kosam */
+        border: none;
+        /* Border remove chesthundi, clean look kosam */
+        border-radius: var(--border-radius);
+        /* Rounded corners set chesthundi, stylish look kosam */
+        cursor: pointer;
+        /* Pointer cursor set chesthundi, clickable ani indicate cheyadaniki */
+        font-size: 18px;
+        /* Font size 18px set chesthundi, text size kosam */
+      }
+
+      button:hover {
+        /* Button hover cheste red avuthundi, interactive effect kosam */
+        background: red;
+        /* Red background set chesthundi, hover effect kosam */
+      }
+
+      .AAA {
+        /* .AAA class ki dark mode style isthundi, dark theme kosam */
+        background-color: black;
+        /* Black background set chesthundi, dark mode kosam */
+        color: white;
+        /* White color set chesthundi, text highlight kosam */
+      }
+
+      .ABC {
+        /* .ABC class ki button styling isthundi, custom button kosam */
+        padding: 10px 20px;
+        /* Padding set chesthundi, space kosam */
+        font-size: 16px;
+        /* Font size 16px set chesthundi, text size kosam */
+        border: none;
+        /* Border remove chesthundi, clean look kosam */
+        cursor: pointer;
+        /* Pointer cursor set chesthundi, clickable ani indicate cheyadaniki */
+        margin-top: 20px;
+        /* Margin top 20px set chesthundi, space kosam */
+      }
+
+      .dark-mode-section {
+        /* .dark-mode-section ki white background isthundi, section highlight kosam */
+        background-color: white;
+        /* White background set chesthundi, section contrast kosam */
+        padding: 20px;
+        /* Padding 20px set chesthundi, space kosam */
+        border-radius: 10px;
+        /* Rounded corners 10px set chesthundi, stylish look kosam */
+        color: pink;
+        /* Pink color set chesthundi, text highlight kosam */
+      }
+
+      .portfolio-body {
+        /* .portfolio-body ki center align isthundi, full page organize kosam */
+        font-family: Arial, sans-serif;
+        /* Arial font set chesthundi, clean text look kosam */
+        text-align: center;
+        /* Text center align set chesthundi, content center kosam */
+        margin: 0;
+        /* Margin zero set chesthundi, extra space remove cheyadaniki */
+        background-color: white;
+        /* White background set chesthundi, clean look kosam */
+      }
+
+      .portfolio-nav {
+        /* .portfolio-nav ki pink background isthundi, navigation bar kosam */
+        background-color: var(--main-color);
+        /* Pink background set chesthundi, stylish nav kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+      }
+
+      .portfolio-nav a {
+        /* Nav links ki red color isthundi, links highlight kosam */
+        margin: 0 15px;
+        /* Margin 15px set chesthundi, links madya space kosam */
+        text-decoration: none;
+        /* Underline remove chesthundi, clean link look kosam */
+        color: red;
+        /* Red color set chesthundi, link highlight kosam */
+      }
+
+      nav a:hover {
+        /* Nav links hover cheste orange avuthundi, interactive effect kosam */
+        color: orange;
+        /* Orange color set chesthundi, hover effect kosam */
+      }
+
+      h1 {
+        /* h1 tags ki violet color isthundi, headings highlight kosam */
+        color: violet;
+        /* Violet color set chesthundi, heading highlight kosam */
+        font-size: 2.5em;
+        /* Font size 2.5em set chesthundi, big heading kosam */
+      }
+
+      p {
+        /* Paragraphs ki size and width isthundi, readable text kosam */
+        font-size: 1.2em;
+        /* Font size 1.2em set chesthundi, text size kosam */
+        max-width: 600px;
+        /* Max width 600px set chesthundi, text limit kosam */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+      }
+
+      .underline {
+        /* .underline class ki red border isthundi, text highlight kosam */
+        border-bottom: 2px solid red;
+        /* Red bottom border set chesthundi, underline effect kosam */
+        display: inline-block;
+        /* Inline-block set chesthundi, text width adjust cheyadaniki */
+        padding-bottom: 5px;
+        /* Padding bottom 5px set chesthundi, space kosam */
+      }
+
+      .skills-box {
+        /* .skills-box ki violet border isthundi, skills section design kosam */
+        border: 2px solid violet;
+        /* 2px violet border set chesthundi, outline kosam */
+        padding: 20px;
+        /* Padding 20px set chesthundi, space kosam */
+        border-radius: 10px;
+        /* Rounded corners 10px set chesthundi, stylish look kosam */
+        max-width: 300px;
+        /* Max width 300px set chesthundi, box size kosam */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+      }
+
+      .portfolio-section {
+        /* .portfolio-section ki padding isthundi, sections separate cheyadaniki */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+      }
+
+      .portfolio-ul,
+      .portfolio-table,
+      .portfolio-form {
+        /* Portfolio elements ki width isthundi, content organize kosam */
+        max-width: 500px;
+        /* Max width 500px set chesthundi, size limit kosam */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+        text-align: left;
+        /* Text left align set chesthundi, content adjust cheyadaniki */
+      }
+
+      .portfolio-table {
+        /* .portfolio-table ki collapse style isthundi, table design kosam */
+        border-collapse: collapse;
+        /* Border collapse set chesthundi, borders join cheyadaniki */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+      }
+
+      .portfolio-th,
+      .portfolio-td {
+        /* Table th and td ki border isthundi, cells design kosam */
+        border: 1px solid black;
+        /* 1px black border set chesthundi, outline kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+      }
+
+      .portfolio-form input,
+      .portfolio-form textarea {
+        /* Form inputs ki full width isthundi, fields adjust cheyadaniki */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+        margin: 2px 0;
+        /* Margin set chesthundi, space kosam */
+      }
+
+      .portfolio-footer {
+        /* .portfolio-footer ki grey background isthundi, footer design kosam */
+        background-color: grey;
+        /* Grey background set chesthundi, footer look kosam */
+        padding: 2px;
+        /* Padding 2px set chesthundi, slight space kosam */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+      }
+
+      .social-icons img {
+        /* Social icons ki size isthundi, uniform look kosam */
+        width: 30px;
+        /* Width 30px set chesthundi, icon size kosam */
+        height: 30px;
+        /* Height 30px set chesthundi, icon size kosam */
+        margin: 0 10px;
+        /* Margin 10px set chesthundi, icons madya space kosam */
+        object-fit: cover;
+        /* Object-fit cover set chesthundi, image fit cheyadaniki */
+      }
+
+      header {
+        /* Header ki background image isthundi, top section design kosam */
+        background-image: url("D:/img4.jpg");
+        /* Background image set chesthundi, header look kosam */
+        background-size: cover;
+        /* Background size cover set chesthundi, full cover kosam */
+        padding: 20px;
+        /* Padding 20px set chesthundi, space kosam */
+        text-align: center;
+        /* Text center align set chesthundi, content center kosam */
+      }
+
+      aside {
+        /* Aside ki fixed position isthundi, sidebar fixed ga kanipinchadaniki */
+        position: fixed;
+        /* Fixed position set chesthundi, screen lo fix cheyadaniki */
+        top: 20px;
+        /* Top 20px set chesthundi, position adjust cheyadaniki */
+        right: 20px;
+        /* Right 20px set chesthundi, position adjust cheyadaniki */
+        width: 150px;
+        /* Width 150px set chesthundi, sidebar size kosam */
+        background: rgba(255, 255, 255, 0.8);
+        /* Semi-transparent white background set chesthundi, stylish look kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+        border-radius: var(--border-radius);
+        /* Rounded corners set chesthundi, stylish look kosam */
+        z-index: 2;
+        /* Z-index 2 set chesthundi, layer order kosam */
+      }
+
+      .sticky-note {
+        /* .sticky-note ki sticky position isthundi, top lo stick cheyadaniki */
+        position: sticky;
+        /* Sticky position set chesthundi, scroll lo stick cheyadaniki */
+        top: 10px;
+        /* Top 10px set chesthundi, position adjust cheyadaniki */
+        background: yellow;
+        /* Yellow background set chesthundi, note look kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+        margin: 10px auto;
+        /* Margin auto set chesthundi, center align kosam */
+        width: 200px;
+        /* Width 200px set chesthundi, note size kosam */
+      }
+
+      video,
+      audio {
+        /* Video and audio ki size isthundi, media center lo kanipinchadaniki */
+        width: 300px;
+        /* Width 300px set chesthundi, media size kosam */
+        margin: 10px auto;
+        /* Margin auto set chesthundi, center align kosam */
+        display: block;
+        /* Block display set chesthundi, separate line kosam */
+      }
+
+      select {
+        /* Select box ki style isthundi, dropdown design kosam */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+        padding: 15px;
+        /* Padding 15px set chesthundi, space kosam */
+        margin-bottom: 15px;
+        /* Margin bottom 15px set chesthundi, space kosam */
+        border: 2px solid var(--main-color);
+        /* 2px pink border set chesthundi, outline kosam */
+        border-radius: var(--border-radius);
+        /* Rounded corners set chesthundi, stylish look kosam */
+        font-size: 18px;
+        /* Font size 18px set chesthundi, text size kosam */
+      }
+
+      .animate-box {
+        /* .animate-box ki transition isthundi, smooth effects kosam */
+        transition: all 0.5s ease;
+        /* Transition set chesthundi, smooth change kosam */
+        background: lightblue;
+        /* Lightblue background set chesthundi, stylish look kosam */
+        padding: 10px;
+        /* Padding 10px set chesthundi, space kosam */
+      }
+
+      .animate-box:hover {
+        /* Animate box hover cheste effects isthundi, interactive look kosam */
+        opacity: 0.7;
+        /* Opacity 0.7 set chesthundi, transparency effect kosam */
+        transform: rotate(5deg);
+        /* Rotate 5deg set chesthundi, tilt effect kosam */
+      }
+
+      @keyframes bounce {
+        /* Bounce animation define chesthundi, button bounce effect kosam */
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+
+        /* Normal position set chesthundi, bounce start and end kosam */
+        40% {
+          transform: translateY(-20px);
+        }
+
+        /* Up 20px set chesthundi, bounce peak kosam */
+        60% {
+          transform: translateY(-10px);
+        }
+
+        /* Down 10px set chesthundi, bounce middle kosam */
+      }
+
+      .bounce {
+        /* .bounce class ki animation apply chesthundi, continuous bounce kosam */
+        animation: bounce 2s infinite;
+        /* Bounce animation 2s infinite set chesthundi, repeat effect kosam */
+      }
+
+      figure {
+        /* Figure ki width isthundi, images with captions organize cheyadaniki */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+        max-width: 300px;
+        /* Max width 300px set chesthundi, size limit kosam */
+      }
+
+      figcaption {
+        /* Figcaption ki italic style isthundi, captions stylish ga kanipinchadaniki */
+        text-align: center;
+        /* Text center align set chesthundi, caption center kosam */
+        font-style: italic;
+        /* Italic style set chesthundi, slanted text kosam */
+      }
+
+      blockquote {
+        /* Blockquote ki green border isthundi, quote highlight cheyadaniki */
+        border-left: 5px solid green;
+        /* 5px green left border set chesthundi, quote outline kosam */
+        padding-left: 10px;
+        /* Padding left 10px set chesthundi, space kosam */
+        margin: 20px;
+        /* Margin 20px set chesthundi, space around quote kosam */
+      }
+
+      .overflow-box {
+        /* .overflow-box ki scroll isthundi, content scrollable ga kanipinchadaniki */
+        width: 400px;
+        /* Width 400px set chesthundi, box size kosam */
+        height: 150px;
+        /* Height 150px set chesthundi, box size kosam */
+        overflow-y: scroll;
+        /* Vertical scroll set chesthundi, extra content scroll cheyadaniki */
+        border: 1px solid black;
+        /* 1px black border set chesthundi, outline kosam */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+      }
+
+      .highlight::before {
+        /* .highlight ki star add chesthundi, text mundu gold star kosam */
+        content: "★ ";
+        /* Gold star content set chesthundi, highlight kosam */
+        color: gold;
+        /* Gold color set chesthundi, star highlight kosam */
+      }
+
+      .portfolio-form label {
+        /* Form labels ki block style isthundi, line by line kanipinchadaniki */
+        display: block;
+        /* Block display set chesthundi, separate lines kosam */
+        margin-bottom: 10px;
+        /* Margin bottom 10px set chesthundi, space kosam */
+      }
+
+      .portfolio-form .radio-group,
+      .portfolio-form .checkbox-group {
+        /* Radio and checkbox groups ki flex isthundi, side by side options kosam */
+        display: flex;
+        /* Flex display set chesthundi, flexible layout kosam */
+        gap: 15px;
+        /* Gap 15px set chesthundi, options madya space kosam */
+        margin-bottom: 10px;
+        /* Margin bottom 10px set chesthundi, space kosam */
+      }
+
+      .portfolio-form input[type="radio"],
+      .portfolio-form input[type="checkbox"] {
+        /* Radio and checkbox inputs ki margin isthundi, adjust cheyadaniki */
+        margin: 0 5px 0 0;
+        /* Margin set chesthundi, space adjust cheyadaniki */
+      }
+
+      canvas {
+        /* Canvas ki border and size isthundi, drawing area create cheyadaniki */
+        border: 1px solid black;
+        /* 1px black border set chesthundi, outline kosam */
+        margin: 20px auto;
+        /* Margin auto set chesthundi, center align kosam */
+        display: block;
+        /* Block display set chesthundi, separate line kosam */
+      }
+
+      progress {
+        /* Progress bar ki style isthundi, progress show cheyadaniki */
+        width: 100%;
+        /* Width 100% set chesthundi, full width kosam */
+        height: 20px;
+        /* Height 20px set chesthundi, bar size kosam */
+      }
+
+      @media (max-width: 600px) {
+        /* Media query start avuthundi, mobile screen ki changes apply cheyadaniki */
+        body {
+          /* Body ki mobile lo changes isthundi, responsive design kosam */
+          background-color: lightgreen;
+          /* Lightgreen background set chesthundi, mobile look kosam */
+        }
+
+        .portfolio-nav a {
+          /* Nav links ki block style isthundi, mobile lo line by line kosam */
+          display: block;
+          /* Block display set chesthundi, separate lines kosam */
+          margin: 5px 0;
+          /* Margin set chesthundi, space kosam */
+        }
+
+        .gallery {
+          /* Gallery ki single column grid isthundi, mobile lo adjust cheyadaniki */
+          grid-template-areas: "img1" "img2" "img3";
+          /* Single column areas set chesthundi, mobile layout kosam */
+        }
+      }
+    </style>
+    <!-- Style tag end avuthundi, CSS code complete chesthundi -->
+  </head>
+  <!-- Head section end avuthundi, settings complete chesthundi -->
+
+  <body>
+    <!-- Body section start avuthundi, visible content kanipinchadaniki use chestham -->
+    <header>
+      <!-- Header start avuthundi, top section with background image kosam -->
+      <h1 style="color: white">CSS Playground</h1>
+      <!-- h1 lo white text set chesthundi, header title kosam -->
+    </header>
+    <!-- Header end avuthundi, top section complete chesthundi -->
+    <main>
+      <!-- Main tag start avuthundi, main content organize cheyadaniki -->
+      <h1 style="color: red">Hello</h1>
+      <!-- h1 lo red text set chesthundi, greeting kosam-->
+      <h2 style="text-align: center">HELLOOOO</h2>
+      <!-- h2 lo center text set chesthundi, heading highlight kosam -->
+      <p class="dashed">HELLO</p>
+      <!-- p.dashed lo text set chesthundi, dashed border text kosam -->
+      <p class="double">AAA</p>
+      <!-- p.double lo text set chesthundi, double border text kosam -->
+      <p class="solid">BBB</p>
+      <!-- p.solid lo text set chesthundi, solid border text kosam -->
+      <h3 class="dotted">CCC</h3>
+      <!-- h3.dotted lo text set chesthundi, dotted border heading kosam -->
+      <h1 style="border: 10px solid pink">DDD</h1>
+      <!-- h1 lo pink border text set chesthundi, heading design kosam -->
+      <h2 style="border-top: 10px solid pink">EEE</h2>
+      <hr />
+      <!-- h2 lo top border text set chesthundi, heading style kosam -->
+      <h4>FFF</h4>
+      <hr />
+      <hr />
+      <!-- h4 lo text set chesthundi, margins tho heading kosam -->
+      <h5>GGG</h5>
+      <hr />
+      <!-- h5 lo text set chesthundi, padding tho heading kosam -->
+      <p class="p1">HHH</p>
+      <hr />
+      <!-- .p1 lo text set chesthundi, right align text kosam -->
+      <p class="p2">III</p>
+      <hr />
+      <!-- .p2 lo text set chesthundi, greenyellow border text kosam -->
+      <p class="p3">JJJ</p>
+      <!-- .p3 lo text set chesthundi, pink border text kosam -->
+      <p class="p4">KKK</p>
+      <hr />
+      <!-- .p4 lo text set chesthundi, center align text kosam -->
+      <p class="p5">LLL</p>
+      <hr />
+      <!-- .p5 lo text set chesthundi, stylish center text kosam -->
+      <p class="p6">MMM</p>
+      <hr />
+      <hr />
+      <!-- .p6 lo text set chesthundi, vertical align text kosam -->
+      <p class="p7">NNN</p>
+      <hr />
+      <hr />
+      <!-- .p7 lo text set chesthundi, float left text kosam -->
+      <p class="p8">OOO</p>
+      <hr />
+      <!-- .p8 lo text set chesthundi, grey background text kosam -->
+      <p class="p9">PPP</p>
+      <hr />
+      <!-- .p9 lo text set chesthundi, green border shape text kosam -->
+      <p class="p10">qqq</p>
+      <hr />
+      <!-- .p10 lo text set chesthundi, orange bold text kosam -->
+      <p class="p11">RRR RRR RRR</p>
+      <hr />
+      <!-- .p11 lo text set chesthundi, underlined text kosam -->
+      <h1 style="outline: 2px dotted red">ABC</h1>
+      <hr />
+      <!-- h1 lo dotted outline text set chesthundi, heading design kosam -->
+      <p class="p12">SSS</p>
+      <hr />
+      <!-- .p12 lo text set chesthundi, red shadow text kosam -->
+      <p class="p13">TTT</p>
+      <hr />
+      <!-- .p13 lo text set chesthundi, skewed box text kosam -->
+      <p class="p14">ASUS VIVOBOOK</p>
+      <hr />
+      <!-- .p14 lo text set chesthundi, cursive text kosam -->
+      <p><a href="https://www.google.com/">Google</a></p>
+      <hr />
+      <!-- Link lo "Google" set chesthundi, external link kosam -->
+      <ol class="ol1">
+        <!-- .ol1 lo ordered list start chesthundi, blue list kosam -->
+        <li>UUU</li>
+        <!-- List item set chesthundi, blue text kosam -->
+        <li>UUU</li>
+        <!-- List item set chesthundi, blue text kosam -->
+      </ol>
+      <!-- Ordered list end chesthundi -->
+      <ol>
+        <!-- Simple ordered list start chesthundi, normal numbers kosam -->
+        <li>AAA</li>
+        <!-- List item set chesthundi, normal list kosam -->
+      </ol>
+      <!-- Ordered list end chesthundi -->
+      <ul>
+        <!-- Unordered list start chesthundi, pink bullets kosam -->
+        <li>WWW</li>
+        <!-- List item set chesthundi, pink text kosam -->
+        <li>WWW</li>
+        <!-- List item set chesthundi, pink text kosam -->
+      </ul>
+      <hr />
+      <!-- Unordered list end chesthundi -->
+      <ol class="ABC">
+        <!-- .ABC lo bold ordered list start chesthundi, highlighted list kosam -->
+        <li>ONE</li>
+        <!-- List item set chesthundi, bold text kosam -->
+        <li>TWO</li>
+        <!-- List item set chesthundi, bold text kosam -->
+      </ol>
+      <hr />
+      <!-- Ordered list end chesthundi -->
+      <div class="gallery">
+        <!-- .gallery div start chesthundi, images grid kosam -->
+        <figure>
+          <!-- Figure start chesthundi, image with caption kosam -->
+          <a href="https://www.google.com" target="_blank">
+            <!-- Link to Google set chesthundi, clickable image kosam -->
+            <img src="D:/img.jpeg" alt="Image 1" />
+            <!-- Image set chesthundi, gallery lo first image kosam -->
+          </a>
+          <!-- Link end chesthundi -->
+          <figcaption>First Image</figcaption>
+          <!-- Caption set chesthundi, image description kosam -->
+        </figure>
+        <!-- Figure end chesthundi -->
+        <figure>
+          <!-- Figure start chesthundi, image with caption kosam -->
+          <a href="https://www.google.com" target="_blank">
+            <!-- Link to Google set chesthundi, clickable image kosam -->
+            <img src="D:/img.jpeg" alt="Image 2" />
+            <!-- Image set chesthundi, gallery lo second image kosam -->
+          </a>
+          <!-- Link end chesthundi -->
+          <figcaption>Second Image</figcaption>
+          <!-- Caption set chesthundi, image description kosam -->
+        </figure>
+        <!-- Figure end chesthundi -->
+        <figure>
+          <!-- Figure start chesthundi, image with caption kosam -->
+          <a href="https://www.wikipedia.org" target="_blank">
+            <!-- Link to Wikipedia set chesthundi, clickable image kosam -->
+            <img src="D:/img4.jpg" alt="My image" />
+            <!-- Image set chesthundi, gallery lo third image kosam -->
+          </a>
+          <!-- Link end chesthundi -->
+          <figcaption>Wiki Image</figcaption>
+          <!-- Caption set chesthundi, image description kosam -->
+        </figure>
+        <!-- Figure end chesthundi -->
+      </div>
+      <hr />
+      <hr />
+      <!-- Gallery div end chesthundi -->
+      <div class="asus">
+        <!-- .asus div start chesthundi, form section design kosam -->
+        <label class="AA" for="name">Name:</label>
+        <!-- Bold label set chesthundi, name input connect cheyadaniki -->
+        <input type="text" id="name" placeholder="Enter your Name" />
+        <!-- Text input set chesthundi, name collect cheyadaniki -->
+        <label class="AA" for="email">Email:</label>
+        <!-- Bold label set chesthundi, email input connect cheyadaniki -->
+        <input type="email" id="email" placeholder="Enter your Email" />
+        <!-- Email input set chesthundi, email collect cheyadaniki -->
+        <label class="AA" for="date">Date:</label>
+        <!-- Bold label set chesthundi, date input connect cheyadaniki -->
+        <input type="date" id="date" />
+        <!-- Date input set chesthundi, date select cheyadaniki -->
+        <label class="AA" for="range">Range:</label>
+        <!-- Bold label set chesthundi, range input connect cheyadaniki -->
+        <input type="range" id="range" min="0" max="100" />
+        <!-- Range input set chesthundi, number select cheyadaniki -->
+        <label class="AA" for="color">Color:</label>
+        <!-- Bold label set chesthundi, color input connect cheyadaniki -->
+        <input type="color" id="color" />
+        <!-- Color input set chesthundi, color choose cheyadaniki -->
+        <label class="AA" for="file">File:</label>
+        <!-- Bold label set chesthundi, file input connect cheyadaniki -->
+        <input type="file" id="file" />
+        <!-- File input set chesthundi, files upload cheyadaniki -->
+        <label class="AA" for="choice">Pick One:</label>
+        <!-- Bold label set chesthundi, dropdown connect cheyadaniki -->
+        <select id="choice">
+          <!-- Select dropdown start chesthundi, options choose cheyadaniki -->
+          <option value="yes">Yes</option>
+          <!-- Option "Yes" set chesthundi, dropdown choice kosam -->
+          <option value="no">No</option>
+          <!-- Option "No" set chesthundi, dropdown choice kosam -->
+        </select>
+        <!-- Select dropdown end chesthundi -->
+        <button type="submit">Submit</button>
+        <!-- Submit button set chesthundi, form submit cheyadaniki -->
+      </div>
+      <hr />
+      <hr />
+      <!-- Asus div end chesthundi -->
+      <div class="dark-mode-section animate-box">
+        <!-- .dark-mode-section div start chesthundi, dark mode toggle kosam -->
+        <h1>Dark Mode Toggle</h1>
+        <!-- h1 lo text set chesthundi, section title kosam -->
+        <button class="ABC bounce" onclick="DarkMode()">Dark Mode</button>
+        <!-- Button set chesthundi, dark mode toggle cheyadaniki -->
+      </div>
+      <hr />
+      <hr />
+      <hr />
+      <!-- Dark mode div end chesthundi -->
+      <div class="portfolio-body">
+        <!-- .portfolio-body div start chesthundi, full portfolio organize kosam -->
+        <nav class="portfolio-nav">
+          <!-- Nav start chesthundi, navigation links kosam -->
+          <a href="#home">Home</a>
+          <!-- Home link set chesthundi, home section ki navigate cheyadaniki -->
+          <a href="#about">About</a>
+          <!-- About link set chesthundi, about section ki navigate cheyadaniki */
+                    <a href="#skills">Skills</a> <!-- Skills link set chesthundi, skills section ki navigate cheyadaniki -->
+          <a href="#projects">Projects</a>
+          <!-- Projects link set chesthundi, projects section ki navigate cheyadaniki -->
+          <a href="#contact">Contact</a>
+          <!-- Contact link set chesthundi, contact section ki navigate cheyadaniki -->
+        </nav>
+        <!-- Nav end chesthundi -->
+        <section class="portfolio-section" id="home">
+          <!-- Home section start chesthundi, welcome content kosam -->
+          <div class="welcome-box">
+            <!-- Welcome box div start chesthundi, home content group cheyadaniki -->
+            <h1 class="underline">Welcome to My Portfolio</h1>
+            <!-- h1 lo underlined text set chesthundi, welcome message kosam -->
+            <video controls>
+              <!-- Video player start chesthundi, video content show cheyadaniki -->
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+              <!-- Video source set chesthundi, video play cheyadaniki -->
+              Your browser does not support video.
+              <!-- Error text set chesthundi, browser support lekunte kanipinchadaniki -->
+            </video>
+            <!-- Video player end chesthundi -->
+            <iframe
+              src="https://www.wikipedia.org"
+              width="300"
+              height="200"
+            ></iframe>
+            <!-- Iframe set chesthundi, external webpage embed cheyadaniki -->
+          </div>
+          <!-- Welcome box div end chesthundi -->
+        </section>
+        <!-- Home section end chesthundi -->
+        <section class="portfolio-section" id="about">
+          <!-- About section start chesthundi, personal info kosam -->
+          <h1 class="underline">Uma Sankar</h1>
+          <!-- h1 lo underlined text set chesthundi, name highlight kosam -->
+          <blockquote>I’m passionate about coding!</blockquote>
+          <!-- Blockquote set chesthundi, passion show cheyadaniki -->
+          <article>
+            <!-- Article start chesthundi, specific content group cheyadaniki -->
+            <time datetime="2025-04-06">April 6, 2025</time>
+            <!-- Time tag set chesthundi, date indicate cheyadaniki -->
+            <p>Passionate web developer focusing on front-end.</p>
+            <!-- p lo text set chesthundi, about info kosam -->
+          </article>
+          <!-- Article end chesthundi -->
+          <ul class="portfolio-ul p5" style="color: green">
+            <!-- Unordered list green text tho start chesthundi, extra info kosam -->
+            <li>B.Tech student at Tirumala Engineering College.</li>
+            <!-- List item set chesthundi, education kosam -->
+            <li>Learned web development from YouTube.</li>
+            <!-- List item set chesthundi, skills source kosam -->
+          </ul>
+          <!-- Unordered list end chesthundi -->
+        </section>
+        <!-- About section end chesthundi -->
+        <section class="portfolio-section" id="skills" style="color: skyblue">
+          <!-- Skills section start chesthundi, skills show cheyadaniki -->
+          <h1 class="underline">My Skills</h1>
+          <!-- h1 lo underlined text set chesthundi, skills title kosam -->
+          <div class="skills-box">
+            <!-- Skills box div start chesthundi, skills group cheyadaniki -->
+            <audio controls>
+              <!-- Audio player start chesthundi, audio content play cheyadaniki -->
+              <source
+                src="https://www.w3schools.com/html/horse.mp3"
+                type="audio/mpeg"
+              />
+              <!-- Audio source set chesthundi, sound play cheyadaniki -->
+              Your browser does not support audio.
+              <!-- Error text set chesthundi, browser support lekunte kanipinchadaniki -->
+            </audio>
+            <!-- Audio player end chesthundi -->
+            <ul class="portfolio-ul" style="color: black">
+              <!-- Unordered list black text tho start chesthundi, skills list kosam -->
+              <li>Python Basics</li>
+              <!-- List item set chesthundi, skill show cheyadaniki -->
+              <li>HTML Basics</li>
+              <!-- List item set chesthundi, skill show cheyadaniki -->
+              <li>CSS Basics</li>
+              <!-- List item set chesthundi, skill show cheyadaniki -->
+              <li>JavaScript Basics</li>
+              <!-- List item set chesthundi, skill show cheyadaniki -->
+            </ul>
+            <!-- Unordered list end chesthundi -->
+            <progress value="70" max="100"></progress>
+            <!-- Progress bar set chesthundi, skill level show cheyadaniki -->
+          </div>
+          <!-- Skills box div end chesthundi -->
+        </section>
+        <!-- Skills section end chesthundi -->
+        <section class="portfolio-section" id="projects">
+          <!-- Projects section start chesthundi, projects show cheyadaniki -->
+          <h1 class="underline">My Projects</h1>
+          <!-- h1 lo underlined text set chesthundi, projects title kosam -->
+          <div class="overflow-box">
+            <!-- Overflow box div start chesthundi, scrollable content kosam -->
+            <table class="portfolio-table p7">
+              <!-- Table start chesthundi, projects list cheyadaniki -->
+              <tr>
+                <th class="portfolio-th">Project</th>
+                <th class="portfolio-th">Description</th>
+              </tr>
+              <!-- Table header row set chesthundi, titles kosam -->
+              <tr>
+                <td class="portfolio-td">Portfolio Website</td>
+                <td class="portfolio-td">Built with HTML, CSS, JavaScript</td>
+              </tr>
+              <!-- Row 1 set chesthundi, project details kosam -->
+              <tr>
+                <td class="portfolio-td">Python Calculator</td>
+                <td class="portfolio-td">
+                  Simple calculator from YouTube course
+                </td>
+              </tr>
+              <!-- Row 2 set chesthundi, project details kosam -->
+              <tr>
+                <td class="portfolio-td">Extra Project</td>
+                <td class="portfolio-td">Just to test overflow</td>
+              </tr>
+              <!-- Row 3 set chesthundi, overflow test kosam -->
+            </table>
+            <!-- Table end chesthundi -->
+          </div>
+          <!-- Overflow box div end chesthundi -->
+          <canvas id="myCanvas" width="200" height="100"></canvas>
+          <!-- Canvas set chesthundi, drawing area kosam -->
+        </section>
+        <!-- Projects section end chesthundi -->
+        <section class="portfolio-section" id="contact">
+          <!-- Contact section start chesthundi, contact info kosam -->
+          <h1 class="underline">Contact Me</h1>
+          <!-- h1 lo underlined text set chesthundi, contact title kosam -->
+          <details>
+            <!-- Details start chesthundi, collapsible content kosam -->
+            <summary>More Info</summary>
+            <!-- Summary set chesthundi, clickable title kosam -->
+            <p>Click to see contact details!</p>
+            <!-- p lo text set chesthundi, extra info kosam -->
+          </details>
+          <!-- Details end chesthundi -->
+          <form class="portfolio-form p6" style="color: blue">
+            <!-- Form start chesthundi, user input collect cheyadaniki -->
+            <label>Name: <input type="text" name="name" required /></label>
+            <!-- Name label and input set chesthundi, name collect cheyadaniki -->
+            <label>Email: <input type="email" name="email" required /></label>
+            <!-- Email label and input set chesthundi, email collect cheyadaniki -->
+            <label
+              >Gender:
+              <!-- Gender label start chesthundi, gender options kosam -->
+              <div class="radio-group">
+                <!-- Radio group div start chesthundi, options side by side kosam -->
+                <input type="radio" name="gender" value="male" /> Male
+                <!-- Male radio button set chesthundi, gender select cheyadaniki -->
+                <input type="radio" name="gender" value="female" /> Female
+                <!-- Female radio button set chesthundi, gender select cheyadaniki -->
+              </div>
+              <!-- Radio group div end chesthundi -->
+            </label>
+            <!-- Gender label end chesthundi -->
+            <label
+              >Interests:
+              <!-- Interests label start chesthundi, interests options kosam -->
+              <div class="checkbox-group">
+                <!-- Checkbox group div start chesthundi, multiple choices kosam -->
+                <input type="checkbox" name="interest" value="coding" /> Coding
+                <!-- Coding checkbox set chesthundi, interest select cheyadaniki -->
+                <input type="checkbox" name="interest" value="design" /> Design
+                <!-- Design checkbox set chesthundi, interest select cheyadaniki -->
+              </div>
+              <!-- Checkbox group div end chesthundi -->
+            </label>
+            <!-- Interests label end chesthundi -->
+            <label
+              >Message: <textarea name="message" maxlength="200"></textarea>
+            </label>
+            <!-- Message label and textarea set chesthundi, message collect cheyadaniki -->
+            <input type="submit" value="Submit" />
+            <!-- Submit input set chesthundi, form submit cheyadaniki -->
+          </form>
+          <!-- Form end chesthundi -->
+        </section>
+        <!-- Contact section end chesthundi -->
+        <footer class="portfolio-footer">
+          <!-- Footer start chesthundi, page bottom info kosam -->
+          <p>© 2025 My Portfolio</p>
+          <!-- Copyright text set chesthundi, ownership indicate cheyadaniki -->
+          <div class="social-icons">
+            <!-- Social icons div start chesthundi, social links kosam -->
+            <a
+              href="https://www.primevideo.com/storefront/ref=atv_dl_rdr"
+              target="_blank"
+              ><img src="D:/img6.jpeg" alt="PrimeVideo"
+            /></a>
+            <!-- PrimeVideo link set chesthundi, social connect kosam -->
+            <a href="https://www.aha.video/" target="_blank"
+              ><img src="D:/img7.jpg" alt="Aha"
+            /></a>
+            <!-- Aha link set chesthundi, social connect kosam -->
+            <a href="https://netfree.cc/mobile/home" target="_blank"
+              ><img src="D:/img8.jpeg" alt="Netflix"
+            /></a>
+            <!-- Netflix link set chesthundi, social connect kosam -->
+          </div>
+          <!-- Social icons div end chesthundi -->
+        </footer>
+        <!-- Footer end chesthundi -->
+      </div>
+      <!-- Portfolio body div end chesthundi -->
+      <aside>
+        <!-- Aside start chesthundi, fixed note kosam -->
+        <div class="sticky-note">Quick Note: Check my portfolio!</div>
+        <!-- .sticky-note lo text set chesthundi, quick info kosam -->
+      </aside>
+      <!-- Aside end chesthundi -->
+    </main>
+    <!-- Main tag end chesthundi -->
+    <script>
+      /* Script tag start chesthundi, JavaScript code kosam */
+      function DarkMode() {
+        /* DarkMode function define chesthundi, dark theme toggle cheyadaniki */
+        document.body.classList.toggle(
+          "AAA"
+        ); /* Body ki AAA class toggle chesthundi, dark mode on/off cheyadaniki */
+      }
+      const canvas =
+        document.getElementById(
+          "myCanvas"
+        ); /* Canvas variable set chesthundi, drawing area select cheyadaniki */
+      const ctx =
+        canvas.getContext(
+          "2d"
+        ); /* Canvas context set chesthundi, 2D drawing enable cheyadaniki */
+      ctx.fillStyle =
+        "red"; /* Fill color red set chesthundi, drawing color kosam */
+      ctx.fillRect(
+        50,
+        25,
+        100,
+        50
+      ); /* Red rectangle draw chesthundi, canvas lo shape kanipinchadaniki */
+    </script>
+    <!-- Script tag end chesthundi -->
+  </body>
+  <!-- Body section end chesthundi -->
+</html>
+<!-- HTML file end chesthundi -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hide Show Text</title>
+</head>
+<body>
+
+  <!-- Paragraph ni hide/show cheyyadam kosam -->
+  <h2 id="message">Hello! This is some text.</h2>
+
+  <!-- Hide button -->
+  <button onclick="hideText()">Hide</button>
+
+  <!-- Show button -->
+  <button onclick="showText()">Show</button>
+
+  <script>
+    // Function to hide text
+    function hideText() {
+      // Display style ni 'none' cheyyadam valla text kanipinchadu
+      document.getElementById("message").style.display = "none";
+    }
+
+    // Function to show text
+    function showText() {
+      // Display style ni 'block' cheyyadam valla text visible avutundi
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

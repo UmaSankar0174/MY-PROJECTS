@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+        /* body ki styles apply chestham */
+        body {
+            font-family: Arial, sans-serif; /* Font ni set chestham */
+            text-align: center; /* Center lo text unchela chestham */
+            transition: background 0.5s, color 0.5s; /* Smooth transition for dark mode */
+        }
+
+        /* Dark mode ki styles */
+        .AAA {  /* user choice */
+            background-color: #222; /* Background dark chestham */
+            color: white; /* Text white chestham */
+        }
+
+        /* Button styles */
+        .ABC {   /* user choice */
+            padding: 10px 20px; /* Button ki padding istam */
+            font-size: 16px; /* Text size increase chestham */
+            border: none; /* Border remove chestham */
+            cursor: pointer; /* Cursor pointer chestham */
+            margin-top: 20px; /* Space add chestham */
+        }
+       /* User choice is the function name (toggleDarkMode()) and the class name (dark-mode).*/
+      /* Predefined keywords are onclick, document.body, classList.toggle(), and function DarkMode.*/
+           </style>
+</head>
+<body>
+    <h1>Dark Mode Toggle</h1> <!-- Heading for the page -->
+    <button class="ABC" onclick="DarkMode()"> Dark Mode </button> <!-- Button ni create chestham .. -->
+
+    <script> // The <script> tag in HTML is used to add JavaScript code inside an HTML file. JavaScript is responsible for making a webpage interactive. Handle user interactions (e.g., button clicks)
+        // Function dark mode ni toggle cheyyadaniki
+        function DarkMode() {
+            document.body.classList.toggle('AAA'); // Body lo class add/remove chestham
+        }
+    </script>
+</body>
+</html>

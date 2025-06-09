@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled CSS Form</title>
+    <style>
+        /* 🌟 Body Styling */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font style */
+            background-color: beige; /* Sets the background color of the webpage */
+            display: flex; /* Enables flexbox for center alignment */
+            justify-content: center; /* Centers the form horizontally */
+            align-items: center; /* Centers the form vertically */
+            height: 100vh; /* Makes the body full height of the viewport */
+        }
+
+        /* 🌟 Form Container Styling */
+        .form-container {
+            background: deepskyblue; /* Sets the background color of the form */
+            padding: 20px; /* Adds padding inside the form container */
+            border-radius: 10px; /* Rounds the corners of the form */
+            width: 300px; /* Defines the width of the form */
+            box-shadow: 5px 5px 10px gray; /* Adds a shadow effect to the form */
+        }
+
+        /* 🌟 Label Styling */
+        label {
+            font-weight: bold; /* Makes labels bold */
+            display: block; /* Ensures labels appear above the input fields */
+            margin-bottom: 5px; /* Adds spacing below the labels */
+        }
+
+        /* 🌟 Input and Textarea Styling */
+        input, textarea {
+            width: 95%; /* Makes inputs and textarea full width */
+            padding: 10px; /* Adds padding inside the input fields */
+            margin-bottom: 10px; /* Adds spacing below each input */
+            border: 2px solid white; /* Adds a white border */
+            background-color: skyblue; /* Sets a light blue background for inputs */
+            border-radius: 10px; /* Rounds the corners of inputs */
+            font-size: 16px; /* Increases font size inside inputs */
+        }
+
+        /* 🌟 Submit Button Styling */
+        button {
+            padding: 10px; /* Adds padding inside the button */
+            background: white; /* Sets background color to white */
+            color: black; /* Sets text color to black */
+            border: 1px solid black; /* Adds a black border */
+            border-radius: 5px; /* Rounds the button corners */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+            font-size: 16px; /* Increases button text size */
+            width: 100%; /* Makes the button full width */
+        }
+
+        /* 🌟 Button Hover Effect */
+        button:hover {
+            background: gray; /* Changes button background to gray when hovered */
+            color: white; /* Changes text color to white when hovered */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 🌟 Form Section -->
+    <div class="form-container"> <!-- Form container with styling -->
+        <form>
+            <!-- Name Field -->
+            <label for="name">name:</label>
+            <input type="text" id="name" placeholder="Enter your name"> <!-- Text input for name -->
+            
+            <!-- Email Field -->
+            <label for="email">email:</label>
+            <input type="email" id="email" placeholder="Enter your email"> <!-- Email input field -->
+            
+            <!-- Message Field -->
+            <label for="Message">message:</label>
+            <textarea id="message" placeholder="Type your message"></textarea> <!-- Message textarea -->
+            
+            <!-- Submit Button -->
+            <button type="Submit">Submit</button> <!-- Button to submit the form -->
+        </form>
+    </div>
+
+</body>
+</html>

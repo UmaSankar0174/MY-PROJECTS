@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Deletion Example</title>
+</head>
+<body>
+
+  <!-- Task list with delete buttons -->
+  <ul id="taskList">
+    <li>Task 1 <button class="delete">❌</button></li>  <!-- Task 1 with delete button -->
+    <li>Task 2 <button class="delete">❌</button></li>  <!-- Task 2 with delete button -->
+  </ul>
+
+  <script>
+    // Step 1: UL (taskList) lo click event ni add chestunnam
+    document.getElementById("taskList").addEventListener("click", function(e) {
+
+      // Step 2: check chestunnam click chesina element ki class 'delete' unda ani
+      if (e.target.classList.contains("delete")) {
+
+        // Step 3: a delete button yokka parent (i.e., <li>) ni remove chestunnam
+        e.target.parentElement.remove();
+      }
+
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+1. setTimeout() – Delay taruvata oka sari execute avutundi
+
+console.log("1. Before");
+
+setTimeout(function () {
+  console.log("2. Hello after 3 seconds");
+}, 3000); // 3000 milliseconds = 3 seconds
+
+console.log("3. After");
+📌 Output:
+markdown
+
+1. Before  
+3. After  
+2. Hello after 3 seconds
+📝 Explanation (Telugu + English):
+
+setTimeout() lo function run avutundi 3 seconds tarvata
+
+console.log("2. Hello") 3 seconds delay tarvata vasthundi
+
+✅ 2. setInterval() – Function ni repeated ga execute chesthundi (every n seconds)
+
+setInterval(function () {
+  console.log("Repeating every 2 seconds");
+}, 2000);
+📝 Explanation:
+
+Prati 2 seconds ki console.log() message print avutundi
+
+It keeps repeating until you stop it manually
+
+✅ 3. Stop setInterval() using clearInterval()
+
+let count = 1;
+
+let timer = setInterval(function () {
+  console.log("Count: " + count);
+  count++;
+
+  if (count > 5) {
+    clearInterval(timer); // Stop after 5 counts
+  }
+}, 1000);
+📌 Output:
+
+Count: 1  
+Count: 2  
+Count: 3  
+Count: 4  
+Count: 5  
+👉 After that, it stops.
+
+🎯 Real-World Use:
+Use Case	Description
+Countdown timer	setInterval() tho seconds countdown
+Loading delay	setTimeout() tho message delay cheyyadam
+Slide show / Carousel	Images change every 3 sec

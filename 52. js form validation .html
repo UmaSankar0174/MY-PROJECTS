@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<!-- Idi HTML5 document ani browser ki chepthundi -->
+
+<html>
+<head>
+  <title>Form Validation Full Example</title> 
+  <!-- Page title browser tab lo kanipistundi -->
+</head>
+
+<body style="text-align:center; padding-top:50px; font-family: Arial;">
+<!-- Body start, center align and padding top for spacing -->
+
+  <form id="myForm">
+    <!-- Form create chesam, id tho access cheyyali JS lo -->
+
+    <input type="text" id="username" placeholder="Enter your name"><br><br>
+    <!-- Text input box for user name -->
+
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <!-- Email input box -->
+
+    <button type="submit">Submit</button>
+    <!-- Submit button form ni submit cheyyadaniki -->
+  </form>
+
+  <p id="msg" style="font-weight:bold;"></p>
+  <!-- Ikkada message (success/error) display avutundi -->
+
+  <script>
+    // JavaScript code start
+
+    // Form submit event ki listener add chesthunam
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      
+      event.preventDefault();  
+      // Default form submit (page reload) ni stop chesthundi
+
+      // Input values ni fetch chesthunam
+      let name = document.getElementById('username').value;
+      let email = document.getElementById('email').value;
+
+      // Message paragraph ni access chesthunam
+      let msg = document.getElementById('msg');
+
+      // Validation logic — empty values unte error chupinchali
+      if(name === '' || email === '') {
+        msg.innerText = 'Please fill all fields.'; // Error message
+        msg.style.color = 'red'; // Red color message
+      } else {
+        msg.innerText = 'Form submitted successfully!'; // Success message
+        msg.style.color = 'green'; // Green color message
+      }
+    });
+
+  </script>
+
+</body>
+</html>

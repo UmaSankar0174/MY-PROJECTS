@@ -1,0 +1,616 @@
+<html>
+    <head>
+        <title>CSS Playground</title>
+        <style>
+            :root {
+                --main-color: pink;
+                --border-radius: 5px;
+            }
+            h2 { 
+                background-color: var(--main-color); 
+            }
+            body { 
+                background-color: skyblue; 
+                margin: 0; 
+                font-size: 1rem;
+            }
+            p.dashed { 
+                border-style: dashed; 
+            }
+            p.double { 
+                border-style: double; 
+            }
+            p.solid { 
+                border-style: solid; 
+            }
+            h3.dotted { 
+                border-style: dotted; 
+            }
+            h4 { 
+                margin: 1em 1em 2em 3em; 
+                border: 4px solid olive; 
+            }
+            h5 { 
+                padding-left: 70px; 
+            }
+            .p1 { 
+                display: flex; 
+                justify-content: flex-end; 
+                align-items: center; 
+                padding-right: 100px; 
+            }
+            .p2 { 
+                border: 1px solid greenyellow; 
+            }
+            .p3 { 
+                border: 1px solid pink; 
+                padding: 60px 100px 70px 80px; 
+                display: flex; 
+            }
+            .p4 { 
+                display: flex; 
+                justify-content: center; 
+            }
+            .p5 { 
+                border: 1px solid pink; 
+                background-color: darkgray; 
+                padding: 60px 100px 0 80px; 
+                display: flex; 
+                margin: auto; 
+                justify-content: center; 
+            }
+            .p6 { 
+                border: 20px solid pink; 
+                display: flex; 
+                flex-direction: column; 
+                padding: 20px; 
+                box-sizing: border-box; 
+            }
+            .p7 { 
+                border: 2px solid navy; 
+                padding: 1px; 
+                margin: 25px; 
+                background-color: grey; 
+                float: left;
+            }
+            .p8 { 
+                border: 2px solid pink; 
+                background-color: grey; 
+            }
+            .p9 { 
+                width: 80vw; 
+                height: 50vh; 
+                border: 2px solid green; 
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            }
+            .p10 { 
+                color: orange; 
+                font-size: 3em; 
+                text-transform: uppercase; 
+                font-weight: bold; 
+                font-style: italic; 
+            }
+            .p11 { 
+                font-family: Arial, sans-serif; 
+                line-height: 1.5; 
+                letter-spacing: 2px; 
+                word-spacing: 5px; 
+                text-decoration: underline; 
+            }
+            .p11::first-line {
+                color: red;
+            }
+            .p12 { 
+                text-shadow: 2px 2px 5px red; 
+            }
+            .p13 { 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                background-color: lightcoral; 
+                width: 100px; 
+                height: 100px; 
+                transform: skew(10deg);
+            }
+            .p14 { 
+                font-family: cursive; 
+            }
+            a { 
+                text-decoration: underline; 
+            }
+            a:visited { 
+                color: green; 
+            }
+            a:hover { 
+                color: blue; 
+            }
+            a:active { 
+                color: red; 
+            }
+            .ol1 { 
+                color: blue; 
+                list-style-type: none; 
+            }
+            ul { 
+                color: pink; 
+            }
+            li { 
+                font-family: "Arial", sans-serif; 
+            }
+            ol.ABC { 
+                margin-bottom: 5px; 
+                font-weight: bold; 
+                margin-right: 5px; 
+            }
+            .gallery { 
+                display: grid; 
+                grid-template-areas: 
+                    "img1 img2"
+                    "img3 img3";
+                gap: 20px; 
+                padding: 20px; 
+            }
+            .gallery img { 
+                width: 100px; 
+                height: auto; 
+                border-radius: var(--border-radius); 
+                object-fit: cover; 
+                filter: grayscale(0%);
+            }
+            .gallery img:hover { 
+                transform: scale(1.1) translateX(10px); 
+                box-shadow: 1px 1px 1px blue; 
+                filter: blur(1px) brightness(1.1); 
+                cursor: pointer; 
+            }
+            .gallery img:nth-child(1) {
+                grid-area: img1;
+            }
+            .gallery img:nth-child(2) {
+                grid-area: img2;
+            }
+            .gallery img:nth-child(3) {
+                grid-area: img3;
+            }
+            .asus { 
+                padding: 10px; 
+                width: 300px; 
+                z-index: 1;
+            }
+            .AA { 
+                font-weight: bold; 
+                display: block; 
+                margin-bottom: 5px; 
+            }
+            input { 
+                width: 100%; 
+                padding: 15px; 
+                margin-bottom: 15px; 
+                border: 2px solid var(--main-color); 
+                border-radius: var(--border-radius); 
+                font-size: 18px; 
+                background-color: aqua; 
+            }
+            input:focus { 
+                border-color: green; 
+                outline: none; 
+            }
+            button { 
+                width: 100%; 
+                padding: 15px; 
+                background: purple; 
+                color: white; 
+                border:none; 
+                border-radius: var(--border-radius); 
+                cursor: pointer; 
+                font-size: 18px; 
+            }
+            button:hover { 
+                background: red; 
+            }
+            .AAA { 
+                background-color: black; 
+                color: white; 
+            }
+            .ABC { 
+                padding: 10px 20px; 
+                font-size: 16px; 
+                border: none; 
+                cursor: pointer; 
+                margin-top: 20px; 
+            }
+            .dark-mode-section { 
+                background-color: white; 
+                padding: 20px; 
+                border-radius: 10px; 
+                color: pink; 
+            }
+            .portfolio-body { 
+                font-family: Arial, sans-serif; 
+                text-align: center; 
+                margin: 0; 
+                background-color: white; 
+            }
+            .portfolio-nav { 
+                background-color: var(--main-color); 
+                padding: 10px; 
+            }
+            .portfolio-nav a { 
+                margin: 0 15px; 
+                text-decoration: none; 
+                color: red; 
+            }
+            nav a:hover { 
+                color: orange; 
+            }
+            h1 { 
+                color: violet; 
+                font-size: 2.5em; 
+            }
+            p { 
+                font-size: 1.2em; 
+                max-width: 600px; 
+                margin: 20px auto; 
+            }
+            .underline { 
+                border-bottom: 2px solid red; 
+                display: inline-block; 
+                padding-bottom: 5px; 
+            }
+            .skills-box { 
+                border: 2px solid violet; 
+                padding: 20px; 
+                border-radius: 10px; 
+                max-width: 300px; 
+                margin: 20px auto; 
+            }
+            .portfolio-section { 
+                padding: 10px; 
+            }
+            .portfolio-ul, .portfolio-table, .portfolio-form { 
+                max-width: 500px; 
+                margin: 20px auto; 
+                text-align: left; 
+            }
+            .portfolio-table { 
+                border-collapse: collapse; 
+                width: 100%; 
+            }
+            .portfolio-th, .portfolio-td { 
+                border: 1px solid black; 
+                padding: 10px; 
+            }
+            .portfolio-form input, .portfolio-form textarea { 
+                width: 100%; 
+                margin: 2px 0; 
+            }
+            .portfolio-footer { 
+                background-color: grey; 
+                padding: 2px; 
+                width: 100%; 
+            }
+            .social-icons img { 
+                width: 30px; 
+                height: 30px; 
+                margin: 0 10px; 
+                object-fit: cover; 
+            }
+            header { 
+                background-image: url("D:/img4.jpg"); 
+                background-size: cover; 
+                padding: 20px; 
+                text-align: center; 
+            }
+            aside { 
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                width: 150px; 
+                background: rgba(255, 255, 255, 0.8); 
+                padding: 10px; 
+                border-radius: var(--border-radius); 
+                z-index: 2;
+            }
+            .sticky-note { 
+                position: sticky; 
+                top: 10px; 
+                background: yellow; 
+                padding: 10px; 
+                margin: 10px auto; 
+                width: 200px; 
+            }
+            video, audio { 
+                width: 300px; 
+                margin: 10px auto; 
+                display: block; 
+            }
+            select { 
+                width: 100%; 
+                padding: 15px; 
+                margin-bottom: 15px; 
+                border: 2px solid var(--main-color); 
+                border-radius: var(--border-radius); 
+                font-size: 18px; 
+            }
+            .animate-box { 
+                transition: all 0.5s ease; 
+                background: lightblue; 
+                padding: 10px; 
+            }
+            .animate-box:hover { 
+                opacity: 0.7; 
+                transform: rotate(5deg); 
+            }
+            @keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% { 
+                    transform: translateY(0); 
+                } 
+                40% { 
+                    transform: translateY(-20px); 
+                } 
+                60% { 
+                    transform: translateY(-10px); 
+                } 
+            }
+            .bounce { 
+                animation: bounce 2s infinite; 
+            }
+            figure { 
+                margin: 20px auto; 
+                max-width: 300px; 
+            }
+            figcaption { 
+                text-align: center; 
+                font-style: italic; 
+            }
+            blockquote { 
+                border-left: 5px solid green; 
+                padding-left: 10px; 
+                margin: 20px; 
+            }
+            .overflow-box { 
+                width: 400px; 
+                height: 150px; 
+                overflow-y: scroll; 
+                border: 1px solid black; 
+                margin: 20px auto; 
+            }
+            .highlight::before { 
+                content: "★ "; 
+                color: gold; 
+            }
+            .portfolio-form label { 
+                display: block; 
+                margin-bottom: 10px; 
+            }
+            .portfolio-form .radio-group, .portfolio-form .checkbox-group { 
+                display: flex; 
+                gap: 15px; 
+                margin-bottom: 10px; 
+            }
+            .portfolio-form input[type="radio"], .portfolio-form input[type="checkbox"] { 
+                margin: 0 5px 0 0; 
+            }
+            canvas {
+                border: 1px solid black;
+                margin: 20px auto;
+                display: block;
+            }
+            progress {
+                width: 100%;
+                height: 20px;
+            }
+            @media (max-width: 600px) {
+                body {
+                    background-color: lightgreen;
+                }
+                .portfolio-nav a {
+                    display: block;
+                    margin: 5px 0;
+                }
+                .gallery {
+                    grid-template-areas: 
+                        "img1"
+                        "img2"
+                        "img3";
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="color: white;">CSS Playground</h1>
+        </header>
+        <main>
+            <h1 style="color:red">Hello</h1>
+            <h2 style="text-align: center;">HELLOOOO</h2>
+            <p class="dashed">HELLO</p>
+            <p class="double">AAA</p>
+            <p class="solid">BBB</p>
+            <h3 class="dotted">CCC</h3>
+            <h1 style="border: 10px solid pink;">DDD</h1>
+            <h2 style="border-top: 10px solid pink;">EEE</h2> <hr>
+            <h4>FFF</h4> <hr> <hr>
+            <h5>GGG</h5> <hr>
+            <p class="p1">HHH</p> <hr>
+            <p class="p2">III</p> <hr>
+            <p class="p3">JJJ</p>
+            <p class="p4">KKK</p> <hr>
+            <p class="p5">LLL</p> <hr>
+            <p class="p6">MMM</p> <hr> <hr>
+            <p class="p7">NNN</p> <hr> <hr>
+            <p class="p8">OOO</p> <hr>
+            <p class="p9">PPP</p> <hr>
+            <p class="p10">qqq</p> <hr>
+            <p class="p11">RRR RRR RRR</p> <hr>
+            <h1 style="outline: 2px dotted red;">ABC</h1> <hr>
+            <p class="p12">SSS</p> <hr>
+            <p class="p13">TTT</p> <hr>
+            <p class="p14">ASUS VIVOBOOK</p> <hr>
+            <p><a href="https://www.google.com/">Google</a></p> <hr>
+            <ol class="ol1">
+                <li>UUU</li>
+                <li>UUU</li>
+            </ol>
+            <ol>
+                <li>AAA</li>
+            </ol>
+            <ul>
+                <li>WWW</li>
+                <li>WWW</li>
+            </ul> <hr>
+            <ol class="ABC">
+                <li>ONE</li>
+                <li>TWO</li>
+            </ol> <hr>
+            <div class="gallery">
+                <figure>
+                    <a href="https://www.google.com" target="_blank">
+                        <img src="D:/img.jpeg" alt="Image 1">
+                    </a>
+                    <figcaption>First Image</figcaption>
+                </figure>
+                <figure>
+                    <a href="https://www.google.com" target="_blank">
+                        <img src="D:/img.jpeg" alt="Image 2">
+                    </a>
+                    <figcaption>Second Image</figcaption>
+                </figure>
+                <figure>
+                    <a href="https://www.wikipedia.org" target="_blank">
+                        <img src="D:/img4.jpg" alt="My image">
+                    </a>
+                    <figcaption>Wiki Image</figcaption>
+                </figure>
+            </div> <hr> <hr>
+            <div class="asus">
+                <label class="AA" for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your Name">
+                <label class="AA" for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your Email">
+                <label class="AA" for="date">Date:</label>
+                <input type="date" id="date">
+                <label class="AA" for="range">Range:</label>
+                <input type="range" id="range" min="0" max="100">
+                <label class="AA" for="color">Color:</label>
+                <input type="color" id="color">
+                <label class="AA" for="file">File:</label>
+                <input type="file" id="file">
+                <label class="AA" for="choice">Pick One:</label>
+                <select id="choice">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="submit">Submit</button>
+            </div> <hr> <hr>
+            <div class="dark-mode-section animate-box">
+                <h1>Dark Mode Toggle</h1>
+                <button class="ABC bounce" onclick="DarkMode()">Dark Mode</button>
+            </div> <hr> <hr> <hr>
+            <div class="portfolio-body">
+                <nav class="portfolio-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <section class="portfolio-section" id="home">
+                    <div class="welcome-box">
+                        <h1 class="underline">Welcome to My Portfolio</h1>
+                        <video controls>
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support video.
+                        </video>
+                        <iframe src="https://www.wikipedia.org" width="300" height="200"></iframe>
+                    </div>
+                </section>
+                <section class="portfolio-section" id="about">
+                    <h1 class="underline">Uma Sankar</h1>
+                    <blockquote>I’m passionate about coding!</blockquote>
+                    <article>
+                        <time datetime="2025-04-06">April 6, 2025</time>
+                        <p>Passionate web developer focusing on front-end.</p>
+                    </article>
+                    <ul class="portfolio-ul p5" style="color: green;">
+                        <li>B.Tech student at Tirumala Engineering College.</li>
+                        <li>Learned web development from YouTube.</li>
+                    </ul>
+                </section>
+                <section class="portfolio-section" id="skills" style="color: skyblue;">
+                    <h1 class="underline">My Skills</h1>
+                    <div class="skills-box">
+                        <audio controls>
+                            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                            Your browser does not support audio.
+                        </audio>
+                        <ul class="portfolio-ul" style="color: black;">
+                            <li>Python Basics</li>
+                            <li>HTML Basics</li>
+                            <li>CSS Basics</li>
+                            <li>JavaScript Basics</li>
+                        </ul>
+                        <progress value="70" max="100"></progress>
+                    </div>
+                </section>
+                <section class="portfolio-section" id="projects">
+                    <h1 class="underline">My Projects</h1>
+                    <div class="overflow-box">
+                        <table class="portfolio-table p7">
+                            <tr><th class="portfolio-th">Project</th><th class="portfolio-th">Description</th></tr>
+                            <tr><td class="portfolio-td">Portfolio Website</td><td class="portfolio-td">Built with HTML, CSS, JavaScript</td></tr>
+                            <tr><td class="portfolio-td">Python Calculator</td><td class="portfolio-td">Simple calculator from YouTube course</td></tr>
+                            <tr><td class="portfolio-td">Extra Project</td><td class="portfolio-td">Just to test overflow</td></tr>
+                        </table>
+                    </div>
+                    <canvas id="myCanvas" width="200" height="100"></canvas>
+                </section>
+                <section class="portfolio-section" id="contact">
+                    <h1 class="underline">Contact Me</h1>
+                    <details>
+                        <summary>More Info</summary>
+                        <p>Click to see contact details!</p>
+                    </details>
+                    <form class="portfolio-form p6" style="color: blue;">
+                        <label>Name: <input type="text" name="name" required></label>
+                        <label>Email: <input type="email" name="email" required></label>
+                        <label>Gender: 
+                            <div class="radio-group">
+                                <input type="radio" name="gender" value="male"> Male
+                                <input type="radio" name="gender" value="female"> Female
+                            </div>
+                        </label>
+                        <label>Interests: 
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="interest" value="coding"> Coding
+                                <input type="checkbox" name="interest" value="design"> Design
+                            </div>
+                        </label>
+                        <label>Message: <textarea name="message" maxlength="200"></textarea></label>
+                        <input type="submit" value="Submit">
+                    </form>
+                </section>
+                <footer class="portfolio-footer">
+                    <p>© 2025 My Portfolio</p>
+                    <div class="social-icons">
+                        <a href="https://www.primevideo.com/storefront/ref=atv_dl_rdr" target="_blank"><img src="D:/img6.jpeg" alt="PrimeVideo"></a>
+                        <a href="https://www.aha.video/" target="_blank"><img src="D:/img7.jpg" alt="Aha"></a>
+                        <a href="https://netfree.cc/mobile/home" target="_blank"><img src="D:/img8.jpeg" alt="Netflix"></a>
+                    </div>
+                </footer>
+            </div>  
+            <aside>
+                <div class="sticky-note">Quick Note: Check my portfolio!</div>
+            </aside>
+        </main>
+        <script>
+            function DarkMode() {
+                document.body.classList.toggle('AAA');
+            }
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'red';
+            ctx.fillRect(50, 25, 100, 50);
+        </script>
+    </body>
+</html>

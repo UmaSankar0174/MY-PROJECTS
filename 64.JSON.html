@@ -1,0 +1,38 @@
+✅ What is JSON?
+🧠 JSON = JavaScript Object Notation
+It is a format to store or send data (APIs lo use chestaru)
+
+👉 Example JSON:
+
+
+{
+  "name": "Uma Sankar",
+  "age": 23,
+  "job": "Frontend Developer"
+}
+Idi chala similar to JS object, but:
+
+Keys and string values are in double quotes
+
+Use chestaru data transfer (backend to frontend) lo
+
+✅ 1. JSON.stringify() – Object ni string ga marchadam
+
+let user = {
+  name: "Uma",
+  age: 23
+};
+
+let strUser = JSON.stringify(user); // object → string
+console.log(strUser); // {"name":"Uma","age":23}
+📝 Use case:
+Browser lo localStorage lo save cheyyali ante → string format kavali
+
+✅ 2. JSON.parse() – String ni object ga marchadam
+
+let strUser = '{"name":"Uma","age":23}'; // string
+
+let objUser = JSON.parse(strUser); // string → object
+console.log(objUser.name); // Uma
+📝 Use case:
+APIs nunchi data osthadi string format lo → access cheyyali ante object lo marchali.

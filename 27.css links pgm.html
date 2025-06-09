@@ -1,0 +1,44 @@
+<html >
+<head>
+    
+    <title>Fixed CSS Links</title>
+    <style>
+        /* Default link style (underlined) */
+        a {
+            text-decoration: underline;
+        }
+
+        /* Custom styled link */
+        a.custom-link {
+            color: pink;
+            text-decoration: none;
+        }
+
+        /* Visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* Hover effect */
+        a:hover {
+            color: blue;
+        }
+
+        /* Active (when clicked) */
+        a:active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p><a href="https://www.google.com/">Google (Default)</a></p>
+    
+    <p><a href="https://www.google.com/" class="custom-link">Google (Custom Styled)</a></p>
+
+    <p><a href="https://www.google.com/" class="hover">Google (Default)</a></p>
+
+    <p><a href="https://www.google.com/">Google (Default)</a></p>
+
+</body>
+</html>

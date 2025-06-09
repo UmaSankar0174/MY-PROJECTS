@@ -1,0 +1,79 @@
+  <!--   Fetch API
+Real-world lo network call chestaru (ex: get user data from server)
+
+ fetch() returns a promise
+fetch() is used to get data from APIs
+
+.then() chains handle asynchronous steps
+
+.json() parses the response into JavaScript object
+
+.catch() handles errors (e.g., no internet or wrong URL)  
+
+
+| Concept         | Use                   |
+| --------------- | --------------------- |
+| `setTimeout()`  | Delay, simulation     |
+| Promise         | Future result         |
+| `.then()`       | Success block         |
+| `.catch()`      | Error block           |
+| `async / await` | Easy promise handling |
+| `fetch()`       | Get API data          |     -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch API Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 16px;
+      color: #333;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fetch JSON Data</h1>
+  <div class="result" id="output">Loading...</div>
+
+  <script>
+    // Fetch post with id 1
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json()) // Convert response to JSON
+      .then(data => {
+        console.log(data); // Log to console
+
+        // Display on the webpage
+        const output = document.getElementById("output");
+        output.textContent = 
+          `Post ID: ${data.id}\n` +
+          `User ID: ${data.userId}\n` +
+          `Title: ${data.title}\n\n` +
+          `Body:\n${data.body}`;
+      })
+      .catch(error => {
+        console.error("Fetch error:", error);
+        document.getElementById("output").textContent = "Failed to load data.";
+      });
+  </script>
+
+</body>
+</html>

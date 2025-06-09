@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Reduce - Multiply</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fdfc;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reduce() - Multiply All Numbers</h1>
+
+  <div class="box">
+    <p><strong>Original Numbers:</strong> <span id="numbers"></span></p>
+    <p><strong>Multiplication Result:</strong> <span id="output"></span></p>
+  </div>
+
+  <script>
+    // Step 1: Define the array of numbers
+    let nums = [2, 3, 4];
+    // This array has 3 numbers we want to multiply: 2 * 3 * 4
+
+    // Step 2: Use reduce to multiply all the numbers
+    let result = nums.reduce((acc, curr) => acc * curr, 1);
+    // acc = accumulator (starts at 1)
+    // curr = current number in array
+    // 1st: acc=1, curr=2 → 1*2 = 2
+    // 2nd: acc=2, curr=3 → 2*3 = 6
+    // 3rd: acc=6, curr=4 → 6*4 = 24 (final result)
+
+    // Step 3: Log to console
+    console.log("Original Array:", nums);    // Output: [2, 3, 4]
+    console.log("Multiplication Result:", result);  // Output: 24
+
+    // Step 4: Show on the webpage
+    document.getElementById("numbers").textContent = JSON.stringify(nums);
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>
+ <!-- .reduce() works not just for sum — but for any accumulation, like multiplying.
+
+(acc, curr) => acc * curr is an arrow function version (short and clean).
+
+The initial value 1 is used because 1 is the identity for multiplication.
+
+| Use Case     | Code Idea                             |
+| ------------ | ------------------------------------- |
+| Sum of array | `arr.reduce((a, c) => a + c, 0)`      |
+| Product      | `arr.reduce((a, c) => a * c, 1)`      |
+| Find max     | `arr.reduce((a, c) => c > a ? c : a)` |
+

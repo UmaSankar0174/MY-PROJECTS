@@ -1,0 +1,71 @@
+<!--  What is Asynchronous JavaScript?
+Normal JavaScript lo code line by line execute avutundi (synchronous).
+But network calls, file reads, timers ki wait cheyyadam waste — so async execution use chestaru. 
+setTimeout() 1 sec wait chestundi — but rest of code executes.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .output {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .log {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript setTimeout Demo</h1>
+
+  <div class="output" id="outputArea">
+    <div class="log">Output will appear here...</div>
+  </div>
+
+  <script>
+    const output = document.getElementById("outputArea");
+
+    // Helper function to display text both on screen and in console
+    function showMessage(msg) {
+      console.log(msg); // Log to console
+      const p = document.createElement("div");
+      p.className = "log";
+      p.textContent = msg;
+      output.appendChild(p); // Show on the web page
+    }
+
+    // Step 1: Log "1"
+    showMessage("1");
+
+    // Step 2: setTimeout will delay "2" by 1 second
+    setTimeout(() => {
+      showMessage("2"); // This runs after 1 second
+    }, 1000);
+
+    // Step 3: Log "3"
+    showMessage("3");
+  </script>
+
+</body>
+</html>

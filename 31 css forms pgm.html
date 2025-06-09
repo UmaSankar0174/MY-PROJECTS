@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Styled CSS Form</title>
+    <style>
+        /* 🌟 Body Styling */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font to Arial */
+            background-color: skyblue; /* Sets the background color to sky blue */
+            display: flex; /* Enables flexible box layout */
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            height: 100vh; /* Makes the body take full viewport height */
+        }
+
+        /* 🌟 Form Styling */
+        asus  {
+            background: white; /* Sets form background color to white */
+            padding: 20px; /* Adds spacing inside the form */
+            border-radius: 10px; /* Makes the edges rounded */
+            box-shadow: 5px 5px 10px red; /* Adds a pink shadow effect */
+            width: 300px; /* Sets the width of the form */
+        }
+
+        /* 🌟 Label Styling */
+        AA {   /* name email lantivi box madyalo side headings ki  */
+            font-weight: bold; /* Makes label text bold */
+            display: block; /* Ensures labels appear on a new line */
+            margin-bottom: 5px; /* Adds space between label and input */
+        }
+
+        /* 🌟 Input Field Styling */
+        input {  /* name kindha oche box email kindha oche box */
+            width: 100%; /* Makes input fields take full width */
+            padding: 10px; /* Adds spacing inside the input box */
+            margin-bottom: 10px; /* Adds space between input fields */
+            border: 2px solid pink; /* Sets a pink border */
+            border-radius: 5px; /* Rounds the edges of input fields */
+            font-size: 16px; /* Increases font size for readability */
+        }
+
+        /* 🌟 Input Focus Effect */
+        input:focus {   /* last lo separate ga button ki color */
+            border-color: green; /* Changes border color to green when focused */
+            outline: none; /* Removes default outline */
+        }
+
+        /* 🌟 Button Styling */
+        button {
+            width: 100%; /* Makes button take full width */
+            padding: 10px; /* Adds padding inside the button */
+            background: purple; /* Sets the background color */
+            color: white; /* Sets the text color to white */
+            border: none; /* Removes default border */
+            border-radius: 5px; /* Rounds the edges */
+            cursor: pointer; /* Changes mouse cursor to pointer */
+            font-size: 16px; /* Increases font size */
+        }
+
+        /* 🌟 Button Hover Effect */
+        button:hover {
+            background: red; /* Changes button color to red when hovered */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🌟 Form Start -->
+    <asus>
+        <!-- 🌟 Name Input -->
+        <AA for="name">Name:</AA>
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <!-- 🌟 Email Input -->
+        <AA for="email">Email:</AA>
+        <input type="email" id="email" placeholder="Enter your email">
+        
+        <!-- 🌟 Submit Button -->
+        <button type="submit">Submit</button>
+    </asus>
+    <!-- 🌟 Form End -->
+</body>
+</html>

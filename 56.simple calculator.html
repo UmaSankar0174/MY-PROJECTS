@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+
+  <h2>Add Two Numbers</h2>
+
+  <!-- Two number inputs for user -->
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <!-- Button click avuthe add() function call -->
+  <button onclick="add()">Add</button>
+
+  <!-- Result display chese paragraph -->
+  <p id="result"></p>
+
+  <script>
+    // Add function to calculate sum
+    function add() {
+      // Get first number and convert to number type
+      let a = Number(document.getElementById("num1").value);
+
+      // Get second number and convert to number type
+      let b = Number(document.getElementById("num2").value);
+
+      // Sum calculate chesi result lo display cheyyadam
+      document.getElementById("result").innerText = "Sum: " + (a + b);
+    }
+  </script>
+
+</body>
+</html>

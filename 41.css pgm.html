@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page meta information -->
+    <meta charset="UTF-8"> <!-- Website lo special characters correct ga display cheyyadam ki -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile-friendly responsive design kosam -->
+    <title>Responsive Portfolio</title> <!-- Browser tab lo title chupinchadam kosam -->
+    <style>
+        /* Page layout ki CSS apply chestunnam */
+        * {
+            margin: 0; /* Page edges ki space remove cheyadam */
+            padding: 0; /* Elements ki extra space ravvakunda cheyadam */
+            box-sizing: border-box; /* Box model correct ga set cheyadam */
+            font-family: Arial, sans-serif; /* Default font set cheyadam */
+        }
+        
+        /* Body background color set cheyadam */
+        body {
+            background-color: #f4f4f4; /* Light gray background set cheyadam */
+            text-align: center; /* Text center lo chupinchadam */
+        }
+        
+        /* Header section style */
+        header {
+            background-color: #333; /* Dark background color */
+            color: white; /* White text */
+            padding: 20px; /* Space add cheyadam header ki */
+            font-size: 24px; /* Text size penchadam */
+        }
+        
+        /* Navigation bar style */
+        nav {
+            background: #444; /* Dark gray background */
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none; /* Bullet points remove cheyadam */
+            display: flex; /* Menu items horizontal ga arrange cheyadam */
+            justify-content: center; /* Center lo align cheyyadam */
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px; /* Menu items ki gap ivvadam */
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none; /* Underline remove cheyyadam */
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Mouse over cheste underline vastundi */
+        }
+        
+        /* Profile image ki style */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circle shape ki image convert cheyyadam */
+            margin-top: 20px;
+        }
+        
+        /* Container lo content center lo arrange cheyyadam */
+        .container {
+            width: 80%; /* Page width ki adjust cheyyadam */
+            margin: auto;
+            padding: 20px;
+            background: white; /* White background set cheyyadam */
+            box-shadow: 0 0 10px gray; /* Box shadow add cheyyadam for better look */
+            border-radius: 10px; /* Edges smooth ga cheyyadam */
+        }
+        
+        /* Button style */
+        .btn {
+            display: inline-block;
+            background: #007BFF; /* Blue color button ki apply cheyyadam */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s; /* Smooth color transition while hover */
+        }
+        .btn:hover {
+            background: #0056b3; /* Mouse over cheste dark blue color vastundi */
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 20px;
+        }
+        .skill-bar {
+            width: 80%;
+            background: #ddd;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .skill-progress {
+            height: 20px;
+            background: #007BFF;
+            width: 80%; /* Skill level percentage chupinchadam */
+            border-radius: 5px;
+        }
+        
+        /* Projects Section */
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .project-card {
+            width: 200px;
+            height: 150px;
+            background: #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05); /* Mouse over cheste zoom effect vastundi */
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 20px;
+        }
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section lo website title display chesthundi -->
+    <header>My Responsive Portfolio</header>
+    
+    <!-- Navigation bar, menu items display cheyyadam kosam -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- About section, user info display cheyyadam kosam -->
+    <div class="container" id="about">
+        <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img"> <!-- Profile image display cheyyadam -->
+        <h2>Hi, I'm a Web Developer</h2>
+        <p>HTML, CSS tho responsive webpages create cheyyadam nunchi start chesthanu.</p>
+        <a href="#contact" class="btn">Contact Me</a> <!-- Contact button -->
+    </div>
+    
+    <!-- Skills section, progress bar tho skills chupinchadam -->
+    <div class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%">HTML & CSS - 90%</div>
+        </div>
+    </div>
+    
+    <!-- Projects section, previous work display cheyyadam kosam -->
+    <div class="projects" id="projects">
+        <div class="project-card">Project 1</div>
+        <div class="project-card">Project 2</div>
+        <div class="project-card">Project 3</div>
+    </div>
+    
+    <!-- Contact section, form tho user messages submit cheyyadam kosam -->
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <!-- Footer section, copyright information display cheyyadam kosam -->
+    <footer>
+        &copy; 2025 My Portfolio | All Rights Reserved
+    </footer>
+</body>
+</html>

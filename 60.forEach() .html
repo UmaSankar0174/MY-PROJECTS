@@ -1,0 +1,48 @@
+
+✅ 1. forEach() – Every item mida loop chesthundi (like for loop)
+
+let numbers = [1, 2, 3, 4];
+
+numbers.forEach(function(num) {
+  console.log(num); // 1 2 3 4
+});
+📝 Use case: Print, display, or loop over data.
+
+✅ 2. map() – New array create chesthundi (modify cheyyali ante)
+
+let numbers = [1, 2, 3, 4];
+
+let doubled = numbers.map(function(num) {
+  return num * 2;
+});
+
+console.log(doubled); // [2, 4, 6, 8]
+📝 Use case: Array values ni change cheyyali (without changing original).
+
+✅ 3. filter() – Only matching values return chesthundi
+
+let numbers = [1, 2, 3, 4, 5];
+
+let even = numbers.filter(function(num) {
+  return num % 2 === 0;
+});
+
+console.log(even); // [2, 4]
+📝 Use case: Filter even numbers, names starting with 'A', etc.
+
+✅ 4. Arrow Functions (=>) – Short & easy syntax
+
+let numbers = [1, 2, 3];
+
+let double = numbers.map(num => num * 2);
+
+console.log(double); // [2, 4, 6]
+✅ Real-world example: Names capitalize cheyyadam
+
+let names = ["uma", "sankar", "teja"];
+
+let capitalized = names.map(name => name.toUpperCase());
+
+console.log(capitalized); // ["UMA", "SANKAR", "TEJA"]
+ 
+
