@@ -1,149 +1,190 @@
+<!DOCTYPE html> <!-- HTML5 document ani browser ki cheptundi -->
 <html>
+
 <head>
-    <title>My Portfolio</title>
+    <title>My Portfolio</title> <!-- Browser tab lo title display cheyyadam -->
+
     <style>
+        /* Webpage overall body style */
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: pink;
-            color: black;
-            text-align: center;
+            margin: 0; /* Page edge ki gap undakunda remove cheyyadam */
+            font-family: Arial, sans-serif; /* Text font Arial, lekapote sans-serif */
+            background-color: pink; /* Page background pink ga untundi */
+            color: black; /* Text color black */
+            text-align: center; /* Text center lo display cheyyadam */
         }
+
+        /* Top navigation bar */
         nav {
-            background-color: white;
-            padding: 10px;
-            box-shadow: 0 2px 5px red;
+            background-color: white; /* Nav bar background white */
+            padding: 10px; /* Inside spacing 10px */
+            box-shadow: 0 2px 5px red; /* Red shadow bottom ki (depth) */
         }
+
+        /* Navigation links style */
         nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: green;
-            font-weight: bold;
+            margin: 0 20px; /* Links madhya 20px space */
+            text-decoration: none; /* Underline remove cheyyadam */
+            color: green; /* Link text color green */
+            font-weight: bold; /* Bold letters */
         }
+
+        /* Hover effect for links */
         nav a:hover {
-            color: orange;
+            color: orange; /* Mouse pointer pettinappudu orange avuthundi */
         }
+
+        /* Each section lo layout */
         section {
-            padding: 50px;
-            min-height: 40vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: dimgray;
+            padding: 50px; /* Inside spacing */
+            min-height: 40vh; /* Section ki minimum height - 40% of screen */
+            display: flex; /* Flexbox use cheyyadam */
+            flex-direction: column; /* Vertical ga items arrange cheyyadam */
+            justify-content: center; /* Vertically center cheyyadam */
+            align-items: center; /* Horizontally center cheyyadam */
+            color: dimgray; /* Text color dimgray */
         }
+
         h1 {
-            color: yellow;
-            font-size: 2.5em;
+            color: yellow; /* Heading color yellow */
+            font-size: 2.5em; /* Font size 2.5 times default */
         }
+
         p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 20px auto;
+            font-size: 1.2em; /* Paragraph font size 1.2x */
+            max-width: 600px; /* Max width 600px */
+            margin: 20px auto; /* Center align with margin */
         }
+
+        /* Welcome box style */
         .welcome-box {
-            border: 2px solid black;
-            padding: 20px;
-            border-radius: 10px;
+            border: 2px solid black; /* Border black 2px */
+            padding: 20px; /* Inside padding 20px */
+            border-radius: 10px; /* Rounded corners */
         }
+
+        /* Red underline heading ki */
         .underline {
-            border-bottom: 2px solid red;
-            display: inline-block;
-            padding-bottom: 5px;
+            border-bottom: 2px solid red; /* Bottom red underline */
+            display: inline-block; /* Only content size varaku */
+            padding-bottom: 5px; /* Bottom spacing */
         }
+
+        /* About section lo list ki style */
         .about-list {
-            list-style-type: disc;
-            padding: 20px;
-            border: 2px solid brown;
-            border-radius: 10px;
-            max-width: 600px;
-            text-align: left;
-            margin: 20px auto;
+            list-style-type: disc; /* Bullet style dots */
+            padding: 20px; /* Inside spacing */
+            border: 2px solid brown; /* Border brown 2px */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 600px; /* Max width */
+            text-align: left; /* Left align text */
+            margin: 20px auto; /* Center lo */
         }
+
+        /* Unordered list general style */
         ul {
-            list-style-type: circle;
-            padding: 0;
-            text-align: left;
-            max-width: 200px;
-            margin: 0 auto;
+            list-style-type: circle; /* Circle bullets */
+            padding: 0; /* Padding remove */
+            text-align: left; /* Left alignment */
+            max-width: 200px; /* Max width */
+            margin: 0 auto; /* Center */
         }
+
+        /* Skills section lo box style */
         .skills-box {
-            border: 2px solid violet;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 300px;
-            margin: 20px auto;
+            border: 2px solid violet; /* Violet border */
+            padding: 20px; /* Padding */
+            border-radius: 10px; /* Rounded edges */
+            max-width: 300px; /* Width limit */
+            margin: 20px auto; /* Center lo margin */
         }
+
+        /* Table style */
         table {
-            max-width: 600px;
-            border-collapse: collapse;
-            margin: 20px auto;
+            max-width: 600px; /* Table width limit */
+            border-collapse: collapse; /* Borders merge avvadam */
+            margin: 20px auto; /* Center the table */
         }
+
         table, th, td {
-            border: 1px solid orange;
+            border: 1px solid orange; /* Table, header, cell border orange */
         }
+
         th, td {
-            padding: 50px;
-            text-align: left;
+            padding: 50px; /* Inside spacing */
+            text-align: left; /* Left align text */
         }
+
+        /* Contact form layout */
         form {
-            max-width: 300px;
-            margin: 0 auto;
-            text-align: left;
-            color: blue;
+            max-width: 300px; /* Form width limit */
+            margin: 0 auto; /* Center the form */
+            text-align: left; /* Left alignment */
+            color: blue; /* Label and text color */
         }
+
         form label {
-            display: block;
-            margin: 10px 0 5px;
+            display: block; /* New line ki label */
+            margin: 10px 0 5px; /* Space top & bottom */
         }
+
         form input, form textarea {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
+            width: 100%; /* Full width fields */
+            padding: 5px; /* Inside padding */
+            margin-bottom: 10px; /* Bottom spacing */
         }
+
         .inline-label {
-            display: inline;
-            margin-right: 5px;
+            display: inline; /* Same line lo labels */
+            margin-right: 5px; /* Space right side */
         }
+
         form input[type="submit"] {
-            width: auto;
-            padding: 10px 20px;
-            background-color: #1E90FF;
-            color: white;
-            border: none;
-            cursor: pointer;
+            width: auto; /* Width auto adjust */
+            padding: 10px 20px; /* Padding inside */
+            background-color: #1E90FF; /* Blue background */
+            color: white; /* Text white */
+            border: none; /* No border */
+            cursor: pointer; /* Mouse pointer change */
         }
+
+        /* Footer style */
         footer {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background-color: black; /* Background black */
+            color: white; /* Text white */
+            padding: 10px; /* Padding inside */
+            position: fixed; /* Screen bottom ki fix cheyyadam */
+            bottom: 0; /* Position bottom 0 */
+            width: 100%; /* Full width */
         }
+
         .social-icons img {
-            width: 30px;
-            margin: 0 10px;
+            width: 30px; /* Icon width */
+            margin: 0 10px; /* Gap between icons */
         }
     </style>
 </head>
+
 <body>
+    <!-- Top navigation bar -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">Home</a> <!-- Scroll to home section -->
+        <a href="#about">About</a> <!-- Scroll to about section -->
+        <a href="#skills">Skills</a> <!-- Scroll to skills section -->
+        <a href="#projects">Projects</a> <!-- Scroll to projects -->
+        <a href="#contact">Contact</a> <!-- Scroll to contact -->
     </nav>
 
+    <!-- Home section -->
     <section id="home">
         <div class="welcome-box">
-            <h1>Welcome to My Portfolio</h1>
+            <h1>Welcome to My Portfolio</h1> <!-- Main heading -->
         </div>
     </section>
 
+    <!-- About section -->
     <section id="about">
-        <h1 class="underline">Uma Sankar</h1>
+        <h1 class="underline">Uma Sankar</h1> <!-- Name with underline -->
         <ul class="about-list">
             <li>I am a passionate web developer with a focus on front-end technologies.</li>
             <li>I am currently pursuing my B.Tech in Tirumala Engineering College.</li>
@@ -152,6 +193,7 @@
         </ul>
     </section>
 
+    <!-- Skills section -->
     <section id="skills">
         <h1 class="underline">My Skills</h1>
         <div class="skills-box">
@@ -164,12 +206,13 @@
         </div>
     </section>
 
+    <!-- Projects section -->
     <section id="projects">
         <h1 class="underline">My Projects</h1>
         <table>
             <tr>
-                <th>Project</th>
-                <th>Description</th>
+                <th>Project</th> <!-- Column heading -->
+                <th>Description</th> <!-- Column heading -->
             </tr>
             <tr>
                 <td>Portfolio Website</td>
@@ -182,31 +225,38 @@
         </table>
     </section>
 
+    <!-- Contact form -->
     <section id="contact">
         <h1 class="underline">Contact Me</h1>
         <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">Name:</label> <!-- Input label -->
+            <input type="text" id="name" name="name" required> <!-- Text input -->
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
             <label>Choose your gender:</label>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male" class="inline-label">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female" class="inline-label">Female</label>
+
             <label>Select your interests:</label>
             <input type="checkbox" id="coding" name="interests" value="coding">
             <label for="coding" class="inline-label">Coding</label>
             <input type="checkbox" id="reading" name="interests" value="reading">
             <label for="reading" class="inline-label">Reading</label>
+
             <label for="message">Message (up to 200 characters):</label>
             <textarea id="message" name="message" maxlength="200"></textarea>
-            <input type="submit" value="Submit">
+
+            <input type="submit" value="Submit"> <!-- Submit button -->
         </form>
     </section>
 
+    <!-- Page footer -->
     <footer>
-        <p>© 2025 My Portfolio</p>
+        <p>© 2025 My Portfolio</p> <!-- Copyright -->
         <div class="social-icons">
             <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
             <a href="https://instagram.com"><img src="instagram-icon.png" alt="Instagram"></a>
@@ -214,4 +264,5 @@
         </div>
     </footer>
 </body>
+
 </html>
